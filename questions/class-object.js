@@ -1,3 +1,14 @@
+/**
+ * @file class-object.js
+ * @description Bank Soal Topik 1: Class & Object (Kelas dan Objek)
+ * @curriculum Pemrograman Visual (Alice 3 / Java OOP) - SPADA UMS Pertemuan 3 & 4
+ * @learning_outcomes
+ *   - Memahami perbedaan fundamental cetak biru (blueprint) vs wujud nyata (instance).
+ *   - Mengidentifikasi proses instansiasi objek menggunakan operator `new`.
+ *   - Menganalisis relasi One Class to Many Objects (Satu Kelas Banyak Objek).
+ *   - Menjelaskan alokasi memori heap objek dan variabel referensi.
+ */
+
 /* Topik 1 — Class & Object */
 window.QUESTION_BANK = window.QUESTION_BANK || [];
 
