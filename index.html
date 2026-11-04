@@ -47,6 +47,9 @@
         <a href="uts-2024.html" class="nav-pill" style="display:inline-flex; align-items:center; gap:6px; text-decoration:none; padding:5px 12px; border:1.5px solid var(--ink); border-radius:999px; background:var(--mustard); font-family:var(--mono); font-size:10px; font-weight:700; box-shadow:2px 2px 0 var(--ink);">
           <span>📜</span> Naskah UTS 2024
         </a>
+        <button id="hotkeysBtn" type="button" class="nav-pill" style="display:inline-flex; align-items:center; gap:6px; cursor:pointer; padding:5px 12px; border:1.5px solid var(--ink); border-radius:999px; background:var(--card); font-family:var(--mono); font-size:10px; font-weight:700; box-shadow:2px 2px 0 var(--ink);">
+          <span>⌨️</span> Tombol Cepat
+        </button>
         <span class="head-note">latihan uts</span>
         <span class="stamp-badge">Pemrograman Visual</span>
       </div>
@@ -390,5 +393,31 @@
 <script src="questions/function-procedure.js"></script>
 <script src="questions/loops.js"></script>
 <script src="app.js"></script>
+<dialog id="hotkeysModal" style="border:2.5px solid var(--ink); border-radius:18px; background:var(--card); box-shadow:8px 8px 0 var(--ink); padding:24px; max-width:420px; font-family:var(--font); color:var(--ink);">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; border-bottom:1.5px dashed var(--ink); padding-bottom:10px;">
+    <h3 style="margin:0; font-family:var(--display); font-size:18px;">⌨️ Pintasan Keyboard</h3>
+    <button id="closeHotkeysModal" type="button" style="border:1.5px solid var(--ink); background:#fff; border-radius:6px; cursor:pointer; font-weight:700; padding:4px 10px;">✕</button>
+  </div>
+  <p style="font-size:13px; color:var(--ink-soft); margin-top:0; margin-bottom:14px;">Kamu bisa menyelesaikan kuis tanpa menyentuh mouse sama sekali!</p>
+  <ul style="list-style:none; padding:0; margin:0; display:grid; gap:12px; font-size:13.5px;">
+    <li style="display:flex; justify-content:space-between; align-items:center;"><span>Pilih Opsi Jawaban:</span> <span><kbd style="background:#eee; padding:3px 8px; border:1px solid #ccc; border-radius:4px; font-family:var(--mono); font-weight:700;">1–4</kbd> / <kbd style="background:#eee; padding:3px 8px; border:1px solid #ccc; border-radius:4px; font-family:var(--mono); font-weight:700;">A–D</kbd></span></li>
+    <li style="display:flex; justify-content:space-between; align-items:center;"><span>Lanjut Soal Berikutnya:</span> <kbd style="background:#eee; padding:3px 8px; border:1px solid #ccc; border-radius:4px; font-family:var(--mono); font-weight:700;">Enter</kbd></li>
+    <li style="display:flex; justify-content:space-between; align-items:center;"><span>Tutup Dialog / Batal:</span> <kbd style="background:#eee; padding:3px 8px; border:1px solid #ccc; border-radius:4px; font-family:var(--mono); font-weight:700;">Esc</kbd></li>
+  </ul>
+</dialog>
+
+<script>
+  const hkBtn = document.getElementById('hotkeysBtn');
+  const hkModal = document.getElementById('hotkeysModal');
+  const closeHk = document.getElementById('closeHotkeysModal');
+  if (hkBtn && hkModal) {
+    hkBtn.addEventListener('click', () => hkModal.showModal());
+    closeHk.addEventListener('click', () => hkModal.close());
+    hkModal.addEventListener('click', (e) => {
+      if (e.target === hkModal) hkModal.close();
+    });
+  }
+</script>
+
 </body>
 </html>
