@@ -1,3 +1,14 @@
+/**
+ * @file property-method.js
+ * @description Bank Soal Topik 2: Property & Method (Atribut dan Perilaku Objek)
+ * @curriculum Pemrograman Visual (Alice 3 / Java OOP) - SPADA UMS Pertemuan 3 & 4
+ * @learning_outcomes
+ *   - Membedakan State (data/keadaan) dan Behavior (aksi/operasi).
+ *   - Memahami konsep enkapsulasi dan penentu akses (public, private, protected).
+ *   - Menganalisis perbedaan variabel instans (field) vs variabel lokal.
+ *   - Memetakan properti grafis Alice 3 (posisi, warna, orientasi, opacity).
+ */
+
 /* Topik 2 — Property & Method */
 window.QUESTION_BANK = window.QUESTION_BANK || [];
 
