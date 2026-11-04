@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Soal &amp; Pembahasan Lengkap Latihan UTS Pemrograman Visual 2026/2027 — UMS</title>
-<meta name="description" content="Halaman khusus latihan dan pembahasan mendalam materi UTS Gasal 2026/2027 Pemrograman Visual Informatika UMS: Class & Object, State & Behavior, Behavior Manusia, Procedure vs Function, dan Inheritance. Dilengkapi simulator esai dan kuis interaktif.">
+<title>Soal &amp; Pembahasan Resmi UTS Pemrograman Visual 2026/2027 (Pertemuan 1–7) — UMS</title>
+<meta name="description" content="Modul belajar resmi dan latihan soal UTS Gasal 2026/2027 Pemrograman Visual Informatika UMS berdasarkan SPADA Pertemuan 1 sampai 7: Visual Blocks, Class & Object, Alice 3, Sequence, Procedural Abstraction, serta keyword extends & super.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
 
 <style>
 /* =========================================================
-   Gaya Khusus Halaman Latihan UTS 2026 (Neo-Brutalist Academic Studio)
+   Gaya Khusus Halaman Latihan UTS 2026 Resmi SPADA UMS
    ========================================================= */
 
 .exam-nav {
@@ -52,7 +52,7 @@
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(246, 240, 228, 0.94);
+  background: rgba(246, 240, 228, 0.95);
   backdrop-filter: blur(8px);
   border-bottom: 2px solid var(--ink);
   margin-top: 18px;
@@ -133,7 +133,7 @@
   overflow: hidden;
 }
 .official-header-card::before {
-  content: "LATIHAN UTS 2026/2027";
+  content: "SPADA RESMI 2026/2027";
   position: absolute;
   top: 14px;
   right: -32px;
@@ -227,6 +227,60 @@
   color: var(--teal);
 }
 
+/* Timeline Silabus Modul */
+.module-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+.module-card {
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  background: var(--card);
+  padding: 18px 22px;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform .15s ease;
+}
+.module-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1.5px dashed rgba(36,34,31,.2);
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.module-pill {
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+}
+.module-title {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+.module-body p, .module-body li {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.module-body ul {
+  margin: 6px 0 10px 20px;
+  padding: 0;
+}
+
 /* Postingan Soal & Solusi */
 .q-post {
   border: 2px solid var(--ink);
@@ -273,10 +327,10 @@
   border-radius: 8px;
   box-shadow: 2px 2px 0 var(--ink);
 }
-.badge-topic {
-  background: var(--blue-soft);
-  color: #2b5672;
-  border: 1.5px solid #9fc3d8;
+.badge-source {
+  background: var(--teal-soft);
+  color: var(--teal);
+  border: 1.5px solid var(--teal);
   font-family: var(--mono);
   font-weight: 700;
   font-size: 11px;
@@ -419,7 +473,7 @@
 }
 .sim-textarea {
   width: 100%;
-  min-height: 110px;
+  min-height: 105px;
   border: 1.5px solid var(--ink);
   border-radius: 10px;
   padding: 12px 14px;
@@ -598,9 +652,12 @@
         <span>←</span> Bank Soal 31
       </a>
       <a href="uts-2024.html" class="nav-pill" title="Halaman Khusus UTS 2024">
-        <span>📜</span> Halaman UTS 2024
+        <span>📜</span> Naskah UTS 2024
       </a>
-      <span class="stamp-badge" style="background:var(--teal-soft); border-color:var(--teal); color:var(--teal);">LATIHAN UTS 2026</span>
+      <a href="https://extends-super-inheritance.netlify.app/" target="_blank" rel="noopener noreferrer" class="nav-pill" style="background:#12233c; color:#5ce0bc; border-color:#2c4566;" title="Slide Resmi Dosen Netlify: extends & super">
+        <span>🌐</span> Slide Netlify Dosen
+      </a>
+      <span class="stamp-badge" style="background:var(--teal-soft); border-color:var(--teal); color:var(--teal);">UTS 2026/2027 (P1–P7)</span>
     </div>
   </header>
 
@@ -610,58 +667,231 @@
       <div class="univ-logo-box">UMS</div>
       <div class="univ-titles">
         <h1>UNIVERSITAS MUHAMMADIYAH SURAKARTA</h1>
-        <p>FAKULTAS KOMUNIKASI DAN INFORMATIKA · PROGRAM STUDI INFORMATIKA</p>
+        <p>FAKULTAS KOMUNIKASI DAN INFORMATIKA · PROGRAM STUDI TEKNIK INFORMATIKA</p>
       </div>
     </div>
 
     <div class="exam-meta-grid">
       <div class="meta-item">
         <span class="meta-label">Mata Uji</span>
-        <span class="meta-val">Pemrograman Visual</span>
+        <span class="meta-val">Pemrograman Visual (Gasal 2026/2027)</span>
       </div>
       <div class="meta-item">
-        <span class="meta-label">Periode Ujian</span>
-        <span class="meta-val">Semester Gasal 2026/2027</span>
+        <span class="meta-label">Cakupan Materi</span>
+        <span class="meta-val">Pertemuan 1 sampai 7 (Lengkap SPADA UMS)</span>
       </div>
       <div class="meta-item">
-        <span class="meta-label">Fokus Materi</span>
-        <span class="meta-val">OOP Dasar, Alice 3, Inheritance, Method</span>
+        <span class="meta-label">Alat &amp; Bahasa</span>
+        <span class="meta-val">Alice 3 ➔ Java OOP (extends &amp; super)</span>
       </div>
       <div class="meta-item">
-        <span class="meta-label">Alokasi Waktu &amp; Skor</span>
-        <span class="meta-val">90 Menit · 100 Poin Total</span>
+        <span class="meta-label">Total Soal &amp; Waktu</span>
+        <span class="meta-val">7 Soal Esai Inti · 14 Kuis Kasus · 90 Menit</span>
       </div>
     </div>
 
     <div class="guidance-box">
-      <strong>Materi Inti UTS 2026 (6 Pilar Utama):</strong>
-      1. Class vs Object · 2. State (Property) vs Behavior (Method) · 3. Pemodelan Behavior Manusia · 4. Procedure &amp; Modularitas Rekayasa Perangkat Lunak · 5. Procedure vs Function di Alice 3 · 6. Inheritance &amp; Reusability (Relasi "is-a").
+      <strong>Peta Kurikulum Riil Pertemuan 1–7 SPADA UMS:</strong>
+      • <strong>P1–2:</strong> From Instructions to Visual Blocks (Solusi, Flowchart, Visual vs Tekstual).<br>
+      • <strong>P3:</strong> Object, Behavior, Sequence, Property &amp; Class.<br>
+      • <strong>P4:</strong> Penerapan OOP di Alice 3 (Gallery, Scene, Properties, Code Editor, Parameter, Bunny, Penguin).<br>
+      • <strong>P5:</strong> Control Structures (do in order, do together, count up to, while) &amp; Procedure jump().<br>
+      • <strong>P6:</strong> Procedural Abstraction, Biped Hierarchy, Parameters &amp; Function vs Procedure.<br>
+      • <strong>P7:</strong> Pewarisan Java OOP: Keyword <code>extends</code> &amp; <code>super</code>, Constructor &amp; Method Overriding.
     </div>
   </section>
 
   <!-- ================= TABS NAVIGATION ================= -->
   <div class="exam-tabs-wrap">
     <div class="exam-tabs" role="tablist">
-      <button class="tab-trigger active" onclick="switchExamTab('solusi', this)" role="tab" aria-selected="true">
-        <span>📖</span> Bedah 6 Soal Inti 2026 <span class="tab-badge">Kunci Lengkap</span>
+      <button class="tab-trigger active" onclick="switchExamTab('silabus', this)" role="tab" aria-selected="true">
+        <span>📚</span> Rangkuman SPADA P1–P7 <span class="tab-badge">Materi Kuliah</span>
+      </button>
+      <button class="tab-trigger" onclick="switchExamTab('solusi', this)" role="tab" aria-selected="false">
+        <span>📖</span> Bedah 7 Soal Esai UTS <span class="tab-badge">Kunci Dosen</span>
       </button>
       <button class="tab-trigger" onclick="switchExamTab('latihan', this)" role="tab" aria-selected="false">
         <span>🎯</span> Arena Simulasi Esai <span class="tab-badge">Self-Scoring</span>
       </button>
       <button class="tab-trigger" onclick="switchExamTab('kuis', this)" role="tab" aria-selected="false">
-        <span>⚡</span> Kuis 10 Kasus <span class="tab-badge">Interaktif</span>
+        <span>⚡</span> Kuis 14 Kasus SPADA <span class="tab-badge">Interaktif</span>
       </button>
       <button class="tab-trigger" onclick="switchExamTab('lab', this)" role="tab" aria-selected="false">
-        <span>🧪</span> Lab OOP &amp; Alice 3 <span class="tab-badge">Visualizer</span>
+        <span>🧪</span> Lab Alice 3 &amp; Netlify Java <span class="tab-badge">Visualizer</span>
       </button>
       <button class="tab-trigger" onclick="switchExamTab('cheatsheet', this)" role="tab" aria-selected="false">
-        <span>🖨️</span> Rangkuman A4 <span class="tab-badge">Siap Cetak</span>
+        <span>🖨️</span> Catatan Kilat A4 <span class="tab-badge">Siap Cetak</span>
       </button>
     </div>
   </div>
 
-  <!-- ================= TAB 1: BEDAH 6 SOAL INTI ================= -->
-  <div id="pane-solusi" class="exam-pane active">
+  <!-- ================= TAB 1: RANGKUMAN SPADA PERTEMUAN 1–7 ================= -->
+  <div id="pane-silabus" class="exam-pane active">
+
+    <div class="module-strip">
+
+      <!-- P1 & P2 -->
+      <article class="module-card">
+        <div class="module-header">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="module-pill">PERTEMUAN 1 &amp; 2</span>
+            <h3 class="module-title">Introduction to Visual Programming — From Instructions to Visual Blocks</h3>
+          </div>
+          <span style="font-family:var(--mono); font-size:11px; color:var(--ink-faint);">Fondasi Logika</span>
+        </div>
+        <div class="module-body">
+          <p>
+            Pemrograman pada hakikatnya bukan sekadar menghafal sintaks kode, melainkan proses merancang solusi komputasi yang terstruktur. Komputer memerlukan instruksi yang <strong>eksplisit, terstruktur, memiliki urutan yang jelas, dan tidak ambigu</strong>.
+          </p>
+          <ul>
+            <li><strong>Tahapan Penyelesaian Masalah:</strong> Masalah ➔ Algoritma ➔ Instruksi ➔ Program ➔ Output.</li>
+            <li><strong>5 Bentuk Representasi Logika:</strong> Bahasa Natural, Pseudocode, Flowchart (diagram alir), Kode Tekstual (Java, Python, C++), dan Blok Visual (Alice 3).</li>
+            <li><strong>Tekstual vs Visual:</strong> Keduanya memakai logika algoritma yang sama persis. Pendekatan visual dipakai sebagai fondasi awal agar mahasiswa memahami urutan, kondisi, dan objek sebelum berpindah ke pemrograman tekstual.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- P3 -->
+      <article class="module-card">
+        <div class="module-header">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="module-pill">PERTEMUAN 3</span>
+            <h3 class="module-title">Dari Instruksi Menuju Object dan Class</h3>
+          </div>
+          <span style="font-family:var(--mono); font-size:11px; color:var(--ink-faint);">Transisi ke Objek</span>
+        </div>
+        <div class="module-body">
+          <p>
+            Sebuah program dapat dipandang sebagai kumpulan objek yang berinteraksi. Setiap objek memiliki data (property) dan aksi (method):
+          </p>
+          <ul>
+            <li><strong>Object &amp; Behavior:</strong> Objek adalah entitas yang menerima instruksi dan menghasilkan perilaku tertentu.</li>
+            <li><strong>Sequence (Urutan):</strong> Urutan penyusunan instruksi secara langsung menentukan hasil akhir program. Urutan yang salah menghasilkan perilaku yang salah.</li>
+            <li><strong>Property (Keadaan/State):</strong> Data ciri objek, seperti <code>color</code>, <code>position</code> (x, y, z), <code>orientation</code> (sudut hadap), dan <code>speed</code>.</li>
+            <li><strong>Method:</strong> Aksi yang dapat dilakukan objek, seperti <code>move()</code>, <code>turn()</code>, <code>stop()</code>, <code>say()</code>.</li>
+            <li><strong>Class:</strong> Blueprint / cetak biru / template yang mendefinisikan struktur property dan method.</li>
+            <li><strong>One Class, Many Objects:</strong> Dari 1 class (misal Class Robot), dapat dibuat banyak objek (Robot A, Robot B, Robot C) dengan nilai property yang berbeda-beda.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- P4 -->
+      <article class="module-card">
+        <div class="module-header">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="module-pill">PERTEMUAN 4</span>
+            <h3 class="module-title">Penerapan Konsep OOP Melalui ALICE (Modul Praktik &amp; PRD)</h3>
+          </div>
+          <span style="font-family:var(--mono); font-size:11px; color:var(--teal); font-weight:700;">Inti Praktikum</span>
+        </div>
+        <div class="module-body">
+          <p>
+            Konsep OOP abstrak terlihat secara visual di lingkungan <strong>Alice 3</strong>:
+          </p>
+          <table class="rubrik-table" style="margin:8px 0 12px;">
+            <thead>
+              <tr><th>Bagian Antarmuka Alice</th><th>Fungsi Nyata</th><th>Konsep OOP</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Gallery</strong></td><td>Menyediakan model/tipe yang bisa dipilih</td><td><strong>Class</strong></td></tr>
+              <tr><td><strong>Scene</strong></td><td>Tempat model diletakkan di dunia 3D</td><td><strong>Object</strong></td></tr>
+              <tr><td><strong>Panel Properties</strong></td><td>Menampilkan &amp; mengubah nilai data (posisi, warna, ukuran)</td><td><strong>Property</strong></td></tr>
+              <tr><td><strong>Code Editor</strong></td><td>Menyusun baris perintah instruksi</td><td><strong>Method</strong></td></tr>
+            </tbody>
+          </table>
+          <ul>
+            <li><strong>Method &amp; Parameter:</strong> Parameter adalah informasi tambahan. Contoh: <code>bunny.move(FORWARD, 2)</code> (arah &amp; jarak); <code>bunny.turn(RIGHT, 0.25)</code> (0.25 putaran ≈ 90°).</li>
+            <li><strong>Alur Hands-on #3:</strong> <code>Build</code> (susun blok) ➔ <code>Predict</code> (tebak posisi/arah akhir sebelum di-run) ➔ <code>Run &amp; Observe</code> ➔ <code>Experiment</code> (ubah parameter).</li>
+            <li><strong>Class Hierarchy &amp; Inheritance:</strong> Superclass <code>Animal</code> (name, position, move()) mewariskan ke <code>Bird</code> (fly()), <code>Rabbit</code> (jump()), dan <code>Fish</code> (swim()).</li>
+            <li><strong>Final Challenge Penguin:</strong> Class Penguin adalah turunan Animal/Biped; mewarisi <code>move()</code> &amp; <code>turn()</code>, serta memiliki specific method <code>waddle()</code>.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- P5 -->
+      <article class="module-card">
+        <div class="module-header">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="module-pill">PERTEMUAN 5</span>
+            <h3 class="module-title">Praktikum Mandiri Alice 3 — Control Statements &amp; Animasi Bunny</h3>
+          </div>
+          <span style="font-family:var(--mono); font-size:11px; color:var(--ink-faint);">Struktur Kontrol</span>
+        </div>
+        <div class="module-body">
+          <p>
+            Mengembangkan animasi Bunny dan MarchHare menggunakan struktur kendali eksekusi:
+          </p>
+          <ul>
+            <li><strong><code>do in order</code>:</strong> Blok kontrol default di mana instruksi dieksekusi secara <strong>berurutan satu demi satu</strong> dari atas ke bawah.</li>
+            <li><strong><code>do together</code>:</strong> Blok kontrol di mana beberapa instruksi dijalankan secara <strong>bersamaan (simultan)</strong> (contoh: mengayunkan kedua tangan dan kaki sekaligus saat melompat).</li>
+            <li><strong><code>count up to</code> (Counted Loop):</strong> Mengeksekusi perulangan sebanyak n kali hitungan pasti.</li>
+            <li><strong><code>while</code> (Conditional Loop):</strong> Mengeksekusi perulangan selama kondisi logika tertentu masih bernilai <code>true</code>.</li>
+            <li><strong>Membuat Procedure <code>jump()</code>:</strong> Mengemas gerakan lompat (gerak ke atas lalu turun) menjadi satu procedure mandiri agar reusable.</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- P6 -->
+      <article class="module-card">
+        <div class="module-header">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="module-pill">PERTEMUAN 6</span>
+            <h3 class="module-title">From Procedural Abstraction to Inheritance, Parameters &amp; Functions</h3>
+          </div>
+          <span style="font-family:var(--mono); font-size:11px; color:var(--ink-faint);">Abstraksi &amp; Fungsi</span>
+        </div>
+        <div class="module-body">
+          <p>
+            Menyempurnakan program animasi agar lebih modular dan fleksibel:
+          </p>
+          <ul>
+            <li><strong>1. Procedural Abstraction:</strong> Mengelompokkan rangkaian instruksi kompleks menjadi satu nama prosedur ringkas (seperti <code>jump()</code>), sehingga pemanggil tidak perlu tahu kerumitan di dalamnya.</li>
+            <li><strong>2. Inheritance di Alice 3 (Biped Hierarchy):</strong> Procedure <code>jump()</code> yang dibuat pada level parent class <strong><code>Biped</code></strong> otomatis diwarisi dan bisa dipakai oleh <code>Bunny</code> maupun <code>MarchHare</code>.</li>
+            <li><strong>3. Parameter pada Procedure:</strong> Mengembangkan prosedur menjadi <code>jump(direction, distance)</code> agar bisa melompat ke arah dan jarak yang dinamis.</li>
+            <li><strong>4. Procedure vs Function:</strong> Procedure bertugas menjalankan aksi (void), sedangkan Function bertugas mengembalikan nilai (misal fungsi bawaan Alice <code>getDistanceTo()</code> untuk mengukur jarak).</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- P7 -->
+      <article class="module-card" style="border-left:5px solid #0f806d;">
+        <div class="module-header">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span class="module-pill" style="background:#0f806d;">PERTEMUAN 7 (NETLIFY)</span>
+            <h3 class="module-title">Pewarisan Java OOP: Keyword <code>extends</code> &amp; <code>super</code></h3>
+          </div>
+          <span style="font-family:var(--mono); font-size:11px; color:#0f806d; font-weight:700;">Transisi ke Java</span>
+        </div>
+        <div class="module-body">
+          <p>
+            Materi resmi dari slide kuliah dosen (<em>https://extends-super-inheritance.netlify.app/</em>) untuk menghubungkan hierarki visual Alice ke bahasa Java murni:
+          </p>
+          <ul>
+            <li><strong>Koneksi Alice ke Java:</strong>
+              <br><code>class Biped extends SJointedModel { ... }</code>
+              <br><code>class Bunny extends Biped { ... }</code>
+            </li>
+            <li><strong>Keyword <code>extends</code>:</strong> Menyatakan hubungan pewarisan bahwa subclass mewarisi anggota superclass (contoh: <code>class Dog extends Animal</code>).</li>
+            <li><strong>Pemanggilan Inherited Method:</strong> Method warisan (seperti <code>move()</code>) dapat dipanggil langsung oleh objek anak (<code>dog1.move()</code>) tanpa perlu kata kunci tambahan.</li>
+            <li><strong>Method Overriding:</strong> Ketika subclass menulis ulang method dengan nama dan signature yang sama dengan superclass (ditandai anotasi <code>@Override</code>).</li>
+            <li><strong>Keyword <code>super</code>:</strong>
+              <ol>
+                <li><strong>Method:</strong> <code>super.sound()</code> memanggil implementasi method milik superclass.</li>
+                <li><strong>Constructor:</strong> <code>super("Buddy")</code> memanggil constructor superclass untuk inisialisasi data parent.</li>
+                <li><strong>Field:</strong> <code>super.name</code> mengakses atribut parent yang tertutup (shadowed) oleh atribut anak <code>this.name</code>.</li>
+              </ol>
+            </li>
+            <li><strong>Miskonsepsi Penting:</strong> <code>super</code> <strong>TIDAK selalu wajib</strong> dipakai saat inheritance. Method warisan dapat dipanggil langsung secara normal jika tidak di-override.</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+
+  <!-- ================= TAB 2: BEDAH 7 SOAL ESAI UTS ================= -->
+  <div id="pane-solusi" class="exam-pane">
 
     <!-- SOAL 1 -->
     <article class="q-post">
@@ -669,58 +899,28 @@
         <div class="q-badge-group">
           <span class="badge-qno">SOAL 01</span>
           <span class="badge-score">Bobot: 15 Poin</span>
-          <span class="badge-topic">Class &amp; Object Concept</span>
+          <span class="badge-source">SPADA P1 &amp; P2</span>
         </div>
       </div>
-
       <h2 class="q-statement">
-        "Apa yang dimaksud dengan Class dalam konsep OOP dan bagaimana hubungannya dengan Object?"
+        "Jelaskan alur penyelesaian masalah komputasi dari Masalah hingga menjadi Program yang dapat dipahami komputer! Mengapa instruksi harus bersifat terstruktur dan tidak ambigu?"
       </h2>
-
       <div class="solution-card">
-        <span class="sol-tag">Pembahasan Lengkap &amp; Model Jawaban Dosen</span>
+        <span class="sol-tag">Kunci Jawaban Sempurna</span>
         <div class="sol-content">
-          <h4>1. Pengertian Class dalam OOP</h4>
-          <p>
-            <strong>Class</strong> adalah sebuah <em>blueprint</em> (cetak biru), kerangka dasar, prototipe abstrak, atau spesifikasi tipe data bentukan programmer yang mendefinisikan struktur data (<strong>properties/atribut/state</strong>) dan sekumpulan tindakan (<strong>methods/behavior</strong>) yang akan dimiliki oleh objek-objek sejenis.
-          </p>
-          <p>
-            Secara teknis, deklarasi sebuah class <strong>belum mengalokasikan ruang memori fisik</strong> (Heap memory) untuk data objek. Class hanya berperan sebagai rancangan logis.
-          </p>
-
-          <h4>2. Hubungan Antara Class dan Object</h4>
-          <p>
-            Hubungan antara Class dan Object adalah hubungan antara <strong>cetakan</strong> dengan <strong>produk hasil cetakan</strong> (relasi <em>Type to Instance</em>):
-          </p>
+          <h4>1. Alur 5 Tahapan:</h4>
+          <p><strong>Masalah ➔ Algoritma ➔ Instruksi ➔ Program ➔ Output</strong></p>
           <ul>
-            <li><strong>Class sebagai Definisi:</strong> Menentukan <em>"apa saja yang boleh dimiliki dan dilakukan"</em> oleh objek.</li>
-            <li><strong>Object sebagai Wujud Nyata (Instance):</strong> Entitas konkret yang benar-benar hidup di memori komputer, diciptakan melalui proses <em>instansiasi</em> (menggunakan operator <code>new</code> pada Java atau menambahkan model ke dunia 3D di Alice 3).</li>
-            <li><strong>Relasi Satu-ke-Banyak (1 to N):</strong> Dari satu class yang sama, kita bisa menciptakan banyak object mandiri yang memiliki nilai atribut berbeda-beda tanpa saling mengganggu.</li>
+            <li><strong>Masalah:</strong> Situasi atau tantangan komputasi nyata yang ingin diselesaikan.</li>
+            <li><strong>Algoritma:</strong> Urutan langkah logis dan sistematis untuk memecahkan masalah.</li>
+            <li><strong>Instruksi:</strong> Perintah satuan yang dapat diterjemahkan ke dalam bahasa mesin.</li>
+            <li><strong>Program:</strong> Kumpulan instruksi utuh yang disusun dalam bahasa pemrograman (tekstual/visual).</li>
+            <li><strong>Output:</strong> Hasil akhir yang ditampilkan atau dijalankan oleh komputer.</li>
           </ul>
-
-          <h4>3. Analogi Dunia Nyata &amp; Implementasi Kode</h4>
+          <h4>2. Mengapa Harus Terstruktur dan Tidak Ambigu?</h4>
           <p>
-            <em>Analogi:</em> Denah arsitektur rumah (Class) vs Bangunan rumah fisik yang dihuni di jalan Mawar No. 10 (Object). Dari satu lembar denah, kontraktor bisa membangun 50 rumah dengan warna cat dan furnitur yang berbeda.
+            Komputer adalah mesin deterministik yang tidak memiliki intuisi manusia. Komputer mengeksekusi instruksi secara harfiah. Jika instruksi ambigu atau urutannya keliru, komputer akan menghasilkan kesalahan logika (<em>logic error</em>) atau program berhenti tiba-tiba (<em>crash</em>).
           </p>
-          <div class="code-window">
-            <div class="code-bar">
-              <div class="code-dots"><span></span><span></span><span></span></div>
-              <span>Contoh Hubungan Class &amp; Object</span>
-            </div>
-            <pre><code>// CLASS: Cetak Biru
-class Mobil {
-    String merk;
-    String warna;
-    void melaju() { System.out.println(merk + " melaju!"); }
-}
-
-// OBJECT: Dua Instance Berbeda dari Class yang Sama
-Mobil mobilA = new Mobil(); // Object 1 di memori Heap
-mobilA.merk = "Avanza";
-
-Mobil mobilB = new Mobil(); // Object 2 di memori Heap
-mobilB.merk = "Brio";</code></pre>
-          </div>
         </div>
       </div>
     </article>
@@ -731,41 +931,41 @@ mobilB.merk = "Brio";</code></pre>
         <div class="q-badge-group">
           <span class="badge-qno">SOAL 02</span>
           <span class="badge-score">Bobot: 15 Poin</span>
-          <span class="badge-topic">State &amp; Behavior</span>
+          <span class="badge-source">SPADA P3 &amp; P4</span>
         </div>
       </div>
-
       <h2 class="q-statement">
-        "Apa yang dimaksud dengan State (Property) dan Behavior (Method) pada sebuah object? Jelaskan hubungannya!"
+        "Bagaimanakah konsep Class, Object, Property, dan Method tercermin pada antarmuka aplikasi Alice 3? Jelaskan pemetaannya secara lengkap!"
       </h2>
-
       <div class="solution-card">
-        <span class="sol-tag">Pembahasan Lengkap &amp; Model Jawaban Dosen</span>
+        <span class="sol-tag">Kunci Jawaban Sempurna</span>
         <div class="sol-content">
-          <h4>1. Pengertian State (Property / Field / Atribut)</h4>
-          <p>
-            <strong>State (Property)</strong> adalah kondisi data, ciri-ciri, atau variabel internal yang melekat dan disimpan di dalam sebuah objek pada suatu momen tertentu. State merepresentasikan <em>"apa yang dimiliki (what it has)"</em> atau status keadaan objek tersebut.
-          </p>
-          <p>
-            Nilai state dapat bersifat konstan atau berubah-ubah selama program berjalan sebagai akibat dari tindakan method. Contoh pada objek Lampu: state <code>isMenyala = false</code>, <code>dayaWatt = 15</code>.
-          </p>
-
-          <h4>2. Pengertian Behavior (Method / Operasi)</h4>
-          <p>
-            <strong>Behavior (Method)</strong> adalah sekumpulan instruksi, fungsi, atau prosedur di dalam class yang mendefinisikan tindakan atau aksi yang dapat dilakukan oleh atau terhadap objek tersebut. Behavior merepresentasikan <em>"apa yang bisa dilakukan (what it does)"</em>.
-          </p>
-          <p>
-            Contoh pada objek Lampu: method <code>saklarOn()</code>, <code>saklarOff()</code>, <code>gantiBohlam()</code>.
-          </p>
-
-          <h4>3. Hubungan Timbal Balik Antara State dan Behavior</h4>
-          <p>
-            State dan Behavior saling terikat secara intim dalam prinsip <strong>Encapsulation</strong>:
-          </p>
-          <ul>
-            <li><strong>Behavior mengubah State:</strong> Ketika method <code>saklarOn()</code> dijalankan, ia mengubah nilai state <code>isMenyala</code> dari <code>false</code> menjadi <code>true</code>.</li>
-            <li><strong>State menentukan hasil Behavior:</strong> Jika state bensin mobil <code>volumeBensin == 0</code>, maka method <code>tancapGas()</code> tidak akan bisa dijalankan (menolak melaju).</li>
-          </ul>
+          <h4>Pemetaan 4 Konsep OOP ke Antarmuka Alice 3:</h4>
+          <table class="rubrik-table">
+            <thead><tr><th>Konsep OOP</th><th>Komponen di Alice 3</th><th>Penjelasan Konkret</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Class</strong></td>
+                <td><strong>Gallery</strong></td>
+                <td>Berfungsi sebagai katalog cetak biru (blueprint). Contoh: Class <code>Bunny</code>, <code>Penguin</code>.</td>
+              </tr>
+              <tr>
+                <td><strong>Object</strong></td>
+                <td><strong>Scene (World)</strong></td>
+                <td>Instance konkret yang diseret ke dalam panggung 3D. Dari 1 Class Bunny bisa dibuat <code>bunny</code>, <code>bunny2</code>.</td>
+              </tr>
+              <tr>
+                <td><strong>Property</strong></td>
+                <td><strong>Panel Properties</strong></td>
+                <td>Data atau keadaan objek, seperti posisi (x,y,z), orientasi (sudut hadap), ukuran (size), dan warna (paint).</td>
+              </tr>
+              <tr>
+                <td><strong>Method</strong></td>
+                <td><strong>Code Editor</strong></td>
+                <td>Blok perintah tindakan/aksi yang disusun untuk dijalankan, seperti <code>move()</code>, <code>turn()</code>, <code>say()</code>.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </article>
@@ -776,78 +976,29 @@ mobilB.merk = "Brio";</code></pre>
         <div class="q-badge-group">
           <span class="badge-qno">SOAL 03</span>
           <span class="badge-score">Bobot: 15 Poin</span>
-          <span class="badge-topic">Pemodelan Behavior Manusia</span>
+          <span class="badge-source">SPADA P3 &amp; P4</span>
         </div>
       </div>
-
       <h2 class="q-statement">
-        "Berikan contoh behavior (method) manusia dalam pemodelan OOP beserta penjelasan fungsi dan pengaruhnya terhadap state!"
+        "Apa yang dimaksud dengan Parameter pada sebuah method di Alice 3? Berikan contohnya dan jelaskan apa yang terjadi jika parameter diubah!"
       </h2>
-
       <div class="solution-card">
-        <span class="sol-tag">Pembahasan Lengkap &amp; Model Jawaban Dosen</span>
+        <span class="sol-tag">Kunci Jawaban Sempurna</span>
         <div class="sol-content">
-          <h4>1. Pemodelan Class Manusia</h4>
+          <h4>1. Pengertian Parameter:</h4>
           <p>
-            Jika seorang manusia dimodelkan ke dalam class OOP, ia memiliki state (seperti <code>nama</code>, <code>usia</code>, <code>energi</code>, <code>tingkatKenyang</code>, <code>pengetahuan</code>). Behavior adalah seluruh tindakan yang bisa dilakukan manusia tersebut:
+            <strong>Parameter</strong> adalah informasi tambahan yang dikirimkan ke dalam sebuah method untuk menentukan secara spesifik bagaimana aksi tersebut dijalankan oleh objek.
           </p>
-
-          <h4>2. Contoh 5 Behavior Konkret Manusia</h4>
-          <ol>
-            <li>
-              <strong><code>berjalan(int jarakMeter)</code></strong><br>
-              <em>Fungsi:</em> Menggerakkan tubuh manusia berpindah posisi sejauh jarak tertentu.<br>
-              <em>Pengaruh State:</em> Mengurangi nilai <code>energi</code> (misal berkurang 5 poin per 100 meter) dan menambah kelelahan.
-            </li>
-            <li>
-              <strong><code>makan(String makanan, int kalori)</code></strong><br>
-              <em>Fungsi:</em> Mengonsumsi makanan untuk metabolisme tubuh.<br>
-              <em>Pengaruh State:</em> Meningkatkan <code>tingkatKenyang</code> dan memulihkan poin <code>energi</code>.
-            </li>
-            <li>
-              <strong><code>tidur(int durasiJam)</code></strong><br>
-              <em>Fungsi:</em> Mengistirahatkan raga dan pikiran.<br>
-              <em>Pengaruh State:</em> Mereset status lelah, memulihkan <code>energi = 100</code>, dan memelihara kesehatan.
-            </li>
-            <li>
-              <strong><code>belajar(String materi)</code></strong><br>
-              <em>Fungsi:</em> Membaca buku atau menyimak penjelasan dosen.<br>
-              <em>Pengaruh State:</em> Meningkatkan state <code>pengetahuan</code> atau IPK, namun mengonsumsi sedikit <code>energi</code>.
-            </li>
-            <li>
-              <strong><code>berbicara(String pesan)</code></strong><br>
-              <em>Fungsi:</em> Menyampaikan komunikasi lisan kepada manusia lain (ekuivalen dengan <code>say()</code> pada Alice 3).
-            </li>
-          </ol>
-
-          <div class="code-window">
-            <div class="code-bar">
-              <div class="code-dots"><span></span><span></span><span></span></div>
-              <span>Manusia.java (State &amp; Behavior Hubungan Nyata)</span>
-            </div>
-            <pre><code>public class Manusia {
-    // STATE (Property)
-    String nama;
-    int energi = 100;
-    int tingkatKenyang = 50;
-
-    // BEHAVIOR (Method)
-    void makan(String makanan) {
-        tingkatKenyang += 30;
-        energi += 20;
-        System.out.println(nama + " makan " + makanan + ". Energi naik menjadi: " + energi);
-    }
-
-    void berjalan(int langkah) {
-        if (energi <= 10) {
-            System.out.println(nama + " terlalu lemas untuk berjalan!");
-            return;
-        }
-        energi -= (langkah / 100);
-        System.out.println(nama + " berjalan " + langkah + " langkah. Sisa energi: " + energi);
-    }
-}</code></pre>
-          </div>
+          <h4>2. Contoh Parameter di Alice 3:</h4>
+          <ul>
+            <li><strong>Direction:</strong> Menentukan arah pergerakan (<code>FORWARD</code>, <code>BACKWARD</code>, <code>LEFT</code>, <code>RIGHT</code>).</li>
+            <li><strong>Distance / Steps:</strong> Menentukan seberapa jauh objek bergerak (misal <code>2.0</code> meter).</li>
+            <li><strong>Revolutions / Degrees:</strong> Menentukan besar putaran objek (misal <code>0.25 revolutions</code> ekuivalen dengan 90 derajat putaran).</li>
+          </ul>
+          <h4>3. Dampak Jika Parameter Diubah:</h4>
+          <p>
+            Mengubah nilai parameter akan mengubah hasil perilaku (*behavior*) objek secara langsung. Contoh: jika <code>turn(RIGHT, 0.25)</code> diubah menjadi <code>turn(LEFT, 0.5)</code>, maka objek yang tadinya berbelok ke kanan 90° akan berputar ke kiri 180° menghadap ke belakang.
+          </p>
         </div>
       </div>
     </article>
@@ -858,41 +1009,27 @@ mobilB.merk = "Brio";</code></pre>
         <div class="q-badge-group">
           <span class="badge-qno">SOAL 04</span>
           <span class="badge-score">Bobot: 15 Poin</span>
-          <span class="badge-topic">Prosedur &amp; Rekayasa Program</span>
+          <span class="badge-source">SPADA P4 (Final Challenge)</span>
         </div>
       </div>
-
       <h2 class="q-statement">
-        "Apa yang dimaksud dengan procedure dan mengapa procedure sangat diperlukan dalam pengembangan program?"
+        "Berdasarkan Final Challenge Modul Pertemuan 4, jelaskan objek Penguin menggunakan konsep OOP: Class, Parent Class, Property, Inherited Method, dan Specific Method!"
       </h2>
-
       <div class="solution-card">
-        <span class="sol-tag">Pembahasan Lengkap &amp; Model Jawaban Dosen</span>
+        <span class="sol-tag">Kunci Jawaban Sempurna</span>
         <div class="sol-content">
-          <h4>1. Pengertian Procedure</h4>
-          <p>
-            <strong>Procedure (Prosedur)</strong> adalah subrutin, blok kode, atau subprogram terisolasi yang berisi sekumpulan instruksi terstruktur untuk menjalankan suatu aksi atau tugas tertentu <strong>tanpa mengembalikan nilai (return value)</strong> kepada pemanggilnya. Pada bahasa pemrograman seperti Java/C++, prosedur ditandai dengan return type <code>void</code>.
-          </p>
-
-          <h4>2. Mengapa Procedure Sangat Diperlukan? (4 Alasan Krusial)</h4>
-          <ul>
-            <li>
-              <strong>1. Modularitas (Divide and Conquer):</strong><br>
-              Mengurai program yang raksasa dan rumit menjadi modul-modul kecil yang mandiri. Hal ini memudahkan kolaborasi tim pengembang perangkat lunak karena programmer dapat membagi tugas pengerjaan per prosedur.
-            </li>
-            <li>
-              <strong>2. Menghindari Duplikasi Kode (Prinsip DRY — Don't Repeat Yourself):</strong><br>
-              Instruksi yang sering dipakai (seperti mencetak struk belanja, menggerakkan karakter maju, atau validasi input) cukup ditulis 1 kali saja di dalam prosedur, lalu dipanggil di berbagai tempat kapan pun dibutuhkan.
-            </li>
-            <li>
-              <strong>3. Kemudahan Debugging dan Perawatan (Maintainability):</strong><br>
-              Jika terdapat kesalahan logika (bug) atau perubahan aturan bisnis, kita cukup memperbaiki kode di dalam satu blok prosedur tersebut tanpa risiko merusak bagian kode lainnya.
-            </li>
-            <li>
-              <strong>4. Meningkatkan Keterbacaan Kode (Readability):</strong><br>
-              Alur program utama menjadi sangat bersih dan deskriptif karena menggunakan nama prosedur yang bermakna (contoh: <code>nyalakanMesin();</code>, <code>bacaSensor();</code>, <code>simpanData();</code>).
-            </li>
-          </ul>
+          <h4>Analisis Objek Penguin:</h4>
+          <table class="rubrik-table">
+            <thead><tr><th>Aspek OOP</th><th>Penjelasan pada Objek Penguin</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Class</strong></td><td><code>Penguin</code> (cetak biru spesifik penguin).</td></tr>
+              <tr><td><strong>Parent Class</strong></td><td><code>Animal</code> / <code>Biped</code> (superclass model berkaki dua).</td></tr>
+              <tr><td><strong>Property</strong></td><td><code>position</code>, <code>orientation</code>, <code>size</code>, <code>color</code>.</td></tr>
+              <tr><td><strong>Inherited Method</strong></td><td><code>move()</code>, <code>turn()</code>, <code>say()</code> (diwarisi dari class induk).</td></tr>
+              <tr><td><strong>Specific Method</strong></td><td><code>waddle()</code> (gaya berjalan bergoyang khas penguin).</td></tr>
+              <tr><td><strong>Konsep Inheritance</strong></td><td>Penguin mewarisi atribut dan method umum dari parent Biped/Animal, lalu menambahkan perilaku khususnya sendiri tanpa perlu menulis ulang fungsi dasar gerak.</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </article>
@@ -902,59 +1039,25 @@ mobilB.merk = "Brio";</code></pre>
       <div class="q-post-header">
         <div class="q-badge-group">
           <span class="badge-qno">SOAL 05</span>
-          <span class="badge-score">Bobot: 20 Poin</span>
-          <span class="badge-topic">Procedure vs Function</span>
+          <span class="badge-score">Bobot: 15 Poin</span>
+          <span class="badge-source">SPADA P5</span>
         </div>
       </div>
-
       <h2 class="q-statement">
-        "Jelaskan perbedaan mendasar antara procedure dan function dalam pemrograman beserta contohnya!"
+        "Jelaskan perbedaan mendasar antara struktur kontrol 'do in order' dan 'do together' di Alice 3, serta sebutkan kapan masing-masing digunakan!"
       </h2>
-
       <div class="solution-card">
-        <span class="sol-tag">Pembahasan Lengkap &amp; Model Jawaban Dosen</span>
+        <span class="sol-tag">Kunci Jawaban Sempurna</span>
         <div class="sol-content">
-          <h4>1. Matriks Perbedaan Procedure vs Function</h4>
-          <table class="rubrik-table">
-            <thead>
-              <tr>
-                <th>Kriteria Pembeda</th>
-                <th>Procedure (Prosedur)</th>
-                <th>Function (Fungsi)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Nilai Balik (Return Value)</strong></td>
-                <td><strong>TIDAK MENGEMBALIKAN NILAI</strong> (bertipe <code>void</code>).</td>
-                <td><strong>WAJIB MENGEMBALIKAN NILAI</strong> (bertipe <code>int</code>, <code>double</code>, <code>boolean</code>, <code>String</code>, dll).</td>
-              </tr>
-              <tr>
-                <td><strong>Tujuan Pokok</strong></td>
-                <td>Menghasilkan aksi fisik, animasi gerak, perubahan status, atau input/output di layar.</td>
-                <td>Menghitung rumus matematika, mencari data, atau mengecek status kondisi logika.</td>
-              </tr>
-              <tr>
-                <td><strong>Cara Pemanggilan</strong></td>
-                <td>Berdiri sendiri sebagai satu baris instruksi utuh (<em>statement</em>).</td>
-                <td>Harus ditampung ke dalam variabel, dipakai dalam rumus, atau sebagai syarat percabangan (<code>if</code>).</td>
-              </tr>
-              <tr>
-                <td><strong>Contoh di Alice 3</strong></td>
-                <td><code>alice.move(FORWARD, 2.0);</code><br><code>alice.say("Halo!");</code></td>
-                <td><code>alice.getDistanceTo(kelinci);</code><br><code>alice.getHeight();</code></td>
-              </tr>
-              <tr>
-                <td><strong>Contoh di Java</strong></td>
-                <td><code>void cetakHeader() { ... }</code></td>
-                <td><code>double hitungLuas(double r) { return 3.14 * r * r; }</code></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h4>2. Mengapa Function Bisa Masuk ke Kondisi IF sedangkan Procedure Tidak?</h4>
+          <h4>1. <code>do in order</code> (Sekuensial):</h4>
           <p>
-            Karena function menghasilkan nilai (misalnya <code>Boolean</code>: <code>true/false</code> atau angka), nilai tersebut dapat dievaluasi oleh operator relasional. Sedangkan procedure hanya melakukan aksi (bertipe <code>void</code>/hampa), sehingga jika ditulis <code>if (alice.move(...))</code> komputer akan memunculkan error <em>"incompatible types: void cannot be converted to boolean"</em>.
+            Mengeksekusi setiap baris instruksi di dalamnya secara <strong>berurutan satu demi satu</strong> dari atas ke bawah. Baris kedua baru akan berjalan setelah baris pertama tuntas.
+            <br><em>Penggunaan:</em> Navigasi berjalan (Maju 2 langkah, lalu berbelok kanan, lalu maju lagi).
+          </p>
+          <h4>2. <code>do together</code> (Simultan / Paralel):</h4>
+          <p>
+            Mengeksekusi semua instruksi di dalamnya secara <strong>bersamaan dalam satu waktu</strong>.
+            <br><em>Penggunaan:</em> Animasi realistis (Saat karakter melompat: badan terangkat ke atas <code>move(UP)</code> bersamaan dengan kedua kaki ditekuk).
           </p>
         </div>
       </div>
@@ -965,63 +1068,94 @@ mobilB.merk = "Brio";</code></pre>
       <div class="q-post-header">
         <div class="q-badge-group">
           <span class="badge-qno">SOAL 06</span>
-          <span class="badge-score">Bobot: 20 Poin</span>
-          <span class="badge-topic">Inheritance &amp; Kebermanfaatan</span>
+          <span class="badge-score">Bobot: 10 Poin</span>
+          <span class="badge-source">SPADA P6</span>
         </div>
       </div>
-
       <h2 class="q-statement">
-        "Apa yang dimaksud dengan Inheritance dalam OOP dan mengapa konsep ini sangat bermanfaat dalam rekayasa perangkat lunak?"
+        "Apa itu Procedural Abstraction dan bagaimana hubungannya dengan Procedure vs Function di Alice 3?"
       </h2>
-
       <div class="solution-card">
-        <span class="sol-tag">Pembahasan Lengkap &amp; Model Jawaban Dosen</span>
+        <span class="sol-tag">Kunci Jawaban Sempurna</span>
         <div class="sol-content">
-          <h4>1. Pengertian Inheritance (Pewarisan)</h4>
+          <h4>1. Procedural Abstraction:</h4>
           <p>
-            <strong>Inheritance (Pewarisan)</strong> adalah pilar fundamental OOP yang memungkinkan sebuah class baru (disebut <em>subclass / child class / kelas turunan</em>) mewarisi atribut (state) dan metode (behavior) dari class yang sudah ada sebelumnya (disebut <em>superclass / parent class / kelas induk</em>).
+            Teknik menyembunyikan detail kerumitan langkah-langkah instruksi di dalam satu nama prosedur (seperti <code>jump()</code>). Pengguna prosedur cukup memanggil namanya tanpa perlu mengetahui 10 baris kode detail di dalamnya.
           </p>
-          <p>
-            Inheritance membentuk relasi hierarkis <strong>"is-a" (adalah seorang / adalah sebuah)</strong>. Contoh:
-          </p>
+          <h4>2. Perbedaan Procedure vs Function:</h4>
           <ul>
-            <li><code>Mahasiswa</code> <em>is-a</em> <code>Manusia</code></li>
-            <li><code>Petani</code> <em>is-a</em> <code>Manusia</code></li>
-            <li><code>Kucing</code> <em>is-a</em> <code>Hewan</code></li>
+            <li><strong>Procedure:</strong> Berorientasi pada aksi nyata / animasi / perubahan visual (bertipe <code>void</code> / tanpa nilai balik). Contoh: <code>bunny.jump()</code>.</li>
+            <li><strong>Function:</strong> Berorientasi pada komputasi / menjawab pertanyaan dengan mengembalikan data hasil. Contoh: <code>bunny.getDistanceTo(marchHare)</code> yang mengembalikan angka desimal (Double).</li>
           </ul>
+        </div>
+      </div>
+    </article>
 
-          <h4>2. Mengapa Inheritance Sangat Bermanfaat? (4 Manfaat Utama)</h4>
-          <ul>
-            <li>
-              <strong>1. Reusabilitas Kode yang Sangat Tinggi (Code Reusability):</strong><br>
-              Atribut umum seperti <code>nama, usia, gender, alamat</code> serta method <code>berjalan(), makan()</code> cukup ditulis satu kali di class parent <code>Manusia</code>. Subclass tidak perlu menulis ulang, melainkan otomatis mewarisinya.
-            </li>
-            <li>
-              <strong>2. Menghilangkan Redundansi (DRY Principle):</strong><br>
-              Mencegah pemborosan baris kode dan menghemat konsumsi memori. Jika terdapat 10 jenis profesi manusia, kita menghemat puluhan deklarasi variabel duplikat.
-            </li>
-            <li>
-              <strong>3. Kemudahan Pemeliharaan Skala Besar (Scalability &amp; Maintainability):</strong><br>
-              Jika ada atribut umum baru (misalnya pemerintah menambahkan <code>nik</code> atau kewarganegaraan), kita cukup menambahkannya di <code>Manusia</code> satu kali saja, dan seluruh subclass otomatis memiliki atribut tersebut.
-            </li>
-            <li>
-              <strong>4. Mendukung Polimorfisme &amp; Overriding:</strong><br>
-              Subclass dapat memodifikasi (meng-<em>override</em>) method warisan jika ingin memberikan perilaku khusus (misalnya method <code>makan()</code> pada Mahasiswa disesuaikan menjadi makan di kantin kampus).
-            </li>
-          </ul>
+    <!-- SOAL 7 -->
+    <article class="q-post">
+      <div class="q-post-header">
+        <div class="q-badge-group">
+          <span class="badge-qno">SOAL 07</span>
+          <span class="badge-score">Bobot: 15 Poin</span>
+          <span class="badge-source">SPADA P7 &amp; Netlify Dosen</span>
+        </div>
+      </div>
+      <h2 class="q-statement">
+        "Jelaskan fungsi keyword 'extends' dan 'super' dalam pemrograman berorientasi objek Java! Berikan contoh pemanggilan constructor dan method overriding!"
+      </h2>
+      <div class="solution-card">
+        <span class="sol-tag">Kunci Jawaban Sempurna (Sesuai Slide Dosen Netlify)</span>
+        <div class="sol-content">
+          <h4>1. Keyword <code>extends</code>:</h4>
+          <p>
+            Digunakan untuk mendeklarasikan hubungan pewarisan bahwa suatu class adalah subclass dari superclass. Subclass otomatis mewarisi seluruh atribut dan method non-private parent class.
+          </p>
+          <div class="code-window">
+            <div class="code-bar">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <span>Contoh extends &amp; super</span>
+            </div>
+            <pre><code>class Vehicle {
+    String brand;
+    Vehicle(String brand) { this.brand = brand; }
+
+    void move() { System.out.println("Moving"); }
+}
+
+class Car extends Vehicle {
+    Car(String brand) {
+        super(brand); // 1. super() memanggil constructor parent
+    }
+
+    @Override
+    void move() {
+        System.out.println("Driving");
+    }
+
+    void start() {
+        super.move(); // 2. super.move() memanggil implementasi method parent
+    }
+}</code></pre>
+          </div>
+          <h4>2. Tiga Kegunaan Utama <code>super</code>:</h4>
+          <ol>
+            <li><strong><code>super.method()</code>:</strong> Memanggil implementasi method milik superclass saat method tersebut di-override oleh anak.</li>
+            <li><strong><code>super(arguments)</code>:</strong> Memanggil constructor superclass yang sesuai untuk inisialisasi state parent.</li>
+            <li><strong><code>super.field</code>:</strong> Mengakses atribut parent jika terdapat nama atribut yang sama persis di subclass (shadowed).</li>
+          </ol>
         </div>
       </div>
     </article>
 
   </div>
 
-  <!-- ================= TAB 2: ARENA SIMULASI ESAI ================= -->
+  <!-- ================= TAB 3: ARENA SIMULASI ESAI ================= -->
   <div id="pane-latihan" class="exam-pane">
 
     <div class="exam-score-bar">
       <div class="score-info">
-        <h3>Simulasi Penilaian Mandiri UTS 2026</h3>
-        <p>Ketik jawabanmu, cocokkan dengan kunci dosen, lalu berikan skor jujur (0–100 Poin)</p>
+        <h3>Simulasi Penilaian Mandiri UTS 2026/2027</h3>
+        <p>Ketik jawabanmu, buka checklist rubrik dosen, lalu beri skor jujur (Total 100 Poin)</p>
       </div>
       <div class="score-tally-box">
         <div>
@@ -1036,25 +1170,24 @@ mobilB.merk = "Brio";</code></pre>
     <div class="essay-sim-card">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
         <span class="badge-qno">LATIHAN 01 (Max: 15 Poin)</span>
-        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">Class vs Object</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">P1–P2: Alur Komputasi</span>
       </div>
-      <p style="font-weight:700; margin:0 0 8px;">Soal: Jelaskan apa itu Class dalam konsep OOP dan bagaimana hubungannya dengan Object!</p>
-      <textarea id="essay2026_1" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
+      <p style="font-weight:700; margin:0 0 8px;">Soal: Jelaskan alur 5 tahapan dari masalah hingga menjadi program, dan mengapa instruksi tidak boleh ambigu?</p>
+      <textarea id="sim2026_1" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
       
       <div class="sim-actions">
-        <button class="btn btn-small" type="button" onclick="toggleKey('key2026_1', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
+        <button class="btn btn-small" type="button" onclick="toggleKey('simKey1', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
         <div class="score-slider-wrap">
           <label style="font-size:12px; font-weight:700;">Nilai Mandiri:</label>
-          <input type="range" id="score2026_1" min="0" max="15" value="0" oninput="updateExamScore2026()">
-          <span id="text2026_1" class="score-val-badge">0 / 15</span>
+          <input type="range" id="simRange1" min="0" max="15" value="0" oninput="updateExamScore2026()">
+          <span id="simText1" class="score-val-badge">0 / 15</span>
         </div>
       </div>
-      <div id="key2026_1" class="solution-card" style="display:none; margin-top:14px;">
+      <div id="simKey1" class="solution-card" style="display:none; margin-top:14px;">
         <p style="font-size:13px; line-height:1.6; margin:0;">
-          <strong>Checklist Rubrik:</strong><br>
-          ✓ Class sebagai blueprint / cetak biru abstrak (5 Poin)<br>
-          ✓ Object sebagai instance konkret di memori (5 Poin)<br>
-          ✓ Hubungan 1 Class dapat membuat banyak Object berbeda (5 Poin)
+          <strong>Rubrik:</strong><br>
+          ✓ 5 Tahapan: Masalah ➔ Algoritma ➔ Instruksi ➔ Program ➔ Output (8 Poin)<br>
+          ✓ Penjelasan sifat deterministik komputer &amp; pencegahan logic error (7 Poin)
         </p>
       </div>
     </div>
@@ -1063,25 +1196,26 @@ mobilB.merk = "Brio";</code></pre>
     <div class="essay-sim-card">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
         <span class="badge-qno">LATIHAN 02 (Max: 15 Poin)</span>
-        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">State &amp; Behavior</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">P3–P4: Pemetaan Alice</span>
       </div>
-      <p style="font-weight:700; margin:0 0 8px;">Soal: Jelaskan pengertian State (Property) dan Behavior (Method) serta hubungan timbal baliknya!</p>
-      <textarea id="essay2026_2" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
+      <p style="font-weight:700; margin:0 0 8px;">Soal: Tuliskan pemetaan Class, Object, Property, dan Method pada bagian antarmuka Alice 3!</p>
+      <textarea id="sim2026_2" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
       
       <div class="sim-actions">
-        <button class="btn btn-small" type="button" onclick="toggleKey('key2026_2', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
+        <button class="btn btn-small" type="button" onclick="toggleKey('simKey2', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
         <div class="score-slider-wrap">
           <label style="font-size:12px; font-weight:700;">Nilai Mandiri:</label>
-          <input type="range" id="score2026_2" min="0" max="15" value="0" oninput="updateExamScore2026()">
-          <span id="text2026_2" class="score-val-badge">0 / 15</span>
+          <input type="range" id="simRange2" min="0" max="15" value="0" oninput="updateExamScore2026()">
+          <span id="simText2" class="score-val-badge">0 / 15</span>
         </div>
       </div>
-      <div id="key2026_2" class="solution-card" style="display:none; margin-top:14px;">
+      <div id="simKey2" class="solution-card" style="display:none; margin-top:14px;">
         <p style="font-size:13px; line-height:1.6; margin:0;">
-          <strong>Checklist Rubrik:</strong><br>
-          ✓ State sebagai atribut / data yang dimiliki (5 Poin)<br>
-          ✓ Behavior sebagai aksi / apa yang bisa dilakukan (5 Poin)<br>
-          ✓ Hubungan: behavior memodifikasi state, state membatasi behavior (5 Poin)
+          <strong>Rubrik:</strong><br>
+          ✓ Gallery = Class (4 Poin)<br>
+          ✓ Scene = Object (4 Poin)<br>
+          ✓ Properties Panel = Property (4 Poin)<br>
+          ✓ Code Editor = Method (3 Poin)
         </p>
       </div>
     </div>
@@ -1090,24 +1224,25 @@ mobilB.merk = "Brio";</code></pre>
     <div class="essay-sim-card">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
         <span class="badge-qno">LATIHAN 03 (Max: 15 Poin)</span>
-        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">Behavior Manusia</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">P4: Parameter Method</span>
       </div>
-      <p style="font-weight:700; margin:0 0 8px;">Soal: Berikan minimal 3-4 contoh behavior manusia dalam OOP dan dampaknya terhadap state objek!</p>
-      <textarea id="essay2026_3" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
+      <p style="font-weight:700; margin:0 0 8px;">Soal: Apa itu parameter? Berikan contoh parameter Direction, Steps, dan Revolutions (0.25 rev)!</p>
+      <textarea id="sim2026_3" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
       
       <div class="sim-actions">
-        <button class="btn btn-small" type="button" onclick="toggleKey('key2026_3', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
+        <button class="btn btn-small" type="button" onclick="toggleKey('simKey3', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
         <div class="score-slider-wrap">
           <label style="font-size:12px; font-weight:700;">Nilai Mandiri:</label>
-          <input type="range" id="score2026_3" min="0" max="15" value="0" oninput="updateExamScore2026()">
-          <span id="text2026_3" class="score-val-badge">0 / 15</span>
+          <input type="range" id="simRange3" min="0" max="15" value="0" oninput="updateExamScore2026()">
+          <span id="simText3" class="score-val-badge">0 / 15</span>
         </div>
       </div>
-      <div id="key2026_3" class="solution-card" style="display:none; margin-top:14px;">
+      <div id="simKey3" class="solution-card" style="display:none; margin-top:14px;">
         <p style="font-size:13px; line-height:1.6; margin:0;">
-          <strong>Checklist Rubrik:</strong><br>
-          ✓ Menyebutkan minimal 3 behavior realistis (berjalan, makan, tidur, belajar) (6 Poin)<br>
-          ✓ Menjelaskan pengaruhnya ke state (energi, tingkatKenyang, pengetahuan) (9 Poin)
+          <strong>Rubrik:</strong><br>
+          ✓ Definisi parameter sebagai informasi pelengkap aksi (5 Poin)<br>
+          ✓ Penjelasan Direction &amp; Steps (5 Poin)<br>
+          ✓ Penjelasan Revolutions (0.25 = 90 derajat) (5 Poin)
         </p>
       </div>
     </div>
@@ -1116,25 +1251,25 @@ mobilB.merk = "Brio";</code></pre>
     <div class="essay-sim-card">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
         <span class="badge-qno">LATIHAN 04 (Max: 15 Poin)</span>
-        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">Peran Procedure</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">P4: Penguin Challenge</span>
       </div>
-      <p style="font-weight:700; margin:0 0 8px;">Soal: Apa itu procedure dan mengapa procedure diperlukan dalam pengembangan program?</p>
-      <textarea id="essay2026_4" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
+      <p style="font-weight:700; margin:0 0 8px;">Soal: Bedah objek Penguin (Class, Parent Class, Property, Inherited Method, Specific Method)!</p>
+      <textarea id="sim2026_4" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
       
       <div class="sim-actions">
-        <button class="btn btn-small" type="button" onclick="toggleKey('key2026_4', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
+        <button class="btn btn-small" type="button" onclick="toggleKey('simKey4', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
         <div class="score-slider-wrap">
           <label style="font-size:12px; font-weight:700;">Nilai Mandiri:</label>
-          <input type="range" id="score2026_4" min="0" max="15" value="0" oninput="updateExamScore2026()">
-          <span id="text2026_4" class="score-val-badge">0 / 15</span>
+          <input type="range" id="simRange4" min="0" max="15" value="0" oninput="updateExamScore2026()">
+          <span id="simText4" class="score-val-badge">0 / 15</span>
         </div>
       </div>
-      <div id="key2026_4" class="solution-card" style="display:none; margin-top:14px;">
+      <div id="simKey4" class="solution-card" style="display:none; margin-top:14px;">
         <p style="font-size:13px; line-height:1.6; margin:0;">
-          <strong>Checklist Rubrik:</strong><br>
-          ✓ Definisi procedure (blok kode void tanpa return value) (5 Poin)<br>
-          ✓ Alasan modularitas &amp; DRY principle (5 Poin)<br>
-          ✓ Kemudahan debugging dan keterbacaan kode (5 Poin)
+          <strong>Rubrik:</strong><br>
+          ✓ Class Penguin &amp; Parent Animal/Biped (4 Poin)<br>
+          ✓ Property (position, size, color) (4 Poin)<br>
+          ✓ Inherited Method (move, turn) &amp; Specific Method (waddle) (7 Poin)
         </p>
       </div>
     </div>
@@ -1142,26 +1277,25 @@ mobilB.merk = "Brio";</code></pre>
     <!-- SIMULATOR 5 -->
     <div class="essay-sim-card">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-        <span class="badge-qno">LATIHAN 05 (Max: 20 Poin)</span>
-        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">Procedure vs Function</span>
+        <span class="badge-qno">LATIHAN 05 (Max: 15 Poin)</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">P5: Control Structures</span>
       </div>
-      <p style="font-weight:700; margin:0 0 8px;">Soal: Jelaskan perbedaan procedure dan function serta berikan contoh konkret keduanya!</p>
-      <textarea id="essay2026_5" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
+      <p style="font-weight:700; margin:0 0 8px;">Soal: Jelaskan perbedaan 'do in order' vs 'do together' serta 'count up to' vs 'while' di Alice 3!</p>
+      <textarea id="sim2026_5" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
       
       <div class="sim-actions">
-        <button class="btn btn-small" type="button" onclick="toggleKey('key2026_5', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
+        <button class="btn btn-small" type="button" onclick="toggleKey('simKey5', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
         <div class="score-slider-wrap">
           <label style="font-size:12px; font-weight:700;">Nilai Mandiri:</label>
-          <input type="range" id="score2026_5" min="0" max="20" value="0" oninput="updateExamScore2026()">
-          <span id="text2026_5" class="score-val-badge">0 / 20</span>
+          <input type="range" id="simRange5" min="0" max="15" value="0" oninput="updateExamScore2026()">
+          <span id="simText5" class="score-val-badge">0 / 15</span>
         </div>
       </div>
-      <div id="key2026_5" class="solution-card" style="display:none; margin-top:14px;">
+      <div id="simKey5" class="solution-card" style="display:none; margin-top:14px;">
         <p style="font-size:13px; line-height:1.6; margin:0;">
-          <strong>Checklist Rubrik:</strong><br>
-          ✓ Pembeda nilai balik (Procedure void vs Function mengembalikan nilai) (8 Poin)<br>
-          ✓ Pembeda cara pemanggilan (statement vs expression/if-condition) (6 Poin)<br>
-          ✓ Contoh pada Java atau Alice 3 (6 Poin)
+          <strong>Rubrik:</strong><br>
+          ✓ do in order (sekuensial) vs do together (simultan) (8 Poin)<br>
+          ✓ count up to (pasti/counted) vs while (bersyarat/conditional) (7 Poin)
         </p>
       </div>
     </div>
@@ -1169,44 +1303,69 @@ mobilB.merk = "Brio";</code></pre>
     <!-- SIMULATOR 6 -->
     <div class="essay-sim-card">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-        <span class="badge-qno">LATIHAN 06 (Max: 20 Poin)</span>
-        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">Inheritance</span>
+        <span class="badge-qno">LATIHAN 06 (Max: 10 Poin)</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">P6: Abstraksi &amp; Fungsi</span>
       </div>
-      <p style="font-weight:700; margin:0 0 8px;">Soal: Apa itu inheritance dalam OOP dan jelaskan mengapa inheritance sangat bermanfaat!</p>
-      <textarea id="essay2026_6" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
+      <p style="font-weight:700; margin:0 0 8px;">Soal: Jelaskan apa itu Procedural Abstraction dan beda Procedure vs Function di Alice 3!</p>
+      <textarea id="sim2026_6" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
       
       <div class="sim-actions">
-        <button class="btn btn-small" type="button" onclick="toggleKey('key2026_6', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
+        <button class="btn btn-small" type="button" onclick="toggleKey('simKey6', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
         <div class="score-slider-wrap">
           <label style="font-size:12px; font-weight:700;">Nilai Mandiri:</label>
-          <input type="range" id="score2026_6" min="0" max="20" value="0" oninput="updateExamScore2026()">
-          <span id="text2026_6" class="score-val-badge">0 / 20</span>
+          <input type="range" id="simRange6" min="0" max="10" value="0" oninput="updateExamScore2026()">
+          <span id="simText6" class="score-val-badge">0 / 10</span>
         </div>
       </div>
-      <div id="key2026_6" class="solution-card" style="display:none; margin-top:14px;">
+      <div id="simKey6" class="solution-card" style="display:none; margin-top:14px;">
         <p style="font-size:13px; line-height:1.6; margin:0;">
-          <strong>Checklist Rubrik:</strong><br>
-          ✓ Definisi inheritance &amp; relasi "is-a" (Parent/Superclass ke Child/Subclass) (8 Poin)<br>
-          ✓ Manfaat code reusability &amp; DRY principle (6 Poin)<br>
-          ✓ Kemudahan maintenance &amp; skalabilitas perangkat lunak (6 Poin)
+          <strong>Rubrik:</strong><br>
+          ✓ Definisi Procedural Abstraction (5 Poin)<br>
+          ✓ Procedure void vs Function return value (5 Poin)
+        </p>
+      </div>
+    </div>
+
+    <!-- SIMULATOR 7 -->
+    <div class="essay-sim-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="badge-qno">LATIHAN 07 (Max: 15 Poin)</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">P7: extends &amp; super</span>
+      </div>
+      <p style="font-weight:700; margin:0 0 8px;">Soal: Jelaskan fungsi keyword extends dan 3 kegunaan keyword super di Java OOP!</p>
+      <textarea id="sim2026_7" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
+      
+      <div class="sim-actions">
+        <button class="btn btn-small" type="button" onclick="toggleKey('simKey7', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
+        <div class="score-slider-wrap">
+          <label style="font-size:12px; font-weight:700;">Nilai Mandiri:</label>
+          <input type="range" id="simRange7" min="0" max="15" value="0" oninput="updateExamScore2026()">
+          <span id="simText7" class="score-val-badge">0 / 15</span>
+        </div>
+      </div>
+      <div id="simKey7" class="solution-card" style="display:none; margin-top:14px;">
+        <p style="font-size:13px; line-height:1.6; margin:0;">
+          <strong>Rubrik:</strong><br>
+          ✓ Fungsi keyword extends (5 Poin)<br>
+          ✓ 3 Kegunaan super: super.method(), super(), super.field (10 Poin)
         </p>
       </div>
     </div>
 
   </div>
 
-  <!-- ================= TAB 3: KUIS 10 KASUS INTERAKTIF ================= -->
+  <!-- ================= TAB 4: KUIS 14 KASUS SPADA ================= -->
   <div id="pane-kuis" class="exam-pane">
 
     <div class="exam-score-bar" style="background:var(--teal-soft); border-color:var(--teal);">
       <div class="score-info">
-        <h3 style="color:var(--teal);">Kuis Pemahaman Konsep 2026</h3>
-        <p>10 Soal pilihan ganda yang menguji ketelitian konsep Class, Behavior, Procedure, dan Inheritance</p>
+        <h3 style="color:var(--teal);">Kuis Komprehensif SPADA Pertemuan 1–7</h3>
+        <p>14 Soal pilihan ganda yang menguji ketelitian konsep visual blocks, Alice 3, hingga Java extends &amp; super</p>
       </div>
       <div class="score-tally-box">
         <div>
           <span style="font-family:var(--mono); font-size:11px; display:block; text-align:right;">SKOR KUIS</span>
-          <span id="quizScoreNum2026" class="score-big-num">0</span> <span style="font-size:1.1rem; font-weight:700;">/ 10</span>
+          <span id="quizScoreNum2026" class="score-big-num">0</span> <span style="font-size:1.1rem; font-weight:700;">/ 14</span>
         </div>
         <button class="btn btn-small" onclick="resetQuiz2026()">Ulangi Kuis ↺</button>
       </div>
@@ -1216,47 +1375,55 @@ mobilB.merk = "Brio";</code></pre>
 
   </div>
 
-  <!-- ================= TAB 4: LAB VISUALIZER OOP & ALICE 3 ================= -->
+  <!-- ================= TAB 5: LAB ALICE 3 & NETLIFY JAVA ================= -->
   <div id="pane-lab" class="exam-pane">
 
     <div class="official-header-card" style="background:#fff;">
-      <h3 style="margin:0 0 8px; font-family:var(--display); font-size:1.3rem;">Visualizer Alur Data: Procedure vs Function di Alice 3</h3>
+      <h3 style="margin:0 0 8px; font-family:var(--display); font-size:1.3rem;">Visualizer Alur Eksekusi: Alice 3 ke Java OOP</h3>
       <p style="font-size:13.5px; color:var(--ink-soft); margin-bottom:18px;">
-        Perhatikan perbedaan fundamental bagaimana komputer mengeksekusi sebuah Procedure (aksi murni) dibandingkan Function (menghasilkan nilai yang kembali ke pemanggil).
+        Pelajari bagaimana hierarki visual di Alice 3 diterjemahkan ke sintaks Java murni dengan keyword <code>extends</code> dan <code>super</code>.
       </p>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:18px;">
         
-        <!-- PROCEDURE BOX -->
+        <!-- Alice 3 Biped Hierarchy -->
         <div style="border:2px solid var(--ink); border-radius:12px; background:var(--paper); padding:16px;">
           <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid var(--ink); padding-bottom:8px; margin-bottom:12px;">
-            <strong style="font-family:var(--mono); color:var(--tomato); font-size:13px;">1. PROCEDURE (Aksi Murni)</strong>
-            <span style="background:var(--tomato-soft); color:var(--tomato); font-size:10px; font-family:var(--mono); padding:2px 8px; border-radius:4px; font-weight:700;">RETURN TYPE: VOID</span>
+            <strong style="font-family:var(--mono); color:var(--teal); font-size:13px;">1. HIERARKI ALICE 3</strong>
+            <span style="background:var(--teal-soft); color:var(--teal); font-size:10px; font-family:var(--mono); padding:2px 8px; border-radius:4px; font-weight:700;">VISUAL MODEL</span>
           </div>
-          <div style="font-family:var(--mono); font-size:12px; background:#1e1e24; color:#f3ecdc; padding:10px; border-radius:6px; margin-bottom:10px;">
-            this.alice.move(FORWARD, 2.0);
+          <div style="font-family:var(--mono); font-size:12px; line-height:1.7; background:#1e1e24; color:#f3ecdc; padding:12px; border-radius:8px; margin-bottom:12px;">
+            SJointedModel<br>
+            &nbsp;&nbsp;└── Biped (Parent)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├── Bunny (Child 1)<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└── MarchHare (Child 2)
           </div>
-          <div style="font-size:12.5px; line-height:1.55; color:var(--ink-soft);">
-            <strong style="color:var(--ink);">Alur Eksekusi:</strong><br>
-            [Pemanggilan] ➔ [Komputer gerakkan model Alice 2 meter ke depan di layar 3D] ➔ [Selesai! Tidak ada data yang dikembalikan].<br>
-            <em>*Hasil tidak bisa disimpan ke variabel.</em>
-          </div>
+          <p style="font-size:12.5px; line-height:1.55; margin:0; color:var(--ink-soft);">
+            Procedure <code>jump()</code> yang diletakkan pada class <strong>Biped</strong> otomatis diwarisi oleh Bunny dan MarchHare tanpa perlu membuat ulang di kedua class anak.
+          </p>
         </div>
 
-        <!-- FUNCTION BOX -->
+        <!-- Java extends & super -->
         <div style="border:2px solid var(--ink); border-radius:12px; background:var(--paper); padding:16px;">
           <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid var(--ink); padding-bottom:8px; margin-bottom:12px;">
-            <strong style="font-family:var(--mono); color:var(--teal); font-size:13px;">2. FUNCTION (Pertanyaan &amp; Nilai)</strong>
-            <span style="background:var(--teal-soft); color:var(--teal); font-size:10px; font-family:var(--mono); padding:2px 8px; border-radius:4px; font-weight:700;">RETURN: DOUBLE / BOOL</span>
+            <strong style="font-family:var(--mono); color:var(--tomato); font-size:13px;">2. SINTAKS JAVA OOP</strong>
+            <span style="background:var(--tomato-soft); color:var(--tomato); font-size:10px; font-family:var(--mono); padding:2px 8px; border-radius:4px; font-weight:700;">NETLIFY DOSEN</span>
           </div>
-          <div style="font-family:var(--mono); font-size:12px; background:#1e1e24; color:#f3ecdc; padding:10px; border-radius:6px; margin-bottom:10px;">
-            Double jarak = this.alice.getDistanceTo(kelinci);
+          <div style="font-family:var(--mono); font-size:11.5px; line-height:1.6; background:#1e1e24; color:#f3ecdc; padding:12px; border-radius:8px; margin-bottom:12px;">
+            class Biped extends SJointedModel {<br>
+            &nbsp;&nbsp;void jump() { ... }<br>
+            }<br>
+            class Bunny extends Biped {<br>
+            &nbsp;&nbsp;@Override<br>
+            &nbsp;&nbsp;void jump() {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;super.jump(); // panggil aksi parent<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Telinga goyang");<br>
+            &nbsp;&nbsp;}<br>
+            }
           </div>
-          <div style="font-size:12.5px; line-height:1.55; color:var(--ink-soft);">
-            <strong style="color:var(--ink);">Alur Eksekusi:</strong><br>
-            [Pemanggilan] ➔ [Komputer hitung koordinat 3D Alice &amp; Kelinci] ➔ [Menghasilkan angka <code>3.45</code>] ➔ [Angka disimpan ke variabel <code>jarak</code>].<br>
-            <em>*Bisa dimasukkan ke dalam ekspresi <code>if (jarak &lt; 2.0)</code>.</em>
-          </div>
+          <p style="font-size:12.5px; line-height:1.55; margin:0; color:var(--ink-soft);">
+            Menggunakan <code>extends</code> untuk mewarisi dan <code>super.jump()</code> untuk memanggil implementasi method parent saat terjadi method overriding.
+          </p>
         </div>
 
       </div>
@@ -1264,13 +1431,13 @@ mobilB.merk = "Brio";</code></pre>
 
   </div>
 
-  <!-- ================= TAB 5: CATATAN RINGKAS A4 ================= -->
+  <!-- ================= TAB 6: CATATAN KILAT A4 ================= -->
   <div id="pane-cheatsheet" class="exam-pane">
 
     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;" class="no-print">
       <div>
-        <h3 style="margin:0; font-family:var(--display);">Ringkasan Catatan Kilat UTS 2026 (Siap Cetak / A4)</h3>
-        <p style="margin:2px 0 0; font-size:13px; color:var(--ink-soft);">Satu lembar rangkuman padat 6 konsep inti untuk belajar efisien</p>
+        <h3 style="margin:0; font-family:var(--display);">Lembar Kisi-Kisi Kilat UTS 2026/2027 (Siap Cetak / A4)</h3>
+        <p style="margin:2px 0 0; font-size:13px; color:var(--ink-soft);">Rangkuman resmi Pertemuan 1–7 dalam satu lembar padat</p>
       </div>
       <button class="btn btn-primary" onclick="window.print()">
         <span>🖨️ Cetak / Simpan PDF (Ctrl+P)</span>
@@ -1278,53 +1445,57 @@ mobilB.merk = "Brio";</code></pre>
     </div>
 
     <div class="official-header-card" style="background:#fff;">
-      <div style="text-align:center; border-bottom:2px solid #24221f; padding-bottom:10px; margin-bottom:12px;">
-        <h2 style="font-family:var(--display); font-size:17px; margin:0;">LEMBAR BELAJAR CEPAT UTS PEMROGRAMAN VISUAL 2026/2027</h2>
-        <p style="font-family:var(--mono); font-size:11px; margin:2px 0 0;">Informatika Universitas Muhammadiyah Surakarta</p>
+      <div style="text-align:center; border-bottom:2px solid #24221f; padding-bottom:8px; margin-bottom:10px;">
+        <h2 style="font-family:var(--display); font-size:16px; margin:0;">RINGKASAN MATERI UTS PEMROGRAMAN VISUAL 2026/2027</h2>
+        <p style="font-family:var(--mono); font-size:10.5px; margin:2px 0 0;">Teknik Informatika Universitas Muhammadiyah Surakarta · Pertemuan 1–7</p>
       </div>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:11.5px; line-height:1.45;">
-        <div style="border:1.5px solid #24221f; border-radius:6px; padding:8px; background:#fffdf7;">
-          <strong style="color:var(--tomato); font-family:var(--mono);">1. CLASS VS OBJECT</strong><br>
-          • <strong>Class:</strong> Blueprint / cetak biru, belum ada memori fisik.<br>
-          • <strong>Object:</strong> Wujud konkret (instance), dibuat dengan <code>new</code> di memori Heap.<br>
-          • Relasi: 1 Class dapat mencetak banyak Object dengan state berbeda.
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:11px; line-height:1.45;">
+        <div style="border:1.5px solid #24221f; border-radius:6px; padding:7px; background:#fffdf7;">
+          <strong style="color:var(--tomato); font-family:var(--mono);">P1–P2: ALUR KOMPUTASI</strong><br>
+          • <strong>Tahapan:</strong> Masalah ➔ Algoritma ➔ Instruksi ➔ Program ➔ Output.<br>
+          • <strong>Instruksi Komputer:</strong> Wajib eksplisit, terstruktur, tidak ambigu.<br>
+          • <strong>5 Representasi:</strong> Natural, Pseudocode, Flowchart, Tekstual, Visual.
         </div>
 
-        <div style="border:1.5px solid #24221f; border-radius:6px; padding:8px; background:#fffdf7;">
-          <strong style="color:var(--tomato); font-family:var(--mono);">2. STATE VS BEHAVIOR</strong><br>
-          • <strong>State (Property):</strong> Variabel / data ciri objek (<em>"apa yang dimiliki"</em>).<br>
-          • <strong>Behavior (Method):</strong> Aksi / fungsi (<em>"apa yang bisa dilakukan"</em>).<br>
-          • Saling memengaruhi: Method berjalan() mengubah state energi.
+        <div style="border:1.5px solid #24221f; border-radius:6px; padding:7px; background:#fffdf7;">
+          <strong style="color:var(--tomato); font-family:var(--mono);">P3: OBJECT &amp; CLASS</strong><br>
+          • <strong>Class:</strong> Blueprint / template definisi struktur data &amp; method.<br>
+          • <strong>Object:</strong> Instance nyata di memori; menerima instruksi &amp; beraksi.<br>
+          • <strong>Property vs Method:</strong> Property = state/keadaan; Method = aksi.
         </div>
 
-        <div style="border:1.5px solid #24221f; border-radius:6px; padding:8px; background:#fffdf7;">
-          <strong style="color:var(--teal); font-family:var(--mono);">3. BEHAVIOR MANUSIA (OOP)</strong><br>
-          • <code>berjalan(jarak)</code> ➔ kurangi energi.<br>
-          • <code>makan(kalori)</code> ➔ pulihkan energi &amp; kenyang.<br>
-          • <code>tidur(jam)</code> ➔ reset stamina 100%.<br>
-          • <code>belajar(topik)</code> ➔ tambah pengetahuan &amp; IPK.
+        <div style="border:1.5px solid #24221f; border-radius:6px; padding:7px; background:#fffdf7;">
+          <strong style="color:var(--teal); font-family:var(--mono);">P4: PEMETAAN ALICE 3</strong><br>
+          • <strong>Gallery</strong> = Class | <strong>Scene</strong> = Object.<br>
+          • <strong>Properties</strong> = Property | <strong>Code Editor</strong> = Method.<br>
+          • <strong>Parameter:</strong> Direction (arah), Steps (jarak), Revolutions (0.25 rev ≈ 90°).<br>
+          • <strong>Penguin:</strong> Class Penguin, Parent Biped, Specific: <code>waddle()</code>.
         </div>
 
-        <div style="border:1.5px solid #24221f; border-radius:6px; padding:8px; background:#fffdf7;">
-          <strong style="color:var(--teal); font-family:var(--mono);">4. PERAN PROCEDURE</strong><br>
-          Blok kode mandiri bertipe <code>void</code> (tanpa return).<br>
-          • <strong>Modularitas:</strong> Pecah program besar jadi modul kecil.<br>
-          • <strong>DRY Principle:</strong> Hindari penulisan kode berulang.<br>
-          • <strong>Maintainability:</strong> Debugging dan perbaikan terisolasi.
+        <div style="border:1.5px solid #24221f; border-radius:6px; padding:7px; background:#fffdf7;">
+          <strong style="color:var(--teal); font-family:var(--mono);">P5: KONTROL ALICE 3</strong><br>
+          • <strong><code>do in order</code>:</strong> Instruksi dieksekusi berurutan satu demi satu.<br>
+          • <strong><code>do together</code>:</strong> Beberapa instruksi dieksekusi bersamaan.<br>
+          • <strong><code>count up to</code>:</strong> Perulangan pasti n kali.<br>
+          • <strong><code>while</code>:</strong> Perulangan bersyarat selama kondisi true.
         </div>
 
-        <div style="border:1.5px solid #24221f; border-radius:6px; padding:8px; background:#fffdf7;">
-          <strong style="color:var(--tomato); font-family:var(--mono);">5. PROCEDURE VS FUNCTION</strong><br>
-          • <strong>Procedure:</strong> Aksi murni / animasi / void (contoh: <code>alice.move()</code>).<br>
-          • <strong>Function:</strong> Ada nilai balik / return (contoh: <code>alice.getDistanceTo()</code>).<br>
-          • Function dapat masuk ke rumus &amp; syarat <code>if</code>.
+        <div style="border:1.5px solid #24221f; border-radius:6px; padding:7px; background:#fffdf7;">
+          <strong style="color:var(--tomato); font-family:var(--mono);">P6: ABSTRAKSI &amp; FUNGSI</strong><br>
+          • <strong>Procedural Abstraction:</strong> Satukan runtunan jadi procedure <code>jump()</code>.<br>
+          • <strong>Biped Hierarchy:</strong> Procedure di Biped diwarisi Bunny &amp; MarchHare.<br>
+          • <strong>Procedure:</strong> Aksi murni / void (contoh: <code>bunny.jump()</code>).<br>
+          • <strong>Function:</strong> Ada nilai balik (contoh: <code>getDistanceTo()</code>).
         </div>
 
-        <div style="border:1.5px solid #24221f; border-radius:6px; padding:8px; background:#fffdf7;">
-          <strong style="color:var(--teal); font-family:var(--mono);">6. INHERITANCE (PEWARISAN)</strong><br>
-          • Relasi <strong>"is-a"</strong>: Subclass mewarisi state &amp; behavior dari Superclass.<br>
-          • <strong>Manfaat:</strong> Code reusability tinggi, hemat baris kode (DRY), mudah dirawat, mendukung polymorphism.
+        <div style="border:1.5px solid #24221f; border-radius:6px; padding:7px; background:#fffdf7;">
+          <strong style="color:var(--teal); font-family:var(--mono);">P7: EXTENDS &amp; SUPER (JAVA)</strong><br>
+          • <strong><code>extends</code>:</strong> Deklarasi pewarisan (<code>Car extends Vehicle</code>).<br>
+          • <strong>Inherited Method:</strong> Bisa dipanggil langsung (<code>dog.move()</code>).<br>
+          • <strong><code>super.method()</code>:</strong> Panggil method parent saat overriding.<br>
+          • <strong><code>super()</code>:</strong> Panggil constructor parent class.<br>
+          • <em>super tidak selalu wajib, hanya saat butuh akses anggota parent.</em>
         </div>
       </div>
     </div>
@@ -1335,7 +1506,7 @@ mobilB.merk = "Brio";</code></pre>
 
 <script>
 /* =========================================================
-   LOGIKA INTERAKTIF HALAMAN UTS 2026
+   LOGIKA INTERAKTIF UTS 2026 (SPADA UMS PERTEMUAN 1–7)
    ========================================================= */
 
 function switchExamTab(tabId, btnElement) {
@@ -1360,21 +1531,23 @@ function toggleKey(keyId, btn) {
 }
 
 function updateExamScore2026() {
-  const s1 = parseInt(document.getElementById('score2026_1').value) || 0;
-  const s2 = parseInt(document.getElementById('score2026_2').value) || 0;
-  const s3 = parseInt(document.getElementById('score2026_3').value) || 0;
-  const s4 = parseInt(document.getElementById('score2026_4').value) || 0;
-  const s5 = parseInt(document.getElementById('score2026_5').value) || 0;
-  const s6 = parseInt(document.getElementById('score2026_6').value) || 0;
+  const s1 = parseInt(document.getElementById('simRange1').value) || 0;
+  const s2 = parseInt(document.getElementById('simRange2').value) || 0;
+  const s3 = parseInt(document.getElementById('simRange3').value) || 0;
+  const s4 = parseInt(document.getElementById('simRange4').value) || 0;
+  const s5 = parseInt(document.getElementById('simRange5').value) || 0;
+  const s6 = parseInt(document.getElementById('simRange6').value) || 0;
+  const s7 = parseInt(document.getElementById('simRange7').value) || 0;
 
-  document.getElementById('text2026_1').innerText = s1 + ' / 15';
-  document.getElementById('text2026_2').innerText = s2 + ' / 15';
-  document.getElementById('text2026_3').innerText = s3 + ' / 15';
-  document.getElementById('text2026_4').innerText = s4 + ' / 15';
-  document.getElementById('text2026_5').innerText = s5 + ' / 20';
-  document.getElementById('text2026_6').innerText = s6 + ' / 20';
+  document.getElementById('simText1').innerText = s1 + ' / 15';
+  document.getElementById('simText2').innerText = s2 + ' / 15';
+  document.getElementById('simText3').innerText = s3 + ' / 15';
+  document.getElementById('simText4').innerText = s4 + ' / 15';
+  document.getElementById('simText5').innerText = s5 + ' / 15';
+  document.getElementById('simText6').innerText = s6 + ' / 10';
+  document.getElementById('simText7').innerText = s7 + ' / 15';
 
-  const total = s1 + s2 + s3 + s4 + s5 + s6;
+  const total = s1 + s2 + s3 + s4 + s5 + s6 + s7;
   document.getElementById('liveTotalScore').innerText = total;
 
   const gradePill = document.getElementById('liveGradePill');
@@ -1400,139 +1573,189 @@ function updateExamScore2026() {
     gradePill.style.color = '#24221f';
   }
 
-  localStorage.setItem('uts2026_scores', JSON.stringify({s1, s2, s3, s4, s5, s6}));
+  localStorage.setItem('uts2026_spada_scores', JSON.stringify({s1, s2, s3, s4, s5, s6, s7}));
 }
 
-// 10 KUIS PILIHAN GANDA KASUS UTS 2026
-const QUIZ_2026 = [
+// 14 KUIS KASUS RESMI SPADA PERTEMUAN 1–7
+const QUIZ_SPADA = [
+  // P1-P2
   {
-    q: "Manakah pernyataan yang paling akurat mengenai hubungan antara Class dan Object dalam OOP?",
+    q: "1. (Pertemuan 1–2) Dalam rekayasa perangkat lunak, urutan tahapan yang benar dari masalah hingga menjadi hasil di layar adalah:",
     opts: [
-      "Class adalah instansiasi fisik di memori, sedangkan Object adalah denah logisnya.",
-      "Class adalah cetak biru (blueprint), sedangkan Object adalah entitas nyata yang dibentuk dari cetak biru tersebut.",
-      "Satu object bisa memiliki banyak class secara bersamaan.",
-      "Class hanya bisa dibuat setelah object dijalankan di Alice 3."
+      "Instruksi ➔ Algoritma ➔ Masalah ➔ Program ➔ Output",
+      "Masalah ➔ Algoritma ➔ Instruksi ➔ Program ➔ Output",
+      "Program ➔ Algoritma ➔ Masalah ➔ Instruksi ➔ Output",
+      "Algoritma ➔ Output ➔ Program ➔ Masalah ➔ Instruksi"
     ],
     ans: 1,
-    exp: "Benar! Class adalah blueprint atau spesifikasi abstrak, sedangkan Object adalah wujud nyata (instance) yang dialokasikan di memori Heap."
+    exp: "Benar! Solusi dimulai dari pemahaman Masalah, merancang Algoritma, menyusun Instruksi, mengemasnya jadi Program, hingga menghasilkan Output."
   },
   {
-    q: "Jika sebuah class Mobil memiliki variabel 'warna' dan method 'rem()', maka berturut-turut keduanya disebut sebagai:",
+    q: "2. (Pertemuan 1–2) Mengapa komputer memerlukan instruksi yang eksplisit, terstruktur, dan tidak ambigu?",
     opts: [
-      "State (Property) dan Behavior (Method).",
-      "Behavior (Method) dan State (Property).",
-      "Function dan Procedure.",
-      "Superclass dan Subclass."
-    ],
-    ans: 0,
-    exp: "Tepat! 'warna' adalah data karakteristik (State/Property), sedangkan 'rem()' adalah tindakan/aksi yang bisa dilakukan (Behavior/Method)."
-  },
-  {
-    q: "Dalam pemodelan objek manusia, jika method 'berjalan(100)' dipanggil, bagaimana pengaruh umumnya terhadap state objek?",
-    opts: [
-      "State usia bertambah 10 tahun.",
-      "State energi berkurang dan rasa lelah bertambah.",
-      "State nama berubah menjadi null.",
-      "Tidak ada pengaruh apa pun terhadap seluruh state."
+      "Karena komputer bisa menebak sendiri maksud programmer jika instruksinya kurang jelas.",
+      "Karena komputer mengeksekusi instruksi secara harfiah; ambiguitas akan menimbulkan kesalahan logika atau program crash.",
+      "Karena bahasa pemrograman hanya mengenali huruf kapital.",
+      "Karena instruksi ambigu akan menghapus data di harddisk secara otomatis."
     ],
     ans: 1,
-    exp: "Benar! Method behavior berjalan() mengonsumsi energi fisik, sehingga state energi akan berkurang dan kelelahan bertambah."
+    exp: "Tepat! Komputer tidak memiliki akal budi atau asumsi manusia. Segala sesuatu harus didefinisikan secara tegas dan tidak bermakna ganda."
   },
+  // P3
   {
-    q: "Apa karakteristik utama yang membedakan Procedure dari Function?",
+    q: "3. (Pertemuan 3) Tiga objek robot dibuat dari class Robot yang sama: Robot A, Robot B, dan Robot C. Apa yang membedakan ketiga objek tersebut?",
     opts: [
-      "Procedure selalu mengembalikan angka desimal, function mengembalikan teks.",
-      "Procedure tidak mengembalikan nilai (return type void), sedangkan function wajib mengembalikan suatu nilai (return value).",
-      "Procedure hanya boleh ditulis dalam bahasa C++, sedangkan function hanya ada di Java.",
-      "Procedure membutuhkan variabel static, sedangkan function tidak."
-    ],
-    ans: 1,
-    exp: "Sempurna! Procedure bertipe void (tanpa nilai balik) untuk menghasilkan aksi, sedangkan Function mengembalikan nilai (Double, String, Boolean, dll)."
-  },
-  {
-    q: "Mengapa instruksi 'this.alice.say(\"Halo\");' di Alice 3 dikelompokkan sebagai Procedure?",
-    opts: [
-      "Karena instruksi tersebut menampilkan balon teks visual di layar tanpa mengembalikan nilai data ke variabel pemanggil.",
-      "Karena instruksi tersebut mengembalikan angka panjang teks.",
-      "Karena instruksi tersebut hanya bisa dipanggil satu kali selama program aktif.",
-      "Karena kata 'say' termasuk kata benda di kamus."
-    ],
-    ans: 0,
-    exp: "Tepat! 'say()' melakukan aksi tampilan grafis di dunia 3D tanpa menghasilkan return value, sehingga ia adalah Procedure."
-  },
-  {
-    q: "Di antara pilihan berikut, manakah method di Alice 3 yang bertindak sebagai FUNCTION?",
-    opts: [
-      "this.alice.move(Direction.FORWARD, 1.0);",
-      "this.alice.turn(Direction.RIGHT, 0.25);",
-      "this.alice.getDistanceTo(this.rabbit);",
-      "this.alice.roll(Direction.LEFT, 0.5);"
+      "Nama class-nya berbeda-beda.",
+      "Ketiganya tidak boleh berada di dalam satu program yang sama.",
+      "Nilai property masing-masing objek (misalnya warna, posisi, dan kecepatan) dapat berbeda.",
+      "Robot C tidak memiliki method move()."
     ],
     ans: 2,
-    exp: "Benar! 'getDistanceTo()' menghitung jarak antara dua objek dan mengembalikan nilai angka Double."
+    exp: "Sempurna! Konsep 'Same Class, Different Objects': class-nya satu, strukturnya sama, tetapi nilai property setiap objek bersifat independen."
   },
   {
-    q: "Apa keuntungan paling utama dari menerapkan prinsip modularitas menggunakan Procedure dalam pengembangan software?",
+    q: "4. (Pertemuan 3) Mengapa urutan instruksi (sequence) sangat memengaruhi perilaku (behavior) objek?",
     opts: [
-      "Ukuran file proyek menjadi 10 kali lebih besar.",
-      "Memecah program rumit menjadi modul-modul kecil mandiri yang mudah didebug, dirawat, dan dikolaborasikan.",
-      "Menghilangkan kebutuhan akan komputer berspesifikasi tinggi.",
-      "Membuat program kebal dari serangan virus secara otomatis."
+      "Karena komputer membaca program dari bawah ke atas.",
+      "Karena urutan instruksi menentukan rantai sebab-akibat; mengubah urutan akan menghasilkan posisi atau kondisi akhir yang berbeda.",
+      "Karena urutan instruksi hanya berlaku pada bahasa Python, bukan di Alice 3.",
+      "Karena sequence otomatis menghentikan program jika terjadi perulangan."
     ],
     ans: 1,
-    exp: "Luar biasa! Modularitas menyederhanakan arsitektur software sehingga programmer dapat fokus memperbaiki modul spesifik tanpa merusak sistem lain."
+    exp: "Benar! Maju dulu baru belok kanan berbeda hasilnya dengan belok kanan dulu baru maju."
+  },
+  // P4
+  {
+    q: "5. (Pertemuan 4) Di mana letak Class, Object, Property, dan Method pada antarmuka Alice 3?",
+    opts: [
+      "Gallery = Class, Scene = Object, Panel Properties = Property, Code Editor = Method.",
+      "Gallery = Method, Scene = Class, Panel Properties = Object, Code Editor = Property.",
+      "Gallery = Object, Scene = Property, Panel Properties = Method, Code Editor = Class.",
+      "Semua konsep OOP hanya ada di dalam Code Editor."
+    ],
+    ans: 0,
+    exp: "Tepat sekali! Gallery adalah katalog Class, Scene adalah dunia tempat Object berada, panel Properties memuat Property objek, dan Code Editor tempat menyusun Method."
   },
   {
-    q: "Konsep pewarisan (Inheritance) membentuk relasi hierarkis antar-class yang dikenal dengan sebutan:",
+    q: "6. (Pertemuan 4) Jika pada method 'turn' di Alice 3 kita memberikan parameter 'RIGHT' dan '0.25 revolutions', berapa derajat objek berputar?",
     opts: [
-      "Relasi 'has-a' (memiliki).",
-      "Relasi 'is-a' (adalah seorang/sebuah).",
-      "Relasi 'part-of' (bagian dari).",
-      "Relasi 'runs-on' (berjalan di atas)."
+      "45 derajat ke kanan.",
+      "90 derajat ke kanan.",
+      "180 derajat ke kanan.",
+      "360 derajat ke kanan."
     ],
     ans: 1,
-    exp: "Benar! Inheritance memodelkan hubungan generalisasi 'is-a' (contoh: Mahasiswa is-a Manusia, Kucing is-a Hewan)."
+    exp: "Benar! 1 revolution penuh = 360 derajat. Maka 0.25 revolutions = 0.25 x 360 = 90 derajat."
   },
   {
-    q: "Apa manfaat utama yang diperoleh programmer saat menerapkan Inheritance pada class Mahasiswa, Petani, dan Pedagang?",
+    q: "7. (Pertemuan 4) Berdasarkan Final Challenge pada objek Penguin, manakah yang merupakan 'Specific Method' milik Penguin?",
     opts: [
-      "Memaksa ketiga profesi tersebut memiliki IPK yang sama.",
-      "Menghindari penulisan berulang atribut nama, usia, gender, alamat (prinsip DRY) karena diwarisi langsung dari parent Manusia.",
-      "Membuat program hanya bisa dibuka di browser Google Chrome.",
-      "Menghapus method makan() dari memori komputer."
+      "move()",
+      "turn()",
+      "waddle()",
+      "say()"
     ],
-    ans: 1,
-    exp: "Tepat! Atribut dan method bersama cukup ditulis satu kali di class parent Manusia, menghemat kode dan mempermudah pemeliharaan."
+    ans: 2,
+    exp: "Benar! move(), turn(), dan say() adalah inherited method dari parent Animal/Biped, sedangkan waddle() adalah method khusus (specific) milik Penguin."
+  },
+  // P5
+  {
+    q: "8. (Pertemuan 5) Apa perbedaan mendasar antara blok 'do in order' dan 'do together' di Alice 3?",
+    opts: [
+      "do in order mengeksekusi bergantian satu per satu, sedangkan do together mengeksekusi instruksi secara bersamaan (simultan).",
+      "do in order hanya untuk perulangan, do together untuk percabangan if.",
+      "do in order membuat objek berjalan mundur, do together membuat objek melompat.",
+      "Tidak ada perbedaan; keduanya hanya variasi nama tombol."
+    ],
+    ans: 0,
+    exp: "Tepat! do in order menjalankan aksi secara berurutan, sedangkan do together menjalankan aksi secara bersamaan (paralel)."
   },
   {
-    q: "Apa yang terjadi jika programmer ingin menambahkan atribut baru 'kewarganegaraan' untuk seluruh entitas manusia pada sistem yang sudah menggunakan Inheritance?",
+    q: "9. (Pertemuan 5) Kapan kita sebaiknya menggunakan perulangan 'count up to' dibandingkan 'while' di Alice 3?",
     opts: [
-      "Programmer harus mengubah ratusan file subclass satu per satu secara manual.",
-      "Cukup menambahkan atribut tersebut satu kali di superclass Manusia, dan seluruh subclass otomatis mewarisinya.",
-      "Inheritance harus dibatalkan terlebih dahulu.",
-      "Seluruh data mahasiswa akan terhapus otomatis."
+      "Ketika kita belum tahu berapa kali perulangan harus berhenti.",
+      "Ketika jumlah perulangan sudah diketahui pasti sejak awal (misal tepat 4 kali putaran).",
+      "Ketika kita ingin program berhenti secara acak.",
+      "Ketika objek yang digunakan bukan Bunny."
     ],
     ans: 1,
-    exp: "Sempurna! Inilah keunggulan utama maintainability pada Inheritance: perubahan di parent class langsung terefleksi ke seluruh child class turunan."
+    exp: "Benar! 'count up to' adalah counted/definite loop (jumlah iterasi pasti), sedangkan 'while' adalah conditional/indefinite loop (berhenti berdasarkan kondisi)."
+  },
+  // P6
+  {
+    q: "10. (Pertemuan 6) Mengapa penempatan procedure 'jump()' pada class 'Biped' di Alice 3 lebih menguntungkan daripada di class 'Bunny'?",
+    opts: [
+      "Karena class Biped memiliki grafis 3D yang lebih bagus.",
+      "Karena Biped adalah parent class, sehingga procedure jump() otomatis diwarisi oleh Bunny dan MarchHare tanpa duplikasi kode.",
+      "Karena MarchHare tidak diizinkan memiliki procedure sendiri.",
+      "Karena Alice 3 melarang pembuatan method di class Bunny."
+    ],
+    ans: 1,
+    exp: "Luar biasa! Inilah kekuatan inheritance: menempatkan procedure umum di superclass Biped membuat semua child class berkaki dua dapat memakainya."
+  },
+  {
+    q: "11. (Pertemuan 6) Manakah pernyataan yang BENAR mengenai Function di Alice 3?",
+    opts: [
+      "Function bertipe void dan tidak bisa menghasilkan data.",
+      "Function bertugas menjawab pertanyaan kondisi dan mengembalikan nilai (misal Double jarak pada getDistanceTo).",
+      "Function tidak boleh digunakan di dalam blok percabangan if.",
+      "Function hanya berfungsi untuk mengubah warna objek."
+    ],
+    ans: 1,
+    exp: "Tepat! Function menghitung dan mengembalikan nilai (return value) yang bisa dipakai dalam rumus atau syarat pengkondisian."
+  },
+  // P7 (Netlify Dosen)
+  {
+    q: "12. (Pertemuan 7 - Netlify) Perhatikan kode Java berikut: 'class Dog extends Animal { ... }'. Apa makna kata kunci 'extends'?",
+    opts: [
+      "Menghapus seluruh method milik class Animal.",
+      "Mendeklarasikan hubungan pewarisan bahwa Dog adalah subclass dari superclass Animal.",
+      "Membuat objek Dog baru di memori Heap.",
+      "Mengganti nama class Animal menjadi Dog."
+    ],
+    ans: 1,
+    exp: "Benar! 'extends' adalah keyword Java untuk menyatakan inheritance (Dog is-a Animal)."
+  },
+  {
+    q: "13. (Pertemuan 7 - Netlify Slide 11) Perhatikan kode berikut:\nclass Vehicle { void move() { System.out.println(\"Moving\"); } }\nclass Car extends Vehicle {\n  @Override void move() { System.out.println(\"Driving\"); }\n  void start() { super.move(); }\n}\nnew Car().start();\nApa output yang tampil di layar?",
+    opts: [
+      "Driving",
+      "Moving",
+      "Moving lalu Driving",
+      "Error karena terjadi override"
+    ],
+    ans: 1,
+    exp: "Sempurna! Method start() memanggil super.move(), yang merujuk pada implementasi method move() milik superclass Vehicle, sehingga output-nya adalah 'Moving'."
+  },
+  {
+    q: "14. (Pertemuan 7 - Netlify Slide 12) Apakah pemanggilan method warisan selalu memerlukan keyword 'super' saat inheritance?",
+    opts: [
+      "Ya, setiap pemanggilan method anak harus memakai super.",
+      "Ya, keyword extends tidak bekerja tanpa super.method().",
+      "Tidak, method yang diwarisi dapat dipanggil langsung secara normal jika tidak di-override.",
+      "Tidak, karena super hanya boleh digunakan di luar class."
+    ],
+    ans: 2,
+    exp: "Tepat sekali! Ini adalah penegasan penting dari dosen pada Slide 12: method warisan dapat langsung dipanggil tanpa super, kecuali kita secara eksplisit ingin mengakses implementasi superclass yang tertutup oleh overriding."
   }
 ];
 
-let userQuiz2026 = {};
+let userQuizSPADA = {};
 
 function initQuiz2026() {
   const container = document.getElementById('quizContainer2026');
   if (!container) return;
 
-  container.innerHTML = QUIZ_2026.map((q, idx) => `
+  container.innerHTML = QUIZ_SPADA.map((q, idx) => `
     <div class="q-post" id="card2026_${idx}" style="margin-bottom:20px;">
       <div class="q-post-header" style="margin-bottom:12px; padding-bottom:8px;">
-        <span class="badge-qno">KASUS ${idx + 1} / 10</span>
-        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">Konsep UTS 2026</span>
+        <span class="badge-qno">SOAL KASUS ${idx + 1} / 14</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">SPADA UMS Pertemuan 1–7</span>
       </div>
-      <h3 style="font-size:1.05rem; margin:0 0 12px; font-family:var(--display);">${q.q}</h3>
+      <h3 style="font-size:1.05rem; margin:0 0 12px; font-family:var(--display); line-height:1.45; white-space:pre-line;">${q.q}</h3>
       <div class="mc-grid">
         ${q.opts.map((opt, optIdx) => `
-          <button class="mc-opt-btn" id="btn2026_${idx}_${optIdx}" onclick="answer2026(${idx}, ${optIdx})">
+          <button class="mc-opt-btn" id="btn2026_${idx}_${optIdx}" onclick="answerSPADA(${idx}, ${optIdx})">
             <span class="mc-key">${String.fromCharCode(65 + optIdx)}</span>
             <span>${opt}</span>
           </button>
@@ -1543,10 +1766,10 @@ function initQuiz2026() {
   `).join('');
 }
 
-function answer2026(qIdx, selectedOpt) {
-  const qData = QUIZ_2026[qIdx];
+function answerSPADA(qIdx, selectedOpt) {
+  const qData = QUIZ_SPADA[qIdx];
   const isCorrect = selectedOpt === qData.ans;
-  userQuiz2026[qIdx] = isCorrect;
+  userQuizSPADA[qIdx] = isCorrect;
 
   for (let i = 0; i < qData.opts.length; i++) {
     const btn = document.getElementById(`btn2026_${qIdx}_${i}`);
@@ -1568,12 +1791,12 @@ function answer2026(qIdx, selectedOpt) {
   `;
 
   let score = 0;
-  Object.values(userQuiz2026).forEach(v => { if (v) score++; });
+  Object.values(userQuizSPADA).forEach(v => { if (v) score++; });
   document.getElementById('quizScoreNum2026').innerText = score;
 }
 
 function resetQuiz2026() {
-  userQuiz2026 = {};
+  userQuizSPADA = {};
   document.getElementById('quizScoreNum2026').innerText = '0';
   initQuiz2026();
 }
@@ -1581,27 +1804,28 @@ function resetQuiz2026() {
 document.addEventListener('DOMContentLoaded', () => {
   initQuiz2026();
 
-  const saved = localStorage.getItem('uts2026_scores');
+  const saved = localStorage.getItem('uts2026_spada_scores');
   if (saved) {
     try {
       const d = JSON.parse(saved);
-      document.getElementById('score2026_1').value = d.s1 || 0;
-      document.getElementById('score2026_2').value = d.s2 || 0;
-      document.getElementById('score2026_3').value = d.s3 || 0;
-      document.getElementById('score2026_4').value = d.s4 || 0;
-      document.getElementById('score2026_5').value = d.s5 || 0;
-      document.getElementById('score2026_6').value = d.s6 || 0;
+      document.getElementById('simRange1').value = d.s1 || 0;
+      document.getElementById('simRange2').value = d.s2 || 0;
+      document.getElementById('simRange3').value = d.s3 || 0;
+      document.getElementById('simRange4').value = d.s4 || 0;
+      document.getElementById('simRange5').value = d.s5 || 0;
+      document.getElementById('simRange6').value = d.s6 || 0;
+      document.getElementById('simRange7').value = d.s7 || 0;
       updateExamScore2026();
     } catch(e) {}
   }
 
-  for (let i = 1; i <= 6; i++) {
-    const txt = document.getElementById('essay2026_' + i);
+  for (let i = 1; i <= 7; i++) {
+    const txt = document.getElementById('sim2026_' + i);
     if (txt) {
-      const s = localStorage.getItem('uts2026_text_' + i);
+      const s = localStorage.getItem('uts2026_spada_text_' + i);
       if (s) txt.value = s;
       txt.addEventListener('input', () => {
-        localStorage.setItem('uts2026_text_' + i, txt.value);
+        localStorage.setItem('uts2026_spada_text_' + i, txt.value);
       });
     }
   }
