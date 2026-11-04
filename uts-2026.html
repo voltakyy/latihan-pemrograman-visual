@@ -1848,6 +1848,31 @@ say "Hello!"</code></pre>
       </div>
     </div>
 
+    <!-- ================= FAQ SECTION ================= -->
+    <div style="margin-top: 40px; background: var(--card); border: 2px solid var(--ink); border-radius: 16px; padding: 28px; box-shadow: var(--shadow);">
+      <h3 style="font-family: var(--display); font-size: 22px; margin-top: 0; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+        <span>💡</span> Tanya Jawab Cepat Seputar Ujian (FAQ)
+      </h3>
+      <p style="color: var(--ink-soft); font-size: 14px; margin-bottom: 20px;">Pertanyaan yang paling sering membingungkan mahasiswa saat mengerjakan naskah soal UTS Pemrograman Visual.</p>
+
+      <div style="display: grid; gap: 14px;">
+        <details style="background: var(--paper); border: 1.5px solid var(--ink); border-radius: 10px; padding: 14px; cursor: pointer;">
+          <summary style="font-weight: 700; font-size: 15px;">Apakah di Alice 3 Function bisa langsung menggerakkan objek?</summary>
+          <p style="margin: 10px 0 0 0; font-size: 13.5px; line-height: 1.6; color: var(--ink-soft);"><strong>Tidak bisa.</strong> Function hanya bertugas membaca atau menghitung data (mengajukan pertanyaan/query) dan mengembalikan nilai (return value). Untuk menggerakkan objek secara fisik di scene, Anda harus menggunakan <strong>Procedure</strong> (seperti <code>move</code>, <code>turn</code>, atau <code>roll</code>).</p>
+        </details>
+
+        <details style="background: var(--paper); border: 1.5px solid var(--ink); border-radius: 10px; padding: 14px; cursor: pointer;">
+          <summary style="font-weight: 700; font-size: 15px;">Bagaimana cara mudah membedakan kapan memakai While vs Count loop?</summary>
+          <p style="margin: 10px 0 0 0; font-size: 13.5px; line-height: 1.6; color: var(--ink-soft);">Gunakan <strong>Count Loop</strong> jika jumlah putaran sudah pasti diketahui sejak awal (deterministik, misal: melompat 3 kali). Gunakan <strong>While Loop</strong> jika durasi perulangan bergantung pada kondisi dinamis yang belum tentu kapan selesainya (misal: berjalan terus selama jarak ke rintangan &gt; 1 meter).</p>
+        </details>
+
+        <details style="background: var(--paper); border: 1.5px solid var(--ink); border-radius: 10px; padding: 14px; cursor: pointer;">
+          <summary style="font-weight: 700; font-size: 15px;">Pada diagram relasi kelas UML, ke mana arah panah inheritance?</summary>
+          <p style="margin: 10px 0 0 0; font-size: 13.5px; line-height: 1.6; color: var(--ink-soft);">Arah panah selalu ditarik dari <strong>Subclass (kelas anak)</strong> menuju <strong>Superclass (kelas induk)</strong> dengan kepala panah berbentuk <strong>segitiga kosong (hollow triangle)</strong>. Ini melambangkan relasi bahwa Subclass merupakan turunan spesifik dari Superclass (relasi <em>is-a</em>).</p>
+        </details>
+      </div>
+    </div>
+
   </div>
 
 </main>
