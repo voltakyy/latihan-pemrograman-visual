@@ -664,6 +664,7 @@
 </style>
 </head>
 <body>
+<div id="readProgressBar" style="position:fixed; top:0; left:0; height:5px; width:0%; background:var(--teal); z-index:99999; transition:width 0.1s ease;"></div>
 <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
 
 <main class="shell" id="main-content">
@@ -2205,6 +2206,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     btnTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  const progBar = document.getElementById('readProgressBar');
+  if (progBar) {
+    window.addEventListener('scroll', () => {
+      const totalH = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalH > 0) {
+        const pct = Math.min(100, Math.max(0, (window.scrollY / totalH) * 100));
+        progBar.style.width = pct + '%';
+      }
     });
   }
 });
