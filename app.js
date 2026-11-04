@@ -1,3 +1,11 @@
+/**
+ * @file app.js
+ * @description Modul pengelola logika kuis interaktif, peracikan bank soal,
+ * pelacak statistik CPMK, navigasi keyboard, dan penyimpanan status lokal (localStorage).
+ * @author voltakyy
+ * @license MIT
+ */
+
 /* =========================================================
    Logika latihan — Ruang Visual
    ========================================================= */
@@ -573,3 +581,25 @@ document.addEventListener('keydown', event => {
 });
 
 renderHome();
+
+/**
+ * Menampilkan pesan toast sementara di layar
+ * @param {string} msg Teks pesan yang ingin ditampilkan
+ * @param {number} duration Durasi tayang dalam milidetik
+ */
+function showToast(msg, duration = 2500) {
+  let toast = document.getElementById('appToast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'appToast';
+    toast.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 20px;border-radius:999px;font-family:var(--mono);font-size:12px;font-weight:700;z-index:9999;box-shadow:0 4px 12px rgba(0,0,0,0.25);transition:opacity 0.2s ease;pointer-events:none;';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.style.opacity = '1';
+  clearTimeout(toast._timer);
+  toast._timer = setTimeout(() => {
+    toast.style.opacity = '0';
+  }, duration);
+}
+window.showToast = showToast;
