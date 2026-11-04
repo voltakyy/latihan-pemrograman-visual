@@ -171,7 +171,8 @@ Kalau kamu ingin subclass bisa mengakses langsung, gunakan [[protected]]. Kalau 
       'Mengubah access modifier property superclass.'
     ],
     answer: 0,
-    explain: `Saat subclass dibuat, bagian superclass dari object juga perlu disiapkan. [[super()]] memanggil constructor superclass untuk melakukan itu. Kalau superclass hanya punya constructor berparameter, subclass **wajib** memanggilnya secara eksplisit.
+    explain: `Berdasarkan **Slide Dosen Netlify (extends-super-inheritance)**:
+Saat subclass dibuat, bagian superclass dari object juga harus diinisialisasi terlebih dahulu. [[super()]] memanggil constructor superclass dan **wajib menjadi statement pertama** di dalam constructor subclass (*constructor chaining*).
 
 ~~~
 class Orang {
@@ -186,12 +187,15 @@ class Mahasiswa extends Orang {
     double ipk;
 
     Mahasiswa(String nama, double ipk) {
-        super(nama);   // constructor Orang
+        super(nama);   // memanggil constructor Orang (wajib di baris 1)
         this.ipk = ipk;
     }
 }
 ~~~
 
-Pemanggilan [[super(...)]] harus menjadi statement pertama di constructor subclass. Kalau tidak ditulis dan superclass punya default constructor, Java menambahkan [[super()]] secara implisit. [[super]] juga bisa dipakai untuk memanggil method superclass, misalnya [[super.makan()]], ketika subclass ingin menjalankan perilaku lama lalu menambahkan sesuatu.`
+Tiga kegunaan utama keyword [[super]] di Java menurut modul kuliah:
+1. **[[super.method()]]**: Memanggil method parent yang telah di-override di child class (contoh pada slide: [[super.start()]] di class [[Car extends Vehicle]]).
+2. **[[super(...)]]**: Memanggil constructor superclass.
+3. **[[super.field]]**: Mengakses property/field milik parent jika tertutup (*shadowing*) oleh field bernama sama di child class.`
   }
 );

@@ -12,26 +12,26 @@ window.QUESTION_BANK.push(
       'Object harus dibuat terlebih dahulu sebelum sebuah class bisa didefinisikan.'
     ],
     answer: 1,
-    explain: `Class hanya mendeskripsikan **apa yang dimiliki** dan **apa yang bisa dilakukan** sebuah entitas. Class belum menjadi wujud nyata dan tidak menempati memori sebagai object. Object baru benar-benar ada ketika dibuat dengan keyword [[new]], dan setiap object memiliki salinan sendiri dari property (instance field) miliknya.
+    explain: `Berdasarkan **Modul Pertemuan 3 & 4 SPADA UMS**:
+- **Class** adalah cetak biru (blueprint) atau template yang mendefinisikan struktur data (**property**) dan perilaku (**method**). Di Alice 3, class berada di **Gallery** (misalnya class [[Bunny]] atau [[Robot]]).
+- **Object** adalah wujud nyata (*instance*) dari class yang dimasukkan ke dalam **Scene** (misalnya [[Robot A]], [[Robot B]], [[Robot C]] atau [[bunny]], [[bunny2]]).
 
-Analogi yang sering dipakai: class adalah resep kue, object adalah kue yang sudah jadi. Dari satu resep, kamu bisa membuat banyak kue dengan topping berbeda.
+Satu class bisa menghasilkan banyak object (**One Class, Many Objects**). Setiap object memiliki salinan property-nya sendiri (misalnya warna, posisi, orientasi, ukuran), sehingga mengubah property object yang satu tidak akan mengubah object lainnya.
 
 ~~~
-class Mahasiswa {
+class Robot {
     String nama;
-    double ipk;
+    String warna;
 }
 
-Mahasiswa m1 = new Mahasiswa();
-Mahasiswa m2 = new Mahasiswa();
+Robot a = new Robot();
+Robot b = new Robot();
 
-m1.nama = "Ayu";
-m1.ipk  = 3.80;
-m2.nama = "Budi";
-m2.ipk  = 3.25;
+a.nama = "Robot A"; a.warna = "Merah";
+b.nama = "Robot B"; b.warna = "Biru";
 ~~~
 
-[[m1]] dan [[m2]] adalah dua object berbeda dari class yang sama. Mengubah [[m1.ipk]] tidak memengaruhi [[m2.ipk]] karena masing-masing punya ruang data sendiri. Jadi, class bicara soal **rancangan**, sedangkan object bicara soal **wujud nyata** dari rancangan itu.`
+[[a]] dan [[b]] adalah dua instance berbeda dari class yang sama. Jadi, class bicara soal **rancangan/blueprint**, sedangkan object bicara soal **wujud nyata/instance** dari rancangan itu.`
   },
   {
     topic: 'Class & Object',

@@ -12,7 +12,11 @@ window.QUESTION_BANK.push(
       'File tempat class disimpan.'
     ],
     answer: 1,
-    explain: `Property — sering juga disebut atribut, field, atau instance variable — adalah **data/keadaan** yang dimiliki object. Pada diagram UTS, [[nama]], [[usia]], [[gender]], [[alamat]], dan [[ipk]] adalah property milik [[Mahasiswa]]. Setiap property punya tipe data, misalnya [[String]] untuk nama atau [[double]] untuk IPK.
+    explain: `Berdasarkan **Modul Pertemuan 3 & 4 SPADA UMS**:
+- **Property** (sering disebut atribut/field/state) adalah **data atau keadaan** yang dimiliki oleh object. Misalnya warna (*paint/color*), posisi koordinat (*x, y, z*), ukuran (*size*), orientasi/arah (*facing*), dan kecepatan (*speed*). Di Alice 3, nilai property ini dapat dilihat dan diubah di panel Properties atau lewat code.
+- **Method** adalah aksi atau perilaku (*behavior*) yang dapat dilakukan oleh object, seperti [[move()]], [[turn()]], [[say()]], dan [[stop()]].
+
+Pada diagram naskah UTS, [[nama]], [[usia]], [[gender]], [[alamat]], dan [[ipk]] adalah property milik [[Mahasiswa]]. Setiap property memiliki tipe data yang sesuai (misalnya [[String]] untuk nama atau [[double]] untuk IPK).
 
 ~~~
 class Mahasiswa {
@@ -23,7 +27,7 @@ class Mahasiswa {
 }
 ~~~
 
-Property berbeda dari variabel lokal. Variabel lokal dibuat di dalam method dan hanya hidup selama method berjalan, sedangkan property menempel pada object dan bisa dipakai oleh method mana pun di class itu. Property juga bisa diberi access modifier seperti [[private]] agar tidak diubah sembarangan dari luar class.`
+Property menempel pada siklus hidup object dan berbeda dari variabel lokal yang hanya hidup di dalam satu method.`
   },
   {
     topic: 'Property & Method',

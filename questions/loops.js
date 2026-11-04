@@ -105,7 +105,10 @@ Loop [[while (true)]] juga sah kalau memang disengaja, asalkan ada jalur keluar 
       '[[if (air > 0) { tembakAir(); }]]'
     ],
     answer: 1,
-    explain: `Jumlah pengulangan sudah diketahui pasti, yaitu 5 kali. Untuk kasus **count-controlled** seperti ini, [[for]] paling tepat karena inisialisasi, kondisi, dan update ditulis dalam satu baris.
+    explain: `Berdasarkan **Modul Pertemuan 5 SPADA UMS**:
+Struktur perulangan (*loop*) secara garis besar dibedakan menjadi:
+1. **Count-controlled loop** (di Alice 3 berupa blok **count up to**; di Java berupa perulangan [[for]]): dipakai ketika jumlah pengulangan sudah diketahui pasti sejak awal (misalnya tepat 5 kali).
+2. **Condition-controlled loop** (di Alice 3 dan Java berupa blok [[while]]): dipakai ketika pengulangan bergantung pada suatu kondisi logika *boolean* yang belum tentu pasti jumlah putarannya.
 
 ~~~
 for (int i = 0; i < 5; i++) {
@@ -113,7 +116,7 @@ for (int i = 0; i < 5; i++) {
 }
 ~~~
 
-Perhatikan: mulai dari 0 dan kondisi [[i < 5]] menghasilkan 5 putaran (0, 1, 2, 3, 4). Kalau memakai [[i <= 5]], hasilnya 6 putaran. [[while (true)]] tanpa [[break]] akan berjalan selamanya. [[do-while]] dengan kondisi nyawa bisa berhenti lebih cepat atau lebih lama dari 5 kali. [[if]] hanya memeriksa sekali, bukan mengulang. Di Alice 3, pola ini setara dengan blok “loop 5 times”.`
+Perhatikan: mulai dari 0 dan kondisi [[i < 5]] menghasilkan tepat 5 putaran (0, 1, 2, 3, 4). Di Alice 3, pola ini setara dengan membungkus instruksi ke dalam blok **count up to 5** yang dieksekusi secara sekuensial (di dalam [[doInOrder]]) atau simultan (di dalam [[doTogether]]).`
   },
   {
     topic: 'Perulangan',

@@ -12,21 +12,25 @@ window.QUESTION_BANK.push(
       'Function tidak boleh memiliki parameter, procedure harus punya parameter.'
     ],
     answer: 1,
-    explain: `Dalam Alice 3 — dan umumnya dalam pemrograman — **function** adalah subprogram yang **menghasilkan nilai** (return value), sedangkan **procedure** adalah subprogram yang menjalankan aksi tanpa mengembalikan nilai.
+    explain: `Berdasarkan **Modul Pertemuan 6 SPADA UMS**:
+- **Procedure** adalah subprogram/method yang menjalankan urutan aksi atau perintah tanpa mengembalikan nilai data (*void*). Contoh di Alice 3: [[this.bunny.move()]], [[this.bunny.turn()]], [[say("Halo")]], atau custom procedure [[jump()]].
+- **Function** adalah subprogram/method yang melakukan perhitungan atau membaca keadaan object lalu **mengembalikan suatu nilai** (*non-void*). Contoh di Alice 3: [[this.bunny.getDistanceTo(target)]] (mengembalikan angka jarak) atau [[getHeight()]].
 
-Di Java, perbedaan ini terlihat dari return type:
+Di Java, perbedaan ini terlihat jelas dari *return type*:
 
 ~~~
 public int hitungLuas(int p, int l) {
-    return p * l;          // function
+    return p * l;          // Function (mengembalikan nilai int)
 }
 
 public void sapa(String nama) {
-    System.out.println("Halo " + nama); // procedure
+    System.out.println("Halo " + nama); // Procedure (void, tanpa return nilai)
 }
 ~~~
 
-Function bisa dipakai di dalam ekspresi, misalnya [[int luas = hitungLuas(5, 3);]] atau [[if (getDistanceTo(target) < 2.0)]]. Procedure dipanggil sebagai perintah berdiri sendiri, misalnya [[sapa("Ayu");]] atau [[move();]]. Keduanya boleh punya parameter; yang membedakan adalah ada tidaknya nilai yang dikembalikan.`
+Function dapat diletakkan di dalam ekspresi atau kondisi logika, misalnya:
+[[if (this.bunny.getDistanceTo(target) < 2.0)]].
+Sebaliknya, procedure dipanggil sebagai instruksi aksi mandiri yang mengubah *state* visual di layar.`
   },
   {
     topic: 'Function & Procedure',
