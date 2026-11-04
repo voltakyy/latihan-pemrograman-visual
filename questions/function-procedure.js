@@ -1,3 +1,14 @@
+/**
+ * @file function-procedure.js
+ * @description Bank Soal Topik 4: Function & Procedure (Abstraksi Prosedural & Fungsi Komputasi)
+ * @curriculum Pemrograman Visual (Alice 3 / Java OOP) - SPADA UMS Pertemuan 6
+ * @learning_outcomes
+ *   - Memahami konsep dasar Procedural Abstraction dalam rekayasa perangkat lunak.
+ *   - Membedakan aksi void (Procedure) vs komputasi dengan return value (Function).
+ *   - Menganalisis parameter input dan fleksibilitas pemanggilan subprogram.
+ *   - Menerapkan fungsi bawaan Alice 3 (getDistanceTo, getWidth, dsb) dalam ekspresi kondisi.
+ */
+
 /* Topik 4 — Function & Procedure */
 window.QUESTION_BANK = window.QUESTION_BANK || [];
 
