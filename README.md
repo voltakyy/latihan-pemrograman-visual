@@ -8,6 +8,16 @@ Latihan soal pilihan ganda untuk UTS Pemrograman Visual: **Class & Object**, **P
 - Bisa dijawab dengan klik, tombol **1–4 / A–D**, lalu **Enter** untuk lanjut
 - Rapor per topik, review jawaban salah, dan rekor tersimpan di browser
 
+## Halaman Khusus UTS 2024 (Naskah Asli UMS)
+
+Buka [`uts-2024.html`](uts-2024.html) untuk belajar dan latihan langsung dari naskah ujian resmi **UTS Gasal 2024/2025 (Senin, 04 November 2024)**:
+- **Bedah Tuntas 5 Soal Esai:** Solusi ideal 100% dosen untuk Class vs Object, Property & Method (minimal 4), Rekonstruksi Diagram UML Inheritance (Mahasiswa, Petani, Pedagang), Alice 3 Functions vs Procedures, dan Perulangan.
+- **Arena Latihan & Simulasi Esai:** Tempat mengetik jawaban sendiri, kalkulator skor mandiri (0–100 Poin), dan rubrik penilaian dosen.
+- **Kuis 10 Kasus & Jebakan UTS:** Latihan soal pilihan ganda interaktif dengan feedback langsung.
+- **Visualizer Diagram UML:** Membandingkan diagram sebelum vs sesudah inheritance secara visual interaktif.
+- **Catatan Ringkas A4:** Siap cetak / simpan PDF (`Ctrl + P`) untuk belajar cepat sebelum ujian.
+- **Naskah Asli PDF:** Tersedia di folder [`docs/uts-2024-pemrograman-visual.pdf`](docs/uts-2024-pemrograman-visual.pdf).
+
 ## Buka latihan
 
 Langsung buka [`index.html`](index.html) di browser — tidak perlu install, build, atau server.
