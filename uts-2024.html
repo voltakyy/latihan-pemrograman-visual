@@ -770,22 +770,28 @@
       <h2 class="q-statement">"Apa itu Class? Dan apa itu Object?<br>Berikan penjelasan beserta dengan contohnya!"</h2>
 
       <div class="solution-card">
-        <span class="sol-tag">Kunci Jawaban Sempurna (100% Nilai Penuh)</span>
+        <span class="sol-tag">Kunci Jawaban Sempurna (Sesuai Modul SPADA UMS P3 &amp; P4)</span>
         <div class="sol-content">
-          <h4>1. Pengertian Class</h4>
+          <h4>1. Pengertian Class (Blueprint / Template)</h4>
           <p>
-            <strong>Class</strong> adalah sebuah <em>blueprint</em> (cetak biru), kerangka dasar, atau rancangan yang mendefinisikan struktur data (property/atribut) dan perilaku (method/fungsi) yang akan dimiliki oleh setiap objek yang dibuat darinya. Class belum memiliki wujud fisik di memori komputer sebelum objek di-instansiasi.
+            Berdasarkan modul resmi SPADA UMS Pertemuan 3 &amp; 4: <strong>Class</strong> adalah sebuah <em>blueprint</em> (cetak biru) atau template yang mendefinisikan struktur data (<strong>property</strong>) dan perilaku (<strong>method</strong>) yang dimiliki oleh objek. Class belum memiliki wujud fisik di memori komputer sebelum objek di-instansiasi.
           </p>
           <p>
-            <em>Analogi:</em> Denah arsitektur rumah atau cetakan kue martabak. Denah tersebut memuat ukuran dan rancangan ruangan, tetapi belum bisa ditinggali karena belum berwujud fisik.
+            <em>Representasi di Alice 3:</em> Class terletak di bagian <strong>Gallery</strong> (contoh: Class <code>Robot</code>, Class <code>Bunny</code>, atau Class <code>Penguin</code>).
+          </p>
+          <p>
+            <em>Analogi:</em> Denah arsitektur rumah atau resep kue martabak. Denah tersebut memuat ukuran dan rancangan ruangan, tetapi belum bisa ditinggali karena belum berwujud fisik.
           </p>
 
-          <h4>2. Pengertian Object</h4>
+          <h4>2. Pengertian Object (Instance)</h4>
           <p>
-            <strong>Object</strong> adalah <em>instance</em> (wujud nyata) konkret yang diciptakan dari sebuah class. Ketika sebuah object dibuat (menggunakan operator <code>new</code>), ruang memori komputer (Heap memory) dialokasikan untuk menyimpan nilai-nilai dari property milik object tersebut, dan method-nya siap dipanggil untuk beraksi.
+            <strong>Object</strong> adalah <em>instance</em> (wujud nyata) konkret yang diciptakan berdasarkan sebuah class (prinsip <em>One Class, Many Objects</em>). Ketika sebuah object dibuat (menggunakan operator <code>new</code> pada Java atau ditempatkan di <strong>Scene</strong> pada Alice 3), ruang memori komputer dialokasikan untuk menyimpan nilai-nilai property objek tersebut.
           </p>
           <p>
-            <em>Analogi:</em> Rumah nyata yang sudah dibangun dari denah, atau kue martabak matang yang sudah diberi topping cokelat/keju. Dari satu cetakan, dapat dibuat banyak objek yang berbeda.
+            <em>Representasi di Alice 3:</em> Objek berada di dalam <strong>Scene</strong>. Dari 1 Class <code>Bunny</code> di Gallery, kita dapat membuat objek <code>bunny</code> dan <code>bunny2</code> di Scene dengan nilai posisi, orientasi, atau warna yang berbeda (<em>Same Class, Different Objects</em>).
+          </p>
+          <p>
+            <em>Analogi:</em> Rumah nyata yang sudah dibangun dari denah, atau kue martabak matang yang siap dimakan.
           </p>
 
           <h4>3. Contoh Riil dalam Kode</h4>
@@ -870,15 +876,15 @@ public class Main {
       </h2>
 
       <div class="solution-card">
-        <span class="sol-tag">Kunci Jawaban Sempurna (100% Nilai Penuh)</span>
+        <span class="sol-tag">Kunci Jawaban Sempurna (Sesuai Modul SPADA UMS P3 &amp; P4)</span>
         <div class="sol-content">
           <h4>1. Perbedaan Property dan Method</h4>
           <ul>
             <li>
-              <strong>Property (Atribut / Field / State):</strong> Karakteristik, variabel data, atau ciri-ciri yang melekat dan disimpan di dalam class/object. Property menggambarkan <em>"apa yang dimiliki"</em> oleh suatu objek (misal: nama, usia, warna, kapasitas).
+              <strong>Property (Data / Keadaan / State):</strong> Data atau keadaan yang dimiliki oleh sebuah object yang menunjukkan <em>"apa yang dimiliki (what it has)"</em>. Pada Alice 3, property dikelola di <strong>Panel Properties</strong> (contoh: <code>color</code>, <code>position</code>, <code>orientation</code>, <code>size</code>, <code>speed</code>). Nilai property dapat berbeda antar-objek dan dapat berubah selama program berjalan.
             </li>
             <li>
-              <strong>Method (Behavior / Prosedur / Fungsi):</strong> Kumpulan instruksi atau operasi yang menentukan <em>"apa yang bisa dilakukan"</em> oleh atau terhadap objek tersebut. Method merepresentasikan tindakan dinamis, aksi gerak, atau kalkulasi logika.
+              <strong>Method (Perilaku / Aksi / Behavior):</strong> Tindakan atau aksi yang dapat dilakukan oleh sebuah object yang menunjukkan <em>"apa yang dapat dilakukan (what it does)"</em>. Pada Alice 3, method disusun di <strong>Code Editor</strong> (contoh: <code>move()</code>, <code>turn()</code>, <code>stop()</code>, <code>say()</code>, <code>jump()</code>). Method dapat menerima parameter untuk menghasilkan behavior tertentu.
             </li>
           </ul>
 
@@ -1222,14 +1228,19 @@ if (this.alice.getDistanceTo(this.rabbit) < 1.5) {
       </h2>
 
       <div class="solution-card">
-        <span class="sol-tag">Kunci Jawaban Sempurna (100% Nilai Penuh)</span>
+        <span class="sol-tag">Kunci Jawaban Sempurna (Sesuai Modul SPADA UMS P5)</span>
         <div class="sol-content">
           <h4>1. Pengertian Perulangan (Looping / Iteration)</h4>
           <p>
-            <strong>Perulangan (Loop)</strong> adalah struktur kontrol dalam algoritma pemrograman yang digunakan untuk mengeksekusi satu atau sekumpulan instruksi/statement secara berulang-ulang, baik sebanyak jumlah hitungan yang sudah ditentukan (<em>Counted Loop / Definite</em>) maupun selama suatu kondisi logika tertentu masih bernilai benar (<em>Conditional Loop / While Loop / Indefinite</em>).
+            Berdasarkan Modul SPADA UMS Pertemuan 5, <strong>Perulangan (Loop)</strong> adalah struktur kontrol algoritma pemrograman yang digunakan untuk mengeksekusi satu atau sekumpulan instruksi secara berulang-ulang tanpa perlu menuliskan kode yang sama berulang kali:
           </p>
+          <ul>
+            <li><strong>Counted Loop (<code>count up to</code> di Alice 3 / <code>for</code> di Java):</strong> Perulangan dengan jumlah iterasi yang sudah diketahui secara pasti sejak awal.</li>
+            <li><strong>Conditional Loop (<code>while</code> di Alice 3 / Java):</strong> Perulangan bersyarat yang terus berjalan selama kondisi logika masih bernilai <code>true</code>.</li>
+            <li><strong>Kombinasi dengan Control Statement:</strong> Sering digabungkan dengan blok <code>do in order</code> (eksekusi berurutan satu per satu) dan <code>do together</code> (eksekusi simultan bersamaan).</li>
+          </ul>
           <p>
-            <em>Manfaat Utama:</em> Mencegah pengulangan penulisan kode manual (menghindari duplikasi), menghemat memori, menyederhanakan kode, serta mempermudah otomasi tugas berulang (seperti animasi berjalan di Alice 3 atau memproses data array).
+            <em>Manfaat Utama:</em> Mencegah duplikasi kode (DRY), menghemat memori, menyederhanakan kode, serta mempermudah otomasi tugas animasi (seperti Bunny melompat berulang kali).
           </p>
 
           <h4>2. Contoh Implementasi di ALICE 3 (Count Loop)</h4>
