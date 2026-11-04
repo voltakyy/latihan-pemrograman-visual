@@ -50,11 +50,11 @@ Buka [`index.html`](index.html) untuk berlatih 31 soal pilihan ganda:
 
 ---
 
-## 📂 Struktur Repositori
+## 📂 Struktur Repositori & Lembar Belajar
 
 ```text
 latihan-pemrograman-visual/
-├── docs/                      # Dokumen pendukung ujian resmi
+├── docs/                      # Dokumen naskah ujian resmi (PDF)
 │   └── uts-2024-pemrograman-visual.pdf
 ├── questions/                 # Bank soal modular berdasarkan topik
 │   ├── class-object.js
@@ -62,15 +62,35 @@ latihan-pemrograman-visual/
 │   ├── inheritance.js
 │   ├── loops.js
 │   └── property-method.js
-├── app.js                     # Logika kuis interaktif, timer, scoring, local storage
-├── styles.css                 # Desain sistem tema Neo-Brutalist Studio Paper
-├── index.html                 # Halaman utama bank soal pilihan ganda
+├── app.js                     # Logika kuis interaktif, timer, scoring, toast
+├── styles.css                 # Desain sistem Neo-Brutalist & print stylesheet
+├── index.html                 # Halaman utama kuis pilihan ganda interaktif
 ├── uts-2024.html              # Pembahasan interaktif naskah resmi UTS 2024
 ├── uts-2026.html              # Modul lengkap dan simulasi UTS 2026
 ├── GLOSSARY.md                # Kamus istilah lengkap Pemrograman Visual & OOP
+├── CHEATSHEET-ALICE3.md       # Lembar contek cepat orientasi & blok kontrol Alice 3
+├── CHEATSHEET-OOP.md          # Intisari pewarisan, enkapsulasi, & diagram UML
+├── TIPS-UTS.md                # Strategi pengerjaan soal esai & manajemen waktu
+├── CONTRIBUTING.md            # Panduan berkontribusi dan format penambahan soal
+├── CHANGELOG.md               # Catatan riwayat versi dan pembaruan materi
+├── LICENSE                    # Lisensi Open Source MIT
+├── site.webmanifest           # Konfigurasi instalasi Web App PWA
 ├── favicon.svg                # Ikon identitas web
 └── README.md                  # Dokumentasi utama proyek
 ```
+
+---
+
+## 📚 Pusat Referensi & Cheatsheet
+
+Untuk memudahkan belajar cepat sebelum masuk ruang ujian:
+- 📖 [**GLOSSARY.md**](GLOSSARY.md) — Kamus istilah 30+ konsep OOP dan pemrograman visual.
+- 📐 [**CHEATSHEET-ALICE3.md**](CHEATSHEET-ALICE3.md) — Ringkasan 6 arah orientasi spasial dan perbandingan blok logika.
+- 🏛️ [**CHEATSHEET-OOP.md**](CHEATSHEET-OOP.md) — Rangkuman relasi *is-a*, kata kunci `extends` & `super`, serta simbol UML.
+- ⏱️ [**TIPS-UTS.md**](TIPS-UTS.md) — Panduan manajemen waktu ujian 90 menit dan trik mendapatkan nilai maksimal dosen.
+- 📝 [**CONTRIBUTING.md**](CONTRIBUTING.md) — Standarisasi format penambahan soal pilihan ganda baru.
+- 📜 [**CHANGELOG.md**](CHANGELOG.md) — Log catatan evolusi fitur dan modul web.
+- ⚖️ [**LICENSE**](LICENSE) — Lisensi open source MIT.
 
 ---
 
