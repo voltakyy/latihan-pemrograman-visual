@@ -1166,3 +1166,34 @@ code.code-stack{display:inline-block;white-space:pre;vertical-align:top;line-hei
     transition:none !important;
   }
 }
+
+/* =========================================================
+   Print Stylesheet Optimization (A4 / PDF Export)
+   ========================================================= */
+@media print {
+  body {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  .skip-link,
+  .hero-actions,
+  .nav-pill,
+  #hotkeysBtn,
+  .back-to-top,
+  .result-actions,
+  .quiz-footnote,
+  .site-head {
+    display: none !important;
+  }
+  .shell {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .screen {
+    box-shadow: none !important;
+    border: 1px solid #777 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
