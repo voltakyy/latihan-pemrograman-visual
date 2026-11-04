@@ -8,6 +8,15 @@ Latihan soal pilihan ganda untuk UTS Pemrograman Visual: **Class & Object**, **P
 - Bisa dijawab dengan klik, tombol **1–4 / A–D**, lalu **Enter** untuk lanjut
 - Rapor per topik, review jawaban salah, dan rekor tersimpan di browser
 
+## Halaman Khusus Latihan UTS 2026 (Terbaru)
+
+Buka [`uts-2026.html`](uts-2026.html) untuk belajar dan latihan soal prediksi serta pembahasan mendalam **UTS Gasal 2026/2027**:
+- **6 Pilar Soal Inti:** Class vs Object, State & Behavior, Behavior Manusia, Kebutuhan Procedure di Software Engineering, Alice 3 Procedure vs Function, dan Kebermanfaatan Inheritance (Relasi "is-a").
+- **Arena Simulasi Esai & Self-Scoring:** Penilaian mandiri (0–100 Poin) lengkap dengan rubrik dosen dan auto-save `localStorage`.
+- **Kuis 10 Kasus & Jebakan Konseptual:** Latihan pilihan ganda interaktif dengan feedback langsung.
+- **Visualizer Alur Data Alice 3:** Perbandingan eksekusi Procedure vs Function.
+- **Rangkuman Catatan A4:** Siap cetak / simpan PDF (`Ctrl + P`).
+
 ## Halaman Khusus UTS 2024 (Naskah Asli UMS)
 
 Buka [`uts-2024.html`](uts-2024.html) untuk belajar dan latihan langsung dari naskah ujian resmi **UTS Gasal 2024/2025 (Senin, 04 November 2024)**:

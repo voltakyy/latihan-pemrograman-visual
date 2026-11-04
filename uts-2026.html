@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soal &amp; Pembahasan Lengkap Latihan UTS Pemrograman Visual 2026/2027 — UMS</title>
+<meta name="description" content="Halaman khusus latihan dan pembahasan mendalam materi UTS Gasal 2026/2027 Pemrograman Visual Informatika UMS: Class & Object, State & Behavior, Behavior Manusia, Procedure vs Function, dan Inheritance. Dilengkapi simulator esai dan kuis interaktif.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+<style>
+/* =========================================================
+   Gaya Khusus Halaman Latihan UTS 2026 (Neo-Brutalist Academic Studio)
+   ========================================================= */
+
+.exam-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.nav-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  background: var(--card);
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 2px 2px 0 var(--ink);
+  transition: all .15s ease;
+}
+.nav-pill:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--ink);
+  background: var(--mustard-soft);
+}
+.nav-pill.active {
+  background: var(--mustard);
+  color: var(--ink);
+}
+
+/* Tabs Bar */
+.exam-tabs-wrap {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(246, 240, 228, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--ink);
+  margin-top: 18px;
+  padding: 10px 0;
+}
+.exam-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+.exam-tabs::-webkit-scrollbar { display: none; }
+.tab-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  background: var(--card);
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink-soft);
+  cursor: pointer;
+  box-shadow: 3px 3px 0 var(--ink);
+  white-space: nowrap;
+  transition: all .15s ease;
+}
+.tab-trigger:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 var(--ink);
+  color: var(--ink);
+}
+.tab-trigger.active {
+  background: var(--teal);
+  color: #fffdf7;
+  border-color: var(--ink);
+  box-shadow: 3px 3px 0 var(--ink);
+  transform: translate(1px, 1px);
+}
+.tab-badge {
+  font-family: var(--mono);
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: rgba(36,34,31,.12);
+  color: inherit;
+}
+.tab-trigger.active .tab-badge {
+  background: rgba(255,255,255,.25);
+  color: #fff;
+}
+
+.exam-pane {
+  display: none;
+  animation: fadeIn .2s ease-out;
+  padding-top: 24px;
+}
+.exam-pane.active {
+  display: block;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header Card */
+.official-header-card {
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  padding: 26px clamp(18px, 4vw, 32px);
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.official-header-card::before {
+  content: "LATIHAN UTS 2026/2027";
+  position: absolute;
+  top: 14px;
+  right: -32px;
+  background: var(--teal);
+  color: #fff;
+  border: 1.5px solid var(--ink);
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 4px 38px;
+  transform: rotate(18deg);
+  box-shadow: 0 2px 4px rgba(0,0,0,.15);
+  letter-spacing: .08em;
+}
+.univ-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+.univ-logo-box {
+  width: 58px;
+  height: 58px;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  background: var(--teal);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 20px;
+  box-shadow: 3px 3px 0 var(--ink);
+  flex-shrink: 0;
+}
+.univ-titles h1 {
+  margin: 0;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: 800;
+  letter-spacing: -.02em;
+}
+.univ-titles p {
+  margin: 2px 0 0;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+.exam-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin-bottom: 18px;
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 12px;
+  padding: 14px 18px;
+}
+.meta-item {
+  display: flex;
+  flex-direction: column;
+}
+.meta-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--ink-faint);
+}
+.meta-val {
+  font-weight: 700;
+  font-size: 13.5px;
+  color: var(--ink);
+}
+
+.guidance-box {
+  border-left: 4px solid var(--teal);
+  background: var(--teal-soft);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+.guidance-box strong {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  color: var(--teal);
+}
+
+/* Postingan Soal & Solusi */
+.q-post {
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  padding: 26px clamp(18px, 3.5vw, 32px);
+  margin-bottom: 26px;
+  position: relative;
+}
+.q-post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 18px;
+}
+.q-badge-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.badge-qno {
+  background: var(--ink);
+  color: #fffdf7;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 15px;
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+.badge-score {
+  background: var(--mustard);
+  color: var(--ink);
+  border: 1.5px solid var(--ink);
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.badge-topic {
+  background: var(--blue-soft);
+  color: #2b5672;
+  border: 1.5px solid #9fc3d8;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 8px;
+}
+.q-statement {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  font-weight: 750;
+  line-height: 1.35;
+  color: var(--ink);
+  margin: 0 0 16px;
+}
+
+.solution-card {
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  padding: 20px clamp(14px, 3vw, 24px);
+  margin-top: 18px;
+}
+.sol-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--teal);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.sol-content h4 {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 750;
+  margin: 16px 0 8px;
+  color: var(--ink);
+}
+.sol-content p, .sol-content li {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.sol-content ul, .sol-content ol {
+  margin: 8px 0 16px 20px;
+  padding: 0;
+}
+.sol-content code {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  background: var(--card);
+  border: 1px solid rgba(36,34,31,.25);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--tomato);
+}
+.code-window {
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  background: #1e1e24;
+  color: #f3ecdc;
+  margin: 14px 0 18px;
+  overflow: hidden;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.code-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  background: #2b2b34;
+  border-bottom: 1px solid #3c3c46;
+  font-family: var(--mono);
+  font-size: 11px;
+  color: #a4a4b2;
+}
+.code-dots {
+  display: flex;
+  gap: 5px;
+}
+.code-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #555;
+}
+.code-dots span:nth-child(1) { background: #ff5f56; }
+.code-dots span:nth-child(2) { background: #ffbd2e; }
+.code-dots span:nth-child(3) { background: #27c93f; }
+.code-window pre {
+  margin: 0;
+  padding: 14px 16px;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+.rubrik-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+  font-size: 13px;
+  background: var(--card);
+  border: 1.5px solid var(--ink);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.rubrik-table th {
+  background: var(--paper-deep);
+  border-bottom: 1.5px solid var(--ink);
+  padding: 8px 12px;
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.rubrik-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(36,34,31,.15);
+  vertical-align: top;
+}
+.rubrik-table tr:last-child td { border-bottom: none; }
+
+/* Interactive Simulator */
+.essay-sim-card {
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--shadow);
+  padding: 24px clamp(16px, 3.5vw, 28px);
+  margin-bottom: 24px;
+}
+.sim-textarea {
+  width: 100%;
+  min-height: 110px;
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: var(--font);
+  font-size: 14px;
+  background: #fff;
+  color: var(--ink);
+  resize: vertical;
+  margin: 10px 0 14px;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,.08);
+}
+.sim-textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px var(--teal-soft);
+}
+.sim-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.score-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--paper);
+  border: 1.5px solid var(--ink);
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+.score-slider-wrap input[type=range] {
+  cursor: pointer;
+  accent-color: var(--teal);
+}
+.score-val-badge {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--teal);
+  min-width: 52px;
+  text-align: right;
+}
+
+.exam-score-bar {
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  background: var(--mustard);
+  box-shadow: 5px 5px 0 var(--ink);
+  padding: 16px 22px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.score-info h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.score-info p {
+  margin: 2px 0 0;
+  font-size: 12.5px;
+  font-family: var(--mono);
+}
+.score-tally-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.score-big-num {
+  font-family: var(--display);
+  font-size: 2.2rem;
+  font-weight: 850;
+  line-height: 1;
+}
+.grade-pill {
+  padding: 4px 14px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  background: var(--card);
+  font-family: var(--mono);
+  font-weight: 800;
+  font-size: 14px;
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+/* Kuis Options */
+.mc-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 14px 0;
+}
+.mc-opt-btn {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  padding: 12px 16px;
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  background: var(--card);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  transition: all .15s ease;
+}
+.mc-opt-btn:hover {
+  background: var(--mustard-soft);
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.mc-opt-btn.correct {
+  background: var(--teal-soft) !important;
+  border-color: var(--teal) !important;
+  color: var(--teal) !important;
+  font-weight: 700;
+}
+.mc-opt-btn.wrong {
+  background: var(--tomato-soft) !important;
+  border-color: var(--tomato) !important;
+  color: var(--tomato) !important;
+  opacity: .85;
+}
+.mc-key {
+  font-family: var(--mono);
+  font-weight: 700;
+  background: var(--paper-deep);
+  border: 1px solid var(--ink);
+  padding: 2px 7px;
+  border-radius: 5px;
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+/* Printable */
+@media print {
+  body { background: #fff !important; color: #000 !important; }
+  body::before, .site-head, .exam-nav, .exam-tabs-wrap, .exam-score-bar, .sim-actions, .sim-textarea, .no-print, .btn {
+    display: none !important;
+  }
+  .shell { width: 100% !important; max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+  .exam-pane { display: none !important; }
+  #pane-cheatsheet { display: block !important; padding: 0 !important; }
+  .official-header-card { page-break-inside: avoid; box-shadow: none !important; border: 1px solid #666 !important; }
+}
+</style>
+</head>
+<body>
+
+<main class="shell">
+
+  <!-- ================= TOP HEADER ================= -->
+  <header class="site-head">
+    <a class="brand" href="index.html" aria-label="Kembali ke Beranda Ruang Visual">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40">
+          <rect x="2" y="13" width="21" height="21" rx="6" fill="#2b8a79" stroke="#24221f" stroke-width="2.5"/>
+          <rect x="9" y="7" width="21" height="21" rx="6" fill="#f2b544" stroke="#24221f" stroke-width="2.5"/>
+          <rect x="16" y="1" width="21" height="21" rx="6" fill="#dd5a3a" stroke="#24221f" stroke-width="2.5"/>
+        </svg>
+      </span>
+      <span class="brand-text">ruang <em>visual</em></span>
+    </a>
+    
+    <div class="exam-nav">
+      <a href="index.html" class="nav-pill" title="Ke Bank Soal Pilihan Ganda 31 Soal">
+        <span>←</span> Bank Soal 31
+      </a>
+      <a href="uts-2024.html" class="nav-pill" title="Halaman Khusus UTS 2024">
+        <span>📜</span> Halaman UTS 2024
+      </a>
+      <span class="stamp-badge" style="background:var(--teal-soft); border-color:var(--teal); color:var(--teal);">LATIHAN UTS 2026</span>
+    </div>
+  </header>
+
+  <!-- ================= HERO & INFO NASKAH ================= -->
+  <section class="official-header-card" style="margin-top:20px;">
+    <div class="univ-brand">
+      <div class="univ-logo-box">UMS</div>
+      <div class="univ-titles">
+        <h1>UNIVERSITAS MUHAMMADIYAH SURAKARTA</h1>
+        <p>FAKULTAS KOMUNIKASI DAN INFORMATIKA · PROGRAM STUDI INFORMATIKA</p>
+      </div>
+    </div>
+
+    <div class="exam-meta-grid">
+      <div class="meta-item">
+        <span class="meta-label">Mata Uji</span>
+        <span class="meta-val">Pemrograman Visual</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Periode Ujian</span>
+        <span class="meta-val">Semester Gasal 2026/2027</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Fokus Materi</span>
+        <span class="meta-val">OOP Dasar, Alice 3, Inheritance, Method</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Alokasi Waktu &amp; Skor</span>
+        <span class="meta-val">90 Menit · 100 Poin Total</span>
+      </div>
+    </div>
+
+    <div class="guidance-box">
+      <strong>Materi Inti UTS 2026 (6 Pilar Utama):</strong>
+      1. Class vs Object · 2. State (Property) vs Behavior (Method) · 3. Pemodelan Behavior Manusia · 4. Procedure &amp; Modularitas Rekayasa Perangkat Lunak · 5. Procedure vs Function di Alice 3 · 6. Inheritance &amp; Reusability (Relasi "is-a").
+    </div>
+  </section>
+
+  <!-- ================= TABS NAVIGATION ================= -->
+  <div class="exam-tabs-wrap">
+    <div class="exam-tabs" role="tablist">
+      <button class="tab-trigger active" onclick="switchExamTab('solusi', this)" role="tab" aria-selected="true">
+        <span>📖</span> Bedah 6 Soal Inti 2026 <span class="tab-badge">Kunci Lengkap</span>
+      </button>
+      <button class="tab-trigger" onclick="switchExamTab('latihan', this)" role="tab" aria-selected="false">
+        <span>🎯</span> Arena Simulasi Esai <span class="tab-badge">Self-Scoring</span>
+      </button>
+      <button class="tab-trigger" onclick="switchExamTab('kuis', this)" role="tab" aria-selected="false">
+        <span>⚡</span> Kuis 10 Kasus <span class="tab-badge">Interaktif</span>
+      </button>
+      <button class="tab-trigger" onclick="switchExamTab('lab', this)" role="tab" aria-selected="false">
+        <span>🧪</span> Lab OOP &amp; Alice 3 <span class="tab-badge">Visualizer</span>
+      </button>
+      <button class="tab-trigger" onclick="switchExamTab('cheatsheet', this)" role="tab" aria-selected="false">
+        <span>🖨️</span> Rangkuman A4 <span class="tab-badge">Siap Cetak</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= TAB 1: BEDAH 6 SOAL INTI ================= -->
+  <div id="pane-solusi" class="exam-pane active">
+
+    <!-- SOAL 1 -->
+    <article class="q-post">
+      <div class="q-post-header">
+        <div class="q-badge-group">
+          <span class="badge-qno">SOAL 01</span>
+          <span class="badge-score">Bobot: 15 Poin</span>
+          <span class="badge-topic">Class &amp; Object Concept</span>
+        </div>
+      </div>
+
+      <h2 class="q-statement">
+        "Apa yang dimaksud dengan Class dalam konsep OOP dan bagaimana hubungannya dengan Object?"
+      </h2>
+
+      <div class="solution-card">
+        <span class="sol-tag">Pembahasan Lengkap &amp; Model Jawaban Dosen</span>
+        <div class="sol-content">
+          <h4>1. Pengertian Class dalam OOP</h4>
+          <p>
+            <strong>Class</strong> adalah sebuah <em>blueprint</em> (cetak biru), kerangka dasar, prototipe abstrak, atau spesifikasi tipe data bentukan programmer yang mendefinisikan struktur data (<strong>properties/atribut/state</strong>) dan sekumpulan tindakan (<strong>methods/behavior</strong>) yang akan dimiliki oleh objek-objek sejenis.
+          </p>
+          <p>
+            Secara teknis, deklarasi sebuah class <strong>belum mengalokasikan ruang memori fisik</strong> (Heap memory) untuk data objek. Class hanya berperan sebagai rancangan logis.
+          </p>
+
+          <h4>2. Hubungan Antara Class dan Object</h4>
+          <p>
+            Hubungan antara Class dan Object adalah hubungan antara <strong>cetakan</strong> dengan <strong>produk hasil cetakan</strong> (relasi <em>Type to Instance</em>):
+          </p>
+          <ul>
+            <li><strong>Class sebagai Definisi:</strong> Menentukan <em>"apa saja yang boleh dimiliki dan dilakukan"</em> oleh objek.</li>
+            <li><strong>Object sebagai Wujud Nyata (Instance):</strong> Entitas konkret yang benar-benar hidup di memori komputer, diciptakan melalui proses <em>instansiasi</em> (menggunakan operator <code>new</code> pada Java atau menambahkan model ke dunia 3D di Alice 3).</li>
+            <li><strong>Relasi Satu-ke-Banyak (1 to N):</strong> Dari satu class yang sama, kita bisa menciptakan banyak object mandiri yang memiliki nilai atribut berbeda-beda tanpa saling mengganggu.</li>
+          </ul>
+
+          <h4>3. Analogi Dunia Nyata &amp; Implementasi Kode</h4>
+          <p>
+            <em>Analogi:</em> Denah arsitektur rumah (Class) vs Bangunan rumah fisik yang dihuni di jalan Mawar No. 10 (Object). Dari satu lembar denah, kontraktor bisa membangun 50 rumah dengan warna cat dan furnitur yang berbeda.
+          </p>
+          <div class="code-window">
+            <div class="code-bar">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <span>Contoh Hubungan Class &amp; Object</span>
+            </div>
+            <pre><code>// CLASS: Cetak Biru
+class Mobil {
+    String merk;
+    String warna;
+    void melaju() { System.out.println(merk + " melaju!"); }
+}
+
+// OBJECT: Dua Instance Berbeda dari Class yang Sama
+Mobil mobilA = new Mobil(); // Object 1 di memori Heap
+mobilA.merk = "Avanza";
+
+Mobil mobilB = new Mobil(); // Object 2 di memori Heap
+mobilB.merk = "Brio";</code></pre>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- SOAL 2 -->
+    <article class="q-post">
+      <div class="q-post-header">
+        <div class="q-badge-group">
+          <span class="badge-qno">SOAL 02</span>
+          <span class="badge-score">Bobot: 15 Poin</span>
+          <span class="badge-topic">State &amp; Behavior</span>
+        </div>
+      </div>
+
+      <h2 class="q-statement">
+        "Apa yang dimaksud dengan State (Property) dan Behavior (Method) pada sebuah object? Jelaskan hubungannya!"
+      </h2>
+
+      <div class="solution-card">
+        <span class="sol-tag">Pembahasan Lengkap &amp; Model Jawaban Dosen</span>
+        <div class="sol-content">
+          <h4>1. Pengertian State (Property / Field / Atribut)</h4>
+          <p>
+            <strong>State (Property)</strong> adalah kondisi data, ciri-ciri, atau variabel internal yang melekat dan disimpan di dalam sebuah objek pada suatu momen tertentu. State merepresentasikan <em>"apa yang dimiliki (what it has)"</em> atau status keadaan objek tersebut.
+          </p>
+          <p>
+            Nilai state dapat bersifat konstan atau berubah-ubah selama program berjalan sebagai akibat dari tindakan method. Contoh pada objek Lampu: state <code>isMenyala = false</code>, <code>dayaWatt = 15</code>.
+          </p>
+
+          <h4>2. Pengertian Behavior (Method / Operasi)</h4>
+          <p>
+            <strong>Behavior (Method)</strong> adalah sekumpulan instruksi, fungsi, atau prosedur di dalam class yang mendefinisikan tindakan atau aksi yang dapat dilakukan oleh atau terhadap objek tersebut. Behavior merepresentasikan <em>"apa yang bisa dilakukan (what it does)"</em>.
+          </p>
+          <p>
+            Contoh pada objek Lampu: method <code>saklarOn()</code>, <code>saklarOff()</code>, <code>gantiBohlam()</code>.
+          </p>
+
+          <h4>3. Hubungan Timbal Balik Antara State dan Behavior</h4>
+          <p>
+            State dan Behavior saling terikat secara intim dalam prinsip <strong>Encapsulation</strong>:
+          </p>
+          <ul>
+            <li><strong>Behavior mengubah State:</strong> Ketika method <code>saklarOn()</code> dijalankan, ia mengubah nilai state <code>isMenyala</code> dari <code>false</code> menjadi <code>true</code>.</li>
+            <li><strong>State menentukan hasil Behavior:</strong> Jika state bensin mobil <code>volumeBensin == 0</code>, maka method <code>tancapGas()</code> tidak akan bisa dijalankan (menolak melaju).</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- SOAL 3 -->
+    <article class="q-post">
+      <div class="q-post-header">
+        <div class="q-badge-group">
+          <span class="badge-qno">SOAL 03</span>
+          <span class="badge-score">Bobot: 15 Poin</span>
+          <span class="badge-topic">Pemodelan Behavior Manusia</span>
+        </div>
+      </div>
+
+      <h2 class="q-statement">
+        "Berikan contoh behavior (method) manusia dalam pemodelan OOP beserta penjelasan fungsi dan pengaruhnya terhadap state!"
+      </h2>
+
+      <div class="solution-card">
+        <span class="sol-tag">Pembahasan Lengkap &amp; Model Jawaban Dosen</span>
+        <div class="sol-content">
+          <h4>1. Pemodelan Class Manusia</h4>
+          <p>
+            Jika seorang manusia dimodelkan ke dalam class OOP, ia memiliki state (seperti <code>nama</code>, <code>usia</code>, <code>energi</code>, <code>tingkatKenyang</code>, <code>pengetahuan</code>). Behavior adalah seluruh tindakan yang bisa dilakukan manusia tersebut:
+          </p>
+
+          <h4>2. Contoh 5 Behavior Konkret Manusia</h4>
+          <ol>
+            <li>
+              <strong><code>berjalan(int jarakMeter)</code></strong><br>
+              <em>Fungsi:</em> Menggerakkan tubuh manusia berpindah posisi sejauh jarak tertentu.<br>
+              <em>Pengaruh State:</em> Mengurangi nilai <code>energi</code> (misal berkurang 5 poin per 100 meter) dan menambah kelelahan.
+            </li>
+            <li>
+              <strong><code>makan(String makanan, int kalori)</code></strong><br>
+              <em>Fungsi:</em> Mengonsumsi makanan untuk metabolisme tubuh.<br>
+              <em>Pengaruh State:</em> Meningkatkan <code>tingkatKenyang</code> dan memulihkan poin <code>energi</code>.
+            </li>
+            <li>
+              <strong><code>tidur(int durasiJam)</code></strong><br>
+              <em>Fungsi:</em> Mengistirahatkan raga dan pikiran.<br>
+              <em>Pengaruh State:</em> Mereset status lelah, memulihkan <code>energi = 100</code>, dan memelihara kesehatan.
+            </li>
+            <li>
+              <strong><code>belajar(String materi)</code></strong><br>
+              <em>Fungsi:</em> Membaca buku atau menyimak penjelasan dosen.<br>
+              <em>Pengaruh State:</em> Meningkatkan state <code>pengetahuan</code> atau IPK, namun mengonsumsi sedikit <code>energi</code>.
+            </li>
+            <li>
+              <strong><code>berbicara(String pesan)</code></strong><br>
+              <em>Fungsi:</em> Menyampaikan komunikasi lisan kepada manusia lain (ekuivalen dengan <code>say()</code> pada Alice 3).
+            </li>
+          </ol>
+
+          <div class="code-window">
+            <div class="code-bar">
+              <div class="code-dots"><span></span><span></span><span></span></div>
+              <span>Manusia.java (State &amp; Behavior Hubungan Nyata)</span>
+            </div>
+            <pre><code>public class Manusia {
+    // STATE (Property)
+    String nama;
+    int energi = 100;
+    int tingkatKenyang = 50;
+
+    // BEHAVIOR (Method)
+    void makan(String makanan) {
+        tingkatKenyang += 30;
+        energi += 20;
+        System.out.println(nama + " makan " + makanan + ". Energi naik menjadi: " + energi);
+    }
+
+    void berjalan(int langkah) {
+        if (energi <= 10) {
+            System.out.println(nama + " terlalu lemas untuk berjalan!");
+            return;
+        }
+        energi -= (langkah / 100);
+        System.out.println(nama + " berjalan " + langkah + " langkah. Sisa energi: " + energi);
+    }
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- SOAL 4 -->
+    <article class="q-post">
+      <div class="q-post-header">
+        <div class="q-badge-group">
+          <span class="badge-qno">SOAL 04</span>
+          <span class="badge-score">Bobot: 15 Poin</span>
+          <span class="badge-topic">Prosedur &amp; Rekayasa Program</span>
+        </div>
+      </div>
+
+      <h2 class="q-statement">
+        "Apa yang dimaksud dengan procedure dan mengapa procedure sangat diperlukan dalam pengembangan program?"
+      </h2>
+
+      <div class="solution-card">
+        <span class="sol-tag">Pembahasan Lengkap &amp; Model Jawaban Dosen</span>
+        <div class="sol-content">
+          <h4>1. Pengertian Procedure</h4>
+          <p>
+            <strong>Procedure (Prosedur)</strong> adalah subrutin, blok kode, atau subprogram terisolasi yang berisi sekumpulan instruksi terstruktur untuk menjalankan suatu aksi atau tugas tertentu <strong>tanpa mengembalikan nilai (return value)</strong> kepada pemanggilnya. Pada bahasa pemrograman seperti Java/C++, prosedur ditandai dengan return type <code>void</code>.
+          </p>
+
+          <h4>2. Mengapa Procedure Sangat Diperlukan? (4 Alasan Krusial)</h4>
+          <ul>
+            <li>
+              <strong>1. Modularitas (Divide and Conquer):</strong><br>
+              Mengurai program yang raksasa dan rumit menjadi modul-modul kecil yang mandiri. Hal ini memudahkan kolaborasi tim pengembang perangkat lunak karena programmer dapat membagi tugas pengerjaan per prosedur.
+            </li>
+            <li>
+              <strong>2. Menghindari Duplikasi Kode (Prinsip DRY — Don't Repeat Yourself):</strong><br>
+              Instruksi yang sering dipakai (seperti mencetak struk belanja, menggerakkan karakter maju, atau validasi input) cukup ditulis 1 kali saja di dalam prosedur, lalu dipanggil di berbagai tempat kapan pun dibutuhkan.
+            </li>
+            <li>
+              <strong>3. Kemudahan Debugging dan Perawatan (Maintainability):</strong><br>
+              Jika terdapat kesalahan logika (bug) atau perubahan aturan bisnis, kita cukup memperbaiki kode di dalam satu blok prosedur tersebut tanpa risiko merusak bagian kode lainnya.
+            </li>
+            <li>
+              <strong>4. Meningkatkan Keterbacaan Kode (Readability):</strong><br>
+              Alur program utama menjadi sangat bersih dan deskriptif karena menggunakan nama prosedur yang bermakna (contoh: <code>nyalakanMesin();</code>, <code>bacaSensor();</code>, <code>simpanData();</code>).
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- SOAL 5 -->
+    <article class="q-post">
+      <div class="q-post-header">
+        <div class="q-badge-group">
+          <span class="badge-qno">SOAL 05</span>
+          <span class="badge-score">Bobot: 20 Poin</span>
+          <span class="badge-topic">Procedure vs Function</span>
+        </div>
+      </div>
+
+      <h2 class="q-statement">
+        "Jelaskan perbedaan mendasar antara procedure dan function dalam pemrograman beserta contohnya!"
+      </h2>
+
+      <div class="solution-card">
+        <span class="sol-tag">Pembahasan Lengkap &amp; Model Jawaban Dosen</span>
+        <div class="sol-content">
+          <h4>1. Matriks Perbedaan Procedure vs Function</h4>
+          <table class="rubrik-table">
+            <thead>
+              <tr>
+                <th>Kriteria Pembeda</th>
+                <th>Procedure (Prosedur)</th>
+                <th>Function (Fungsi)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Nilai Balik (Return Value)</strong></td>
+                <td><strong>TIDAK MENGEMBALIKAN NILAI</strong> (bertipe <code>void</code>).</td>
+                <td><strong>WAJIB MENGEMBALIKAN NILAI</strong> (bertipe <code>int</code>, <code>double</code>, <code>boolean</code>, <code>String</code>, dll).</td>
+              </tr>
+              <tr>
+                <td><strong>Tujuan Pokok</strong></td>
+                <td>Menghasilkan aksi fisik, animasi gerak, perubahan status, atau input/output di layar.</td>
+                <td>Menghitung rumus matematika, mencari data, atau mengecek status kondisi logika.</td>
+              </tr>
+              <tr>
+                <td><strong>Cara Pemanggilan</strong></td>
+                <td>Berdiri sendiri sebagai satu baris instruksi utuh (<em>statement</em>).</td>
+                <td>Harus ditampung ke dalam variabel, dipakai dalam rumus, atau sebagai syarat percabangan (<code>if</code>).</td>
+              </tr>
+              <tr>
+                <td><strong>Contoh di Alice 3</strong></td>
+                <td><code>alice.move(FORWARD, 2.0);</code><br><code>alice.say("Halo!");</code></td>
+                <td><code>alice.getDistanceTo(kelinci);</code><br><code>alice.getHeight();</code></td>
+              </tr>
+              <tr>
+                <td><strong>Contoh di Java</strong></td>
+                <td><code>void cetakHeader() { ... }</code></td>
+                <td><code>double hitungLuas(double r) { return 3.14 * r * r; }</code></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>2. Mengapa Function Bisa Masuk ke Kondisi IF sedangkan Procedure Tidak?</h4>
+          <p>
+            Karena function menghasilkan nilai (misalnya <code>Boolean</code>: <code>true/false</code> atau angka), nilai tersebut dapat dievaluasi oleh operator relasional. Sedangkan procedure hanya melakukan aksi (bertipe <code>void</code>/hampa), sehingga jika ditulis <code>if (alice.move(...))</code> komputer akan memunculkan error <em>"incompatible types: void cannot be converted to boolean"</em>.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SOAL 6 -->
+    <article class="q-post">
+      <div class="q-post-header">
+        <div class="q-badge-group">
+          <span class="badge-qno">SOAL 06</span>
+          <span class="badge-score">Bobot: 20 Poin</span>
+          <span class="badge-topic">Inheritance &amp; Kebermanfaatan</span>
+        </div>
+      </div>
+
+      <h2 class="q-statement">
+        "Apa yang dimaksud dengan Inheritance dalam OOP dan mengapa konsep ini sangat bermanfaat dalam rekayasa perangkat lunak?"
+      </h2>
+
+      <div class="solution-card">
+        <span class="sol-tag">Pembahasan Lengkap &amp; Model Jawaban Dosen</span>
+        <div class="sol-content">
+          <h4>1. Pengertian Inheritance (Pewarisan)</h4>
+          <p>
+            <strong>Inheritance (Pewarisan)</strong> adalah pilar fundamental OOP yang memungkinkan sebuah class baru (disebut <em>subclass / child class / kelas turunan</em>) mewarisi atribut (state) dan metode (behavior) dari class yang sudah ada sebelumnya (disebut <em>superclass / parent class / kelas induk</em>).
+          </p>
+          <p>
+            Inheritance membentuk relasi hierarkis <strong>"is-a" (adalah seorang / adalah sebuah)</strong>. Contoh:
+          </p>
+          <ul>
+            <li><code>Mahasiswa</code> <em>is-a</em> <code>Manusia</code></li>
+            <li><code>Petani</code> <em>is-a</em> <code>Manusia</code></li>
+            <li><code>Kucing</code> <em>is-a</em> <code>Hewan</code></li>
+          </ul>
+
+          <h4>2. Mengapa Inheritance Sangat Bermanfaat? (4 Manfaat Utama)</h4>
+          <ul>
+            <li>
+              <strong>1. Reusabilitas Kode yang Sangat Tinggi (Code Reusability):</strong><br>
+              Atribut umum seperti <code>nama, usia, gender, alamat</code> serta method <code>berjalan(), makan()</code> cukup ditulis satu kali di class parent <code>Manusia</code>. Subclass tidak perlu menulis ulang, melainkan otomatis mewarisinya.
+            </li>
+            <li>
+              <strong>2. Menghilangkan Redundansi (DRY Principle):</strong><br>
+              Mencegah pemborosan baris kode dan menghemat konsumsi memori. Jika terdapat 10 jenis profesi manusia, kita menghemat puluhan deklarasi variabel duplikat.
+            </li>
+            <li>
+              <strong>3. Kemudahan Pemeliharaan Skala Besar (Scalability &amp; Maintainability):</strong><br>
+              Jika ada atribut umum baru (misalnya pemerintah menambahkan <code>nik</code> atau kewarganegaraan), kita cukup menambahkannya di <code>Manusia</code> satu kali saja, dan seluruh subclass otomatis memiliki atribut tersebut.
+            </li>
+            <li>
+              <strong>4. Mendukung Polimorfisme &amp; Overriding:</strong><br>
+              Subclass dapat memodifikasi (meng-<em>override</em>) method warisan jika ingin memberikan perilaku khusus (misalnya method <code>makan()</code> pada Mahasiswa disesuaikan menjadi makan di kantin kampus).
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- ================= TAB 2: ARENA SIMULASI ESAI ================= -->
+  <div id="pane-latihan" class="exam-pane">
+
+    <div class="exam-score-bar">
+      <div class="score-info">
+        <h3>Simulasi Penilaian Mandiri UTS 2026</h3>
+        <p>Ketik jawabanmu, cocokkan dengan kunci dosen, lalu berikan skor jujur (0–100 Poin)</p>
+      </div>
+      <div class="score-tally-box">
+        <div>
+          <span style="font-family:var(--mono); font-size:11px; display:block; text-align:right;">TOTAL SKOR</span>
+          <span id="liveTotalScore" class="score-big-num">0</span> <span style="font-size:1.1rem; font-weight:700;">/ 100</span>
+        </div>
+        <div id="liveGradePill" class="grade-pill">BELUM DINILAI</div>
+      </div>
+    </div>
+
+    <!-- SIMULATOR 1 -->
+    <div class="essay-sim-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="badge-qno">LATIHAN 01 (Max: 15 Poin)</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">Class vs Object</span>
+      </div>
+      <p style="font-weight:700; margin:0 0 8px;">Soal: Jelaskan apa itu Class dalam konsep OOP dan bagaimana hubungannya dengan Object!</p>
+      <textarea id="essay2026_1" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
+      
+      <div class="sim-actions">
+        <button class="btn btn-small" type="button" onclick="toggleKey('key2026_1', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
+        <div class="score-slider-wrap">
+          <label style="font-size:12px; font-weight:700;">Nilai Mandiri:</label>
+          <input type="range" id="score2026_1" min="0" max="15" value="0" oninput="updateExamScore2026()">
+          <span id="text2026_1" class="score-val-badge">0 / 15</span>
+        </div>
+      </div>
+      <div id="key2026_1" class="solution-card" style="display:none; margin-top:14px;">
+        <p style="font-size:13px; line-height:1.6; margin:0;">
+          <strong>Checklist Rubrik:</strong><br>
+          ✓ Class sebagai blueprint / cetak biru abstrak (5 Poin)<br>
+          ✓ Object sebagai instance konkret di memori (5 Poin)<br>
+          ✓ Hubungan 1 Class dapat membuat banyak Object berbeda (5 Poin)
+        </p>
+      </div>
+    </div>
+
+    <!-- SIMULATOR 2 -->
+    <div class="essay-sim-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="badge-qno">LATIHAN 02 (Max: 15 Poin)</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">State &amp; Behavior</span>
+      </div>
+      <p style="font-weight:700; margin:0 0 8px;">Soal: Jelaskan pengertian State (Property) dan Behavior (Method) serta hubungan timbal baliknya!</p>
+      <textarea id="essay2026_2" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
+      
+      <div class="sim-actions">
+        <button class="btn btn-small" type="button" onclick="toggleKey('key2026_2', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
+        <div class="score-slider-wrap">
+          <label style="font-size:12px; font-weight:700;">Nilai Mandiri:</label>
+          <input type="range" id="score2026_2" min="0" max="15" value="0" oninput="updateExamScore2026()">
+          <span id="text2026_2" class="score-val-badge">0 / 15</span>
+        </div>
+      </div>
+      <div id="key2026_2" class="solution-card" style="display:none; margin-top:14px;">
+        <p style="font-size:13px; line-height:1.6; margin:0;">
+          <strong>Checklist Rubrik:</strong><br>
+          ✓ State sebagai atribut / data yang dimiliki (5 Poin)<br>
+          ✓ Behavior sebagai aksi / apa yang bisa dilakukan (5 Poin)<br>
+          ✓ Hubungan: behavior memodifikasi state, state membatasi behavior (5 Poin)
+        </p>
+      </div>
+    </div>
+
+    <!-- SIMULATOR 3 -->
+    <div class="essay-sim-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="badge-qno">LATIHAN 03 (Max: 15 Poin)</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">Behavior Manusia</span>
+      </div>
+      <p style="font-weight:700; margin:0 0 8px;">Soal: Berikan minimal 3-4 contoh behavior manusia dalam OOP dan dampaknya terhadap state objek!</p>
+      <textarea id="essay2026_3" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
+      
+      <div class="sim-actions">
+        <button class="btn btn-small" type="button" onclick="toggleKey('key2026_3', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
+        <div class="score-slider-wrap">
+          <label style="font-size:12px; font-weight:700;">Nilai Mandiri:</label>
+          <input type="range" id="score2026_3" min="0" max="15" value="0" oninput="updateExamScore2026()">
+          <span id="text2026_3" class="score-val-badge">0 / 15</span>
+        </div>
+      </div>
+      <div id="key2026_3" class="solution-card" style="display:none; margin-top:14px;">
+        <p style="font-size:13px; line-height:1.6; margin:0;">
+          <strong>Checklist Rubrik:</strong><br>
+          ✓ Menyebutkan minimal 3 behavior realistis (berjalan, makan, tidur, belajar) (6 Poin)<br>
+          ✓ Menjelaskan pengaruhnya ke state (energi, tingkatKenyang, pengetahuan) (9 Poin)
+        </p>
+      </div>
+    </div>
+
+    <!-- SIMULATOR 4 -->
+    <div class="essay-sim-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="badge-qno">LATIHAN 04 (Max: 15 Poin)</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">Peran Procedure</span>
+      </div>
+      <p style="font-weight:700; margin:0 0 8px;">Soal: Apa itu procedure dan mengapa procedure diperlukan dalam pengembangan program?</p>
+      <textarea id="essay2026_4" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
+      
+      <div class="sim-actions">
+        <button class="btn btn-small" type="button" onclick="toggleKey('key2026_4', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
+        <div class="score-slider-wrap">
+          <label style="font-size:12px; font-weight:700;">Nilai Mandiri:</label>
+          <input type="range" id="score2026_4" min="0" max="15" value="0" oninput="updateExamScore2026()">
+          <span id="text2026_4" class="score-val-badge">0 / 15</span>
+        </div>
+      </div>
+      <div id="key2026_4" class="solution-card" style="display:none; margin-top:14px;">
+        <p style="font-size:13px; line-height:1.6; margin:0;">
+          <strong>Checklist Rubrik:</strong><br>
+          ✓ Definisi procedure (blok kode void tanpa return value) (5 Poin)<br>
+          ✓ Alasan modularitas &amp; DRY principle (5 Poin)<br>
+          ✓ Kemudahan debugging dan keterbacaan kode (5 Poin)
+        </p>
+      </div>
+    </div>
+
+    <!-- SIMULATOR 5 -->
+    <div class="essay-sim-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="badge-qno">LATIHAN 05 (Max: 20 Poin)</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">Procedure vs Function</span>
+      </div>
+      <p style="font-weight:700; margin:0 0 8px;">Soal: Jelaskan perbedaan procedure dan function serta berikan contoh konkret keduanya!</p>
+      <textarea id="essay2026_5" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
+      
+      <div class="sim-actions">
+        <button class="btn btn-small" type="button" onclick="toggleKey('key2026_5', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
+        <div class="score-slider-wrap">
+          <label style="font-size:12px; font-weight:700;">Nilai Mandiri:</label>
+          <input type="range" id="score2026_5" min="0" max="20" value="0" oninput="updateExamScore2026()">
+          <span id="text2026_5" class="score-val-badge">0 / 20</span>
+        </div>
+      </div>
+      <div id="key2026_5" class="solution-card" style="display:none; margin-top:14px;">
+        <p style="font-size:13px; line-height:1.6; margin:0;">
+          <strong>Checklist Rubrik:</strong><br>
+          ✓ Pembeda nilai balik (Procedure void vs Function mengembalikan nilai) (8 Poin)<br>
+          ✓ Pembeda cara pemanggilan (statement vs expression/if-condition) (6 Poin)<br>
+          ✓ Contoh pada Java atau Alice 3 (6 Poin)
+        </p>
+      </div>
+    </div>
+
+    <!-- SIMULATOR 6 -->
+    <div class="essay-sim-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+        <span class="badge-qno">LATIHAN 06 (Max: 20 Poin)</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">Inheritance</span>
+      </div>
+      <p style="font-weight:700; margin:0 0 8px;">Soal: Apa itu inheritance dalam OOP dan jelaskan mengapa inheritance sangat bermanfaat!</p>
+      <textarea id="essay2026_6" class="sim-textarea" placeholder="Tuliskan jawaban latihanmu di sini..."></textarea>
+      
+      <div class="sim-actions">
+        <button class="btn btn-small" type="button" onclick="toggleKey('key2026_6', this)">Lihat Kunci &amp; Rubrik <span>👁️</span></button>
+        <div class="score-slider-wrap">
+          <label style="font-size:12px; font-weight:700;">Nilai Mandiri:</label>
+          <input type="range" id="score2026_6" min="0" max="20" value="0" oninput="updateExamScore2026()">
+          <span id="text2026_6" class="score-val-badge">0 / 20</span>
+        </div>
+      </div>
+      <div id="key2026_6" class="solution-card" style="display:none; margin-top:14px;">
+        <p style="font-size:13px; line-height:1.6; margin:0;">
+          <strong>Checklist Rubrik:</strong><br>
+          ✓ Definisi inheritance &amp; relasi "is-a" (Parent/Superclass ke Child/Subclass) (8 Poin)<br>
+          ✓ Manfaat code reusability &amp; DRY principle (6 Poin)<br>
+          ✓ Kemudahan maintenance &amp; skalabilitas perangkat lunak (6 Poin)
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= TAB 3: KUIS 10 KASUS INTERAKTIF ================= -->
+  <div id="pane-kuis" class="exam-pane">
+
+    <div class="exam-score-bar" style="background:var(--teal-soft); border-color:var(--teal);">
+      <div class="score-info">
+        <h3 style="color:var(--teal);">Kuis Pemahaman Konsep 2026</h3>
+        <p>10 Soal pilihan ganda yang menguji ketelitian konsep Class, Behavior, Procedure, dan Inheritance</p>
+      </div>
+      <div class="score-tally-box">
+        <div>
+          <span style="font-family:var(--mono); font-size:11px; display:block; text-align:right;">SKOR KUIS</span>
+          <span id="quizScoreNum2026" class="score-big-num">0</span> <span style="font-size:1.1rem; font-weight:700;">/ 10</span>
+        </div>
+        <button class="btn btn-small" onclick="resetQuiz2026()">Ulangi Kuis ↺</button>
+      </div>
+    </div>
+
+    <div id="quizContainer2026"></div>
+
+  </div>
+
+  <!-- ================= TAB 4: LAB VISUALIZER OOP & ALICE 3 ================= -->
+  <div id="pane-lab" class="exam-pane">
+
+    <div class="official-header-card" style="background:#fff;">
+      <h3 style="margin:0 0 8px; font-family:var(--display); font-size:1.3rem;">Visualizer Alur Data: Procedure vs Function di Alice 3</h3>
+      <p style="font-size:13.5px; color:var(--ink-soft); margin-bottom:18px;">
+        Perhatikan perbedaan fundamental bagaimana komputer mengeksekusi sebuah Procedure (aksi murni) dibandingkan Function (menghasilkan nilai yang kembali ke pemanggil).
+      </p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:18px;">
+        
+        <!-- PROCEDURE BOX -->
+        <div style="border:2px solid var(--ink); border-radius:12px; background:var(--paper); padding:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid var(--ink); padding-bottom:8px; margin-bottom:12px;">
+            <strong style="font-family:var(--mono); color:var(--tomato); font-size:13px;">1. PROCEDURE (Aksi Murni)</strong>
+            <span style="background:var(--tomato-soft); color:var(--tomato); font-size:10px; font-family:var(--mono); padding:2px 8px; border-radius:4px; font-weight:700;">RETURN TYPE: VOID</span>
+          </div>
+          <div style="font-family:var(--mono); font-size:12px; background:#1e1e24; color:#f3ecdc; padding:10px; border-radius:6px; margin-bottom:10px;">
+            this.alice.move(FORWARD, 2.0);
+          </div>
+          <div style="font-size:12.5px; line-height:1.55; color:var(--ink-soft);">
+            <strong style="color:var(--ink);">Alur Eksekusi:</strong><br>
+            [Pemanggilan] ➔ [Komputer gerakkan model Alice 2 meter ke depan di layar 3D] ➔ [Selesai! Tidak ada data yang dikembalikan].<br>
+            <em>*Hasil tidak bisa disimpan ke variabel.</em>
+          </div>
+        </div>
+
+        <!-- FUNCTION BOX -->
+        <div style="border:2px solid var(--ink); border-radius:12px; background:var(--paper); padding:16px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1.5px solid var(--ink); padding-bottom:8px; margin-bottom:12px;">
+            <strong style="font-family:var(--mono); color:var(--teal); font-size:13px;">2. FUNCTION (Pertanyaan &amp; Nilai)</strong>
+            <span style="background:var(--teal-soft); color:var(--teal); font-size:10px; font-family:var(--mono); padding:2px 8px; border-radius:4px; font-weight:700;">RETURN: DOUBLE / BOOL</span>
+          </div>
+          <div style="font-family:var(--mono); font-size:12px; background:#1e1e24; color:#f3ecdc; padding:10px; border-radius:6px; margin-bottom:10px;">
+            Double jarak = this.alice.getDistanceTo(kelinci);
+          </div>
+          <div style="font-size:12.5px; line-height:1.55; color:var(--ink-soft);">
+            <strong style="color:var(--ink);">Alur Eksekusi:</strong><br>
+            [Pemanggilan] ➔ [Komputer hitung koordinat 3D Alice &amp; Kelinci] ➔ [Menghasilkan angka <code>3.45</code>] ➔ [Angka disimpan ke variabel <code>jarak</code>].<br>
+            <em>*Bisa dimasukkan ke dalam ekspresi <code>if (jarak &lt; 2.0)</code>.</em>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ================= TAB 5: CATATAN RINGKAS A4 ================= -->
+  <div id="pane-cheatsheet" class="exam-pane">
+
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:18px;" class="no-print">
+      <div>
+        <h3 style="margin:0; font-family:var(--display);">Ringkasan Catatan Kilat UTS 2026 (Siap Cetak / A4)</h3>
+        <p style="margin:2px 0 0; font-size:13px; color:var(--ink-soft);">Satu lembar rangkuman padat 6 konsep inti untuk belajar efisien</p>
+      </div>
+      <button class="btn btn-primary" onclick="window.print()">
+        <span>🖨️ Cetak / Simpan PDF (Ctrl+P)</span>
+      </button>
+    </div>
+
+    <div class="official-header-card" style="background:#fff;">
+      <div style="text-align:center; border-bottom:2px solid #24221f; padding-bottom:10px; margin-bottom:12px;">
+        <h2 style="font-family:var(--display); font-size:17px; margin:0;">LEMBAR BELAJAR CEPAT UTS PEMROGRAMAN VISUAL 2026/2027</h2>
+        <p style="font-family:var(--mono); font-size:11px; margin:2px 0 0;">Informatika Universitas Muhammadiyah Surakarta</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; font-size:11.5px; line-height:1.45;">
+        <div style="border:1.5px solid #24221f; border-radius:6px; padding:8px; background:#fffdf7;">
+          <strong style="color:var(--tomato); font-family:var(--mono);">1. CLASS VS OBJECT</strong><br>
+          • <strong>Class:</strong> Blueprint / cetak biru, belum ada memori fisik.<br>
+          • <strong>Object:</strong> Wujud konkret (instance), dibuat dengan <code>new</code> di memori Heap.<br>
+          • Relasi: 1 Class dapat mencetak banyak Object dengan state berbeda.
+        </div>
+
+        <div style="border:1.5px solid #24221f; border-radius:6px; padding:8px; background:#fffdf7;">
+          <strong style="color:var(--tomato); font-family:var(--mono);">2. STATE VS BEHAVIOR</strong><br>
+          • <strong>State (Property):</strong> Variabel / data ciri objek (<em>"apa yang dimiliki"</em>).<br>
+          • <strong>Behavior (Method):</strong> Aksi / fungsi (<em>"apa yang bisa dilakukan"</em>).<br>
+          • Saling memengaruhi: Method berjalan() mengubah state energi.
+        </div>
+
+        <div style="border:1.5px solid #24221f; border-radius:6px; padding:8px; background:#fffdf7;">
+          <strong style="color:var(--teal); font-family:var(--mono);">3. BEHAVIOR MANUSIA (OOP)</strong><br>
+          • <code>berjalan(jarak)</code> ➔ kurangi energi.<br>
+          • <code>makan(kalori)</code> ➔ pulihkan energi &amp; kenyang.<br>
+          • <code>tidur(jam)</code> ➔ reset stamina 100%.<br>
+          • <code>belajar(topik)</code> ➔ tambah pengetahuan &amp; IPK.
+        </div>
+
+        <div style="border:1.5px solid #24221f; border-radius:6px; padding:8px; background:#fffdf7;">
+          <strong style="color:var(--teal); font-family:var(--mono);">4. PERAN PROCEDURE</strong><br>
+          Blok kode mandiri bertipe <code>void</code> (tanpa return).<br>
+          • <strong>Modularitas:</strong> Pecah program besar jadi modul kecil.<br>
+          • <strong>DRY Principle:</strong> Hindari penulisan kode berulang.<br>
+          • <strong>Maintainability:</strong> Debugging dan perbaikan terisolasi.
+        </div>
+
+        <div style="border:1.5px solid #24221f; border-radius:6px; padding:8px; background:#fffdf7;">
+          <strong style="color:var(--tomato); font-family:var(--mono);">5. PROCEDURE VS FUNCTION</strong><br>
+          • <strong>Procedure:</strong> Aksi murni / animasi / void (contoh: <code>alice.move()</code>).<br>
+          • <strong>Function:</strong> Ada nilai balik / return (contoh: <code>alice.getDistanceTo()</code>).<br>
+          • Function dapat masuk ke rumus &amp; syarat <code>if</code>.
+        </div>
+
+        <div style="border:1.5px solid #24221f; border-radius:6px; padding:8px; background:#fffdf7;">
+          <strong style="color:var(--teal); font-family:var(--mono);">6. INHERITANCE (PEWARISAN)</strong><br>
+          • Relasi <strong>"is-a"</strong>: Subclass mewarisi state &amp; behavior dari Superclass.<br>
+          • <strong>Manfaat:</strong> Code reusability tinggi, hemat baris kode (DRY), mudah dirawat, mendukung polymorphism.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<script>
+/* =========================================================
+   LOGIKA INTERAKTIF HALAMAN UTS 2026
+   ========================================================= */
+
+function switchExamTab(tabId, btnElement) {
+  document.querySelectorAll('.exam-pane').forEach(pane => pane.classList.remove('active'));
+  document.querySelectorAll('.tab-trigger').forEach(btn => btn.classList.remove('active'));
+
+  const targetPane = document.getElementById('pane-' + tabId);
+  if (targetPane) targetPane.classList.add('active');
+  if (btnElement) btnElement.classList.add('active');
+}
+
+function toggleKey(keyId, btn) {
+  const el = document.getElementById(keyId);
+  if (!el) return;
+  if (el.style.display === 'none' || el.style.display === '') {
+    el.style.display = 'block';
+    btn.innerHTML = 'Tutup Kunci <span>✕</span>';
+  } else {
+    el.style.display = 'none';
+    btn.innerHTML = 'Lihat Kunci & Rubrik <span>👁️</span>';
+  }
+}
+
+function updateExamScore2026() {
+  const s1 = parseInt(document.getElementById('score2026_1').value) || 0;
+  const s2 = parseInt(document.getElementById('score2026_2').value) || 0;
+  const s3 = parseInt(document.getElementById('score2026_3').value) || 0;
+  const s4 = parseInt(document.getElementById('score2026_4').value) || 0;
+  const s5 = parseInt(document.getElementById('score2026_5').value) || 0;
+  const s6 = parseInt(document.getElementById('score2026_6').value) || 0;
+
+  document.getElementById('text2026_1').innerText = s1 + ' / 15';
+  document.getElementById('text2026_2').innerText = s2 + ' / 15';
+  document.getElementById('text2026_3').innerText = s3 + ' / 15';
+  document.getElementById('text2026_4').innerText = s4 + ' / 15';
+  document.getElementById('text2026_5').innerText = s5 + ' / 20';
+  document.getElementById('text2026_6').innerText = s6 + ' / 20';
+
+  const total = s1 + s2 + s3 + s4 + s5 + s6;
+  document.getElementById('liveTotalScore').innerText = total;
+
+  const gradePill = document.getElementById('liveGradePill');
+  if (total >= 85) {
+    gradePill.innerText = 'PREDIKSI NILAI: A (SANGAT SIAP)';
+    gradePill.style.background = '#2b8a79';
+    gradePill.style.color = '#fff';
+  } else if (total >= 75) {
+    gradePill.innerText = 'PREDIKSI NILAI: AB (BAGUS)';
+    gradePill.style.background = '#9fc3d8';
+    gradePill.style.color = '#24221f';
+  } else if (total >= 65) {
+    gradePill.innerText = 'PREDIKSI NILAI: B (CUKUP)';
+    gradePill.style.background = '#f2b544';
+    gradePill.style.color = '#24221f';
+  } else if (total >= 50) {
+    gradePill.innerText = 'PREDIKSI NILAI: C (PERLU EVALUASI)';
+    gradePill.style.background = '#dd5a3a';
+    gradePill.style.color = '#fff';
+  } else {
+    gradePill.innerText = 'PREDIKSI NILAI: D/E (BELUM SIAP)';
+    gradePill.style.background = '#fffdf7';
+    gradePill.style.color = '#24221f';
+  }
+
+  localStorage.setItem('uts2026_scores', JSON.stringify({s1, s2, s3, s4, s5, s6}));
+}
+
+// 10 KUIS PILIHAN GANDA KASUS UTS 2026
+const QUIZ_2026 = [
+  {
+    q: "Manakah pernyataan yang paling akurat mengenai hubungan antara Class dan Object dalam OOP?",
+    opts: [
+      "Class adalah instansiasi fisik di memori, sedangkan Object adalah denah logisnya.",
+      "Class adalah cetak biru (blueprint), sedangkan Object adalah entitas nyata yang dibentuk dari cetak biru tersebut.",
+      "Satu object bisa memiliki banyak class secara bersamaan.",
+      "Class hanya bisa dibuat setelah object dijalankan di Alice 3."
+    ],
+    ans: 1,
+    exp: "Benar! Class adalah blueprint atau spesifikasi abstrak, sedangkan Object adalah wujud nyata (instance) yang dialokasikan di memori Heap."
+  },
+  {
+    q: "Jika sebuah class Mobil memiliki variabel 'warna' dan method 'rem()', maka berturut-turut keduanya disebut sebagai:",
+    opts: [
+      "State (Property) dan Behavior (Method).",
+      "Behavior (Method) dan State (Property).",
+      "Function dan Procedure.",
+      "Superclass dan Subclass."
+    ],
+    ans: 0,
+    exp: "Tepat! 'warna' adalah data karakteristik (State/Property), sedangkan 'rem()' adalah tindakan/aksi yang bisa dilakukan (Behavior/Method)."
+  },
+  {
+    q: "Dalam pemodelan objek manusia, jika method 'berjalan(100)' dipanggil, bagaimana pengaruh umumnya terhadap state objek?",
+    opts: [
+      "State usia bertambah 10 tahun.",
+      "State energi berkurang dan rasa lelah bertambah.",
+      "State nama berubah menjadi null.",
+      "Tidak ada pengaruh apa pun terhadap seluruh state."
+    ],
+    ans: 1,
+    exp: "Benar! Method behavior berjalan() mengonsumsi energi fisik, sehingga state energi akan berkurang dan kelelahan bertambah."
+  },
+  {
+    q: "Apa karakteristik utama yang membedakan Procedure dari Function?",
+    opts: [
+      "Procedure selalu mengembalikan angka desimal, function mengembalikan teks.",
+      "Procedure tidak mengembalikan nilai (return type void), sedangkan function wajib mengembalikan suatu nilai (return value).",
+      "Procedure hanya boleh ditulis dalam bahasa C++, sedangkan function hanya ada di Java.",
+      "Procedure membutuhkan variabel static, sedangkan function tidak."
+    ],
+    ans: 1,
+    exp: "Sempurna! Procedure bertipe void (tanpa nilai balik) untuk menghasilkan aksi, sedangkan Function mengembalikan nilai (Double, String, Boolean, dll)."
+  },
+  {
+    q: "Mengapa instruksi 'this.alice.say(\"Halo\");' di Alice 3 dikelompokkan sebagai Procedure?",
+    opts: [
+      "Karena instruksi tersebut menampilkan balon teks visual di layar tanpa mengembalikan nilai data ke variabel pemanggil.",
+      "Karena instruksi tersebut mengembalikan angka panjang teks.",
+      "Karena instruksi tersebut hanya bisa dipanggil satu kali selama program aktif.",
+      "Karena kata 'say' termasuk kata benda di kamus."
+    ],
+    ans: 0,
+    exp: "Tepat! 'say()' melakukan aksi tampilan grafis di dunia 3D tanpa menghasilkan return value, sehingga ia adalah Procedure."
+  },
+  {
+    q: "Di antara pilihan berikut, manakah method di Alice 3 yang bertindak sebagai FUNCTION?",
+    opts: [
+      "this.alice.move(Direction.FORWARD, 1.0);",
+      "this.alice.turn(Direction.RIGHT, 0.25);",
+      "this.alice.getDistanceTo(this.rabbit);",
+      "this.alice.roll(Direction.LEFT, 0.5);"
+    ],
+    ans: 2,
+    exp: "Benar! 'getDistanceTo()' menghitung jarak antara dua objek dan mengembalikan nilai angka Double."
+  },
+  {
+    q: "Apa keuntungan paling utama dari menerapkan prinsip modularitas menggunakan Procedure dalam pengembangan software?",
+    opts: [
+      "Ukuran file proyek menjadi 10 kali lebih besar.",
+      "Memecah program rumit menjadi modul-modul kecil mandiri yang mudah didebug, dirawat, dan dikolaborasikan.",
+      "Menghilangkan kebutuhan akan komputer berspesifikasi tinggi.",
+      "Membuat program kebal dari serangan virus secara otomatis."
+    ],
+    ans: 1,
+    exp: "Luar biasa! Modularitas menyederhanakan arsitektur software sehingga programmer dapat fokus memperbaiki modul spesifik tanpa merusak sistem lain."
+  },
+  {
+    q: "Konsep pewarisan (Inheritance) membentuk relasi hierarkis antar-class yang dikenal dengan sebutan:",
+    opts: [
+      "Relasi 'has-a' (memiliki).",
+      "Relasi 'is-a' (adalah seorang/sebuah).",
+      "Relasi 'part-of' (bagian dari).",
+      "Relasi 'runs-on' (berjalan di atas)."
+    ],
+    ans: 1,
+    exp: "Benar! Inheritance memodelkan hubungan generalisasi 'is-a' (contoh: Mahasiswa is-a Manusia, Kucing is-a Hewan)."
+  },
+  {
+    q: "Apa manfaat utama yang diperoleh programmer saat menerapkan Inheritance pada class Mahasiswa, Petani, dan Pedagang?",
+    opts: [
+      "Memaksa ketiga profesi tersebut memiliki IPK yang sama.",
+      "Menghindari penulisan berulang atribut nama, usia, gender, alamat (prinsip DRY) karena diwarisi langsung dari parent Manusia.",
+      "Membuat program hanya bisa dibuka di browser Google Chrome.",
+      "Menghapus method makan() dari memori komputer."
+    ],
+    ans: 1,
+    exp: "Tepat! Atribut dan method bersama cukup ditulis satu kali di class parent Manusia, menghemat kode dan mempermudah pemeliharaan."
+  },
+  {
+    q: "Apa yang terjadi jika programmer ingin menambahkan atribut baru 'kewarganegaraan' untuk seluruh entitas manusia pada sistem yang sudah menggunakan Inheritance?",
+    opts: [
+      "Programmer harus mengubah ratusan file subclass satu per satu secara manual.",
+      "Cukup menambahkan atribut tersebut satu kali di superclass Manusia, dan seluruh subclass otomatis mewarisinya.",
+      "Inheritance harus dibatalkan terlebih dahulu.",
+      "Seluruh data mahasiswa akan terhapus otomatis."
+    ],
+    ans: 1,
+    exp: "Sempurna! Inilah keunggulan utama maintainability pada Inheritance: perubahan di parent class langsung terefleksi ke seluruh child class turunan."
+  }
+];
+
+let userQuiz2026 = {};
+
+function initQuiz2026() {
+  const container = document.getElementById('quizContainer2026');
+  if (!container) return;
+
+  container.innerHTML = QUIZ_2026.map((q, idx) => `
+    <div class="q-post" id="card2026_${idx}" style="margin-bottom:20px;">
+      <div class="q-post-header" style="margin-bottom:12px; padding-bottom:8px;">
+        <span class="badge-qno">KASUS ${idx + 1} / 10</span>
+        <span style="font-family:var(--mono); font-size:11px; color:var(--ink-soft);">Konsep UTS 2026</span>
+      </div>
+      <h3 style="font-size:1.05rem; margin:0 0 12px; font-family:var(--display);">${q.q}</h3>
+      <div class="mc-grid">
+        ${q.opts.map((opt, optIdx) => `
+          <button class="mc-opt-btn" id="btn2026_${idx}_${optIdx}" onclick="answer2026(${idx}, ${optIdx})">
+            <span class="mc-key">${String.fromCharCode(65 + optIdx)}</span>
+            <span>${opt}</span>
+          </button>
+        `).join('')}
+      </div>
+      <div id="exp2026_${idx}" class="solution-card" style="display:none; margin-top:12px;"></div>
+    </div>
+  `).join('');
+}
+
+function answer2026(qIdx, selectedOpt) {
+  const qData = QUIZ_2026[qIdx];
+  const isCorrect = selectedOpt === qData.ans;
+  userQuiz2026[qIdx] = isCorrect;
+
+  for (let i = 0; i < qData.opts.length; i++) {
+    const btn = document.getElementById(`btn2026_${qIdx}_${i}`);
+    btn.disabled = true;
+    if (i === qData.ans) {
+      btn.classList.add('correct');
+    } else if (i === selectedOpt) {
+      btn.classList.add('wrong');
+    }
+  }
+
+  const expBox = document.getElementById(`exp2026_${qIdx}`);
+  expBox.style.display = 'block';
+  expBox.innerHTML = `
+    <strong style="color:${isCorrect ? 'var(--teal)' : 'var(--tomato)'}; font-family:var(--display);">
+      ${isCorrect ? '✅ JAWABAN BENAR!' : '❌ KURANG TEPAT!'}
+    </strong>
+    <p style="margin:6px 0 0; font-size:13px; line-height:1.5;">${qData.exp}</p>
+  `;
+
+  let score = 0;
+  Object.values(userQuiz2026).forEach(v => { if (v) score++; });
+  document.getElementById('quizScoreNum2026').innerText = score;
+}
+
+function resetQuiz2026() {
+  userQuiz2026 = {};
+  document.getElementById('quizScoreNum2026').innerText = '0';
+  initQuiz2026();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initQuiz2026();
+
+  const saved = localStorage.getItem('uts2026_scores');
+  if (saved) {
+    try {
+      const d = JSON.parse(saved);
+      document.getElementById('score2026_1').value = d.s1 || 0;
+      document.getElementById('score2026_2').value = d.s2 || 0;
+      document.getElementById('score2026_3').value = d.s3 || 0;
+      document.getElementById('score2026_4').value = d.s4 || 0;
+      document.getElementById('score2026_5').value = d.s5 || 0;
+      document.getElementById('score2026_6').value = d.s6 || 0;
+      updateExamScore2026();
+    } catch(e) {}
+  }
+
+  for (let i = 1; i <= 6; i++) {
+    const txt = document.getElementById('essay2026_' + i);
+    if (txt) {
+      const s = localStorage.getItem('uts2026_text_' + i);
+      if (s) txt.value = s;
+      txt.addEventListener('input', () => {
+        localStorage.setItem('uts2026_text_' + i, txt.value);
+      });
+    }
+  }
+});
+</script>
+
+</body>
+</html>
