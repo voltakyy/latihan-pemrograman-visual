@@ -1,3 +1,14 @@
+/**
+ * @file loops.js
+ * @description Bank Soal Topik 5: Control Structures & Loops (Struktur Kontrol & Perulangan)
+ * @curriculum Pemrograman Visual (Alice 3 / Java OOP) - SPADA UMS Pertemuan 3 & 5
+ * @learning_outcomes
+ *   - Memahami konsep urutan sekuensial (Sequence) vs eksekusi konkuren (Do Together).
+ *   - Membedakan Count Loop (deterministik/pasti) vs While Loop (kondisional dinamis).
+ *   - Menganalisis kondisi batas terminasi perulangan dan pencegahan infinite loop.
+ *   - Mengidentifikasi pola perulangan bersarang (Nested Loop) pada animasi grafis.
+ */
+
 /* Topik 5 — Perulangan */
 window.QUESTION_BANK = window.QUESTION_BANK || [];
 
