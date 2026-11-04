@@ -12,9 +12,10 @@ window.QUESTION_BANK.push(
       'Class yang menyimpan banyak object.'
     ],
     answer: 1,
-    explain: `Perulangan adalah struktur kontrol yang mengeksekusi blok kode berkali-kali. Ada dua ide utama: **count-controlled** (dulang sebanyak jumlah yang sudah ditentukan) dan **condition-controlled** (diulang selama kondisi bernilai benar).
+    explain: `Berdasarkan **Modul Pertemuan 3 & 5 UMS**:
+Urutan instruksi (*sequence*) menentukan hasil akhir perilaku program, dan komputer menjalankan instruksi secara berurutan. Saat instruksi yang sama perlu diulang berkali-kali (misalnya robot bergerak maju 5 langkah), kita menggunakan struktur kontrol **perulangan (loop)** daripada menulis baris perintah berulang-ulang.
 
-Supaya loop berhenti, biasanya ada tiga bagian: inisialisasi, kondisi, dan perubahan nilai. Contoh sederhana:
+Ada dua model loop: **count-controlled** (diulang sebanyak jumlah tertentu yang sudah pasti, seperti for atau count up to) dan **condition-controlled** (diulang selama kondisi boolean bernilai benar, seperti while).
 
 ~~~
 for (int i = 1; i <= 5; i++) {
@@ -22,7 +23,7 @@ for (int i = 1; i <= 5; i++) {
 }
 ~~~
 
-Di sini [[i]] mulai dari 1, diulang selama [[i <= 5]], dan bertambah satu setiap putaran. Tanpa perubahan nilai, kondisi bisa selalu benar dan loop tidak pernah berhenti. Perulangan membuat kode lebih pendek, lebih mudah diubah, dan lebih rapi daripada menulis perintah yang sama berulang-ulang.`
+Di sini [[i]] mulai dari 1, diulang selama [[i <= 5]], dan bertambah satu setiap putaran. Tanpa pembaruan nilai, kondisi bisa selalu benar dan menyebabkan infinite loop.`
   },
   {
     topic: 'Perulangan',

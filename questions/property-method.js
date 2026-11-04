@@ -61,11 +61,11 @@ Property menempel pada siklus hidup object dan berbeda dari variabel lokal yang 
       '[[prodi]]'
     ],
     answer: 2,
-    explain: `Method adalah blok kode yang mendefinisikan **perilaku** object. Ciri yang paling mudah dikenali: namanya diikuti tanda kurung [[()]], punya body di dalam [[{ }]], dan bisa menerima parameter serta mengembalikan nilai.
+    explain: `Method adalah blok kode yang mendefinisikan **perilaku (behavior)** object. Ciri yang paling mudah dikenali: namanya diikuti tanda kurung [[()]], punya body di dalam [[{ }]], dan bisa menerima parameter serta mengembalikan nilai.
 
-Pada class di atas, [[belajar()]], [[mengerjakanTugas()]], [[hitungIPK()]], dan [[makan()]] adalah method. Sementara [[nama]], [[usia]], [[ipk]], dan [[prodi]] adalah property karena berupa data bertipe.
+Pada class di atas, [[belajar()]], [[mengerjakanTugas()]], [[hitungIPK()]], dan [[makan()]] adalah method. Sementara [[nama]], [[usia]], [[ipk]], dan [[prodi]] adalah property (data/keadaan).
 
-Method boleh memakai property yang ada di class yang sama. Contohnya [[hitungIPK()]] mengembalikan nilai [[ipk]], dan [[belajar()]] mencetak [[nama]]. Inilah kerja sama antara property sebagai **state** dan method sebagai **behavior**. Class ini juga memenuhi syarat soal UTS: minimal 4 property dan 4 method.`
+Menurut **Modul Pertemuan 3 UMS**: Tidak semua objek memiliki behavior yang sama, dan method harus sesuai dengan jenis objeknya (misalnya [[open()]] cocok untuk Door tetapi tidak untuk Robot/Character; sebaliknya [[move()]] cocok untuk Robot/Car tetapi tidak cocok untuk Door). Method mengeksekusi instruksi yang mengubah property/state object.`
   },
   {
     topic: 'Property & Method',

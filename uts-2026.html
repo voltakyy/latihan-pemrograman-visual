@@ -716,13 +716,13 @@
   <!-- ================= TAB 1: BEDAH 6 SOAL INTI SESUAI MODUL DOSEN ================= -->
   <div id="pane-solusi" class="exam-pane active">
 
-    <!-- SOAL 1 -->
+    <!-- SOAL 01 -->
     <article class="q-post">
       <div class="q-post-header">
         <div class="q-badge-group">
           <span class="badge-qno">SOAL 01</span>
           <span class="badge-score">Bobot: 15 Poin</span>
-          <span class="badge-source">Modul Hal. 2, 3, 7, 8 (SPADA P3 &amp; P4)</span>
+          <span class="badge-source">Modul Pertemuan 3 (Hal. 9–12) &amp; Pertemuan 4 (Hal. 2, 3, 7, 8)</span>
         </div>
       </div>
 
@@ -731,50 +731,92 @@
       </h2>
 
       <div class="solution-card">
-        <span class="sol-tag">Kunci Jawaban Resmi Berdasarkan Modul Kuliah</span>
+        <span class="sol-tag">Kunci Jawaban Resmi Berdasarkan Diktat Pertemuan 3 &amp; 4 UMS</span>
         <div class="sol-content">
           <h4>A. Pengertian Class (Blueprint / Template)</h4>
           <p>
-            Berdasarkan Modul Pertemuan 4 Sub-bab 2.1: <strong>Class</strong> adalah <em>blueprint</em> atau template untuk membuat instance object. Class menyimpan struktur data (<strong>property</strong>) dan perilaku (<strong>method</strong>). Satu class dapat digunakan untuk membuat <strong>banyak object</strong>.
+            Berdasarkan <strong>Modul Pertemuan 3 Sub-bab 10 &amp; 11</strong> serta <strong>Pertemuan 4 Sub-bab 2.1</strong>:
+            <br><strong>Class</strong> adalah <em>blueprint</em> atau template yang mendefinisikan struktur data (<strong>property</strong>) dan perilaku/aksi (<strong>method</strong>) yang dimiliki oleh object.
           </p>
           <p>
-            <em>Contoh pada Modul:</em> <strong>Class: Robot</strong> adalah blueprint.
+            Daripada mendefinisikan property dan method yang sama berulang kali untuk setiap entitas, kita cukup mendefinisikan strukturnya satu kali saja di dalam sebuah Class.
           </p>
+          <p>
+            <em>Contoh pada Modul:</em> <strong>Class: Robot</strong> memiliki struktur:
+          </p>
+          <ul>
+            <li><strong>Property (data):</strong> <code>warna</code>, <code>posisi</code>, <code>arah</code>, <code>kecepatan</code></li>
+            <li><strong>Method (perilaku):</strong> <code>move()</code>, <code>turnRight()</code>, <code>stop()</code>, <code>say("...")</code></li>
+          </ul>
 
           <h4>B. Pengertian Object (Instance)</h4>
           <p>
-            Berdasarkan Modul Pertemuan 4 Sub-bab 2.2: <strong>Object</strong> adalah <em>instance</em> konkret yang didefinisikan oleh class. Banyak object dapat dibuat dari satu class yang sama. Setiap object dapat memiliki <strong>nilai property yang berbeda</strong>, meskipun berasal dari class yang sama (misalnya warna, posisi, ukuran, orientasi).
-          </p>
-          <p>
-            <em>Contoh pada Modul:</em> Dari satu <strong>Class Robot</strong>, dibuat tiga object: <strong>Robot A, Robot B, dan Robot C</strong>.
+            Berdasarkan <strong>Modul Pertemuan 3 Sub-bab 11.2 &amp; Pertemuan 4 Sub-bab 2.2</strong>:
+            <br><strong>Object</strong> adalah hasil nyata (<em>instance</em> konkret) yang dibuat berdasarkan class. Object adalah pihak di dalam program yang menjalankan instruksi.
           </p>
 
           <h4>C. Hubungan Class dan Object (One Class ➔ Many Objects)</h4>
           <p>
-            Hubungan keduanya terlihat langsung pada lingkungan visual <strong>Alice 3</strong>:
+            <strong>Banyak object dapat dibuat menggunakan satu class yang sama.</strong> Setiap object memiliki <strong>struktur property dan method yang sama</strong>, tetapi dapat memiliki <strong>nilai property yang berbeda</strong>.
+          </p>
+          
+          <table class="rubrik-table">
+            <thead>
+              <tr>
+                <th>Object (Instance)</th>
+                <th>Nilai Property (State Berbeda)</th>
+                <th>Method (Struktur Sama)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Robot A</strong></td>
+                <td>warna: <code>biru</code>, posisi: <code>(2, 1)</code>, arah: <code>kanan</code>, kecepatan: <code>2</code></td>
+                <td><code>move()</code>, <code>turnRight()</code>, <code>stop()</code>, <code>say()</code></td>
+              </tr>
+              <tr>
+                <td><strong>Robot B</strong></td>
+                <td>warna: <code>merah</code>, posisi: <code>(4, 2)</code>, arah: <code>kiri</code>, kecepatan: <code>3</code></td>
+                <td><code>move()</code>, <code>turnRight()</code>, <code>stop()</code>, <code>say()</code></td>
+              </tr>
+              <tr>
+                <td><strong>Robot C</strong></td>
+                <td>warna: <code>hijau</code>, posisi: <code>(1, 5)</code>, arah: <code>atas</code>, kecepatan: <code>1</code></td>
+                <td><code>move()</code>, <code>turnRight()</code>, <code>stop()</code>, <code>say()</code></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>D. Analogi Resmi Modul: Blueprint Rumah (Halaman 12)</h4>
+          <p>
+            Dari satu blueprint rumah (<strong>Class: Rumah</strong> dengan property warna, lantai, penghuni, lokasi; method: <code>bangun()</code>, <code>ubahWarna()</code>), kita bisa membuat banyak rumah nyata:
           </p>
           <ul>
-            <li><strong>Class</strong> berada di <strong>Gallery</strong> (contoh: Class <code>Bunny</code> di Gallery hanya ada 1).</li>
-            <li><strong>Object</strong> berada di <strong>Scene</strong> (contoh: dari 1 Class Bunny, ditambahkan ke scene menjadi object <code>bunny</code>, <code>bunny2</code>, dan <code>bunny3</code>).</li>
-            <li><strong>Same Class, Different Objects:</strong> Objek <code>bunny</code> dan <code>bunny2</code> berasal dari class yang sama, namun memiliki nilai property yang berbeda:
-              <ul>
-                <li><code>position</code>: <code>bunny</code> di (0, 0, 0) sedangkan <code>bunny2</code> di (2, 0, -1).</li>
-                <li><code>color</code>: <code>bunny</code> default/putih sedangkan <code>bunny2</code> biru.</li>
-                <li><code>size</code>: <code>bunny</code> 1.0 sedangkan <code>bunny2</code> 1.5.</li>
-              </ul>
-            </li>
+            <li><strong>Rumah A:</strong> warna putih, 2 lantai, penghuni Keluarga A, lokasi Solo.</li>
+            <li><strong>Rumah B:</strong> warna cokelat, 2 lantai, penghuni Keluarga B, lokasi Yogyakarta.</li>
+            <li><strong>Rumah C:</strong> warna abu-abu, 3 lantai, penghuni Keluarga C, lokasi Bandung.</li>
+          </ul>
+          <p>
+            <em>Pertanyaan Analisis Dosen:</em> <strong>"Jika blueprint rumahnya kita ubah, apakah rumah yang dibuat berikutnya memiliki struktur berbeda?"</strong>
+            <br><strong>Jawaban:</strong> Ya. Karena blueprint/class mendefinisikan struktur property dan method. Object adalah instance yang patuh pada cetak birunya.
+          </p>
+
+          <h4>E. Korelasi Langsung pada Alice 3</h4>
+          <ul>
+            <li><strong>Class</strong> berada di <strong>Gallery</strong> (contoh: Class <code>Bunny</code> atau <code>Robot</code>).</li>
+            <li><strong>Object</strong> berada di <strong>Scene</strong> (contoh: object <code>bunny</code> di posisi (0,0) putih, dan <code>bunny2</code> di posisi (2,0) biru).</li>
           </ul>
         </div>
       </div>
     </article>
 
-    <!-- SOAL 2 -->
+    <!-- SOAL 02 -->
     <article class="q-post">
       <div class="q-post-header">
         <div class="q-badge-group">
           <span class="badge-qno">SOAL 02</span>
           <span class="badge-score">Bobot: 15 Poin</span>
-          <span class="badge-source">Modul Hal. 4, 9, 10, 11, 12 (SPADA P3 &amp; P4)</span>
+          <span class="badge-source">Modul Pertemuan 3 (Hal. 8–9) &amp; Pertemuan 4 (Hal. 4, 9–12)</span>
         </div>
       </div>
 
@@ -783,64 +825,66 @@
       </h2>
 
       <div class="solution-card">
-        <span class="sol-tag">Kunci Jawaban Resmi Berdasarkan Modul Kuliah</span>
+        <span class="sol-tag">Kunci Jawaban Resmi Berdasarkan Diktat Pertemuan 3 &amp; 4 UMS</span>
         <div class="sol-content">
-          <h4>A. State (Property) — Apa yang Dimiliki Object</h4>
+          <h4>A. Property / State (Apa yang Dimiliki Object)</h4>
           <p>
-            Berdasarkan Modul Pertemuan 4 Sub-bab 3.1: <strong>Property</strong> adalah data atau keadaan object.
+            Berdasarkan <strong>Modul Pertemuan 3 Sub-bab 8.1 &amp; Pertemuan 4 Sub-bab 3.1</strong>:
+            <br><strong>Property</strong> adalah data atau keadaan (<em>state</em>) yang dimiliki oleh sebuah object.
           </p>
           <ul>
-            <li>Menunjukkan <strong>apa yang dimiliki</strong> oleh object.</li>
-            <li>Menyimpan informasi atau keadaan (<em>state</em>) object.</li>
-            <li>Setiap object dapat memiliki nilai property yang berbeda dan nilainya dapat berubah selama program berjalan.</li>
-            <li>Di Alice 3, property dikelola pada panel <strong>Properties</strong>.</li>
+            <li>Property menunjukkan <strong>apa yang dimiliki</strong> oleh object (*what it has*).</li>
+            <li>Property <strong>dapat berubah nilainya selama program berjalan</strong> (misalnya perubahan posisi robot setelah bergerak).</li>
+            <li>Di Alice 3, nilai property dapat dilihat dan diubah pada panel <strong>Properties</strong>.</li>
             <li><em>Contoh Property pada Modul:</em>
               <ul>
-                <li><code>color</code> ➔ biru / default</li>
-                <li><code>position</code> ➔ (0, 0, 0)</li>
-                <li><code>direction</code> / <code>orientation</code> ➔ 0° (menghadap depan) / 90°</li>
-                <li><code>speed</code> ➔ 1.0</li>
-                <li><code>size</code> ➔ 1.5</li>
+                <li><code>warna</code> (color/paint) ➔ biru, merah, hijau.</li>
+                <li><code>posisi</code> (position) ➔ koordinat (2, 1), (0, 0, 0).</li>
+                <li><code>arah</code> (orientation/direction) ➔ kanan, kiri, atas, 0° s/d 360°.</li>
+                <li><code>kecepatan</code> (speed) ➔ 1, 2, 3.</li>
+                <li><code>ukuran</code> (size/opacity) ➔ scale desimal.</li>
               </ul>
             </li>
           </ul>
 
-          <h4>B. Behavior (Method) — Apa yang Dapat Dilakukan Object</h4>
+          <h4>B. Method / Behavior (Apa yang Dapat Dilakukan Object)</h4>
           <p>
-            Berdasarkan Modul Pertemuan 4 Sub-bab 3.2: <strong>Method</strong> adalah perilaku object.
+            Berdasarkan <strong>Modul Pertemuan 3 Sub-bab 8.2 &amp; Pertemuan 4 Sub-bab 3.2</strong>:
+            <br><strong>Method</strong> adalah aksi atau perilaku (<em>behavior</em>) yang dapat dilakukan oleh sebuah object (*what it does*).
           </p>
           <ul>
-            <li>Menunjukkan <strong>apa yang dapat dilakukan</strong> oleh object (merupakan aksi yang dapat dilakukan object).</li>
-            <li>Method dijalankan untuk menghasilkan <strong>behavior</strong>.</li>
+            <li>Method menentukan apa yang dapat dilakukan oleh object dan dijalankan untuk menghasilkan aksi nyata di layar.</li>
             <li>Di Alice 3, method disusun di <strong>Code Editor</strong>.</li>
-            <li>Method dapat memiliki informasi tambahan yang disebut <strong>argument / parameter</strong> (seperti direction, steps, degrees, revolutions).</li>
-            <li><em>Contoh Method pada Modul (Object Bunny):</em>
+            <li>Method dapat membutuhkan informasi tambahan yang disebut <strong>parameter / argument</strong> (misalnya direction, steps, duration, atau revolutions di mana <code>0.25 rev ≈ 90°</code>).</li>
+            <li><em>Contoh Method pada Modul:</em>
               <ul>
-                <li><code>move()</code> ➔ menggerakkan object (contoh: <code>bunny.move(FORWARD, 2)</code>)</li>
-                <li><code>turn()</code> ➔ memutar object (contoh: <code>bunny.turn(RIGHT, 0.25)</code> di mana 0.25 revolutions ≈ 90°)</li>
-                <li><code>jump()</code> ➔ melompat</li>
-                <li><code>say()</code> ➔ menampilkan balon teks pesan (contoh: <code>bunny.say("Hello!")</code>)</li>
-                <li><code>stop()</code> ➔ menghentikan gerakan</li>
+                <li><code>move()</code> ➔ Menggerakkan robot maju sejumlah langkah (misal <code>robot.move()</code> atau <code>bunny.move(FORWARD, 2)</code>).</li>
+                <li><code>turnRight()</code> / <code>turn()</code> ➔ Memutar object ke arah tertentu.</li>
+                <li><code>stop()</code> ➔ Menghentikan pergerakan object.</li>
+                <li><code>say("...")</code> ➔ Menampilkan balon dialog atau berbicara.</li>
+                <li><code>jump()</code> ➔ Menggerakkan object melompat ke atas lalu kembali ke bawah.</li>
               </ul>
             </li>
           </ul>
 
-          <h4>C. Hubungan Property dan Method Menghasilkan Behavior</h4>
+          <h4>C. Kesimpulan Resmi Dosen</h4>
+          <blockquote>
+            <strong>"Setiap object memiliki property dan method. Property menyimpan data/keadaan object, sedangkan method menentukan apa yang dapat dilakukan oleh object tersebut."</strong>
+          </blockquote>
           <p>
-            Beberapa method dapat disusun secara berurutan (<strong>sequence</strong>) untuk membentuk perilaku (<strong>behavior</strong>) yang lebih kompleks.
-            <br><em>Alur Konsep:</em> <strong>Class</strong> ➔ membuat (create) ➔ <strong>Object</strong> ➔ memiliki ➔ <strong>Property + Method</strong> ➔ menghasilkan ➔ <strong>Behavior</strong>.
+            <em>Alur Pembentukan:</em> <strong>Class</strong> ➔ mencetak ➔ <strong>Object</strong> ➔ memiliki ➔ <strong>Property (Data) + Method (Aksi)</strong> ➔ menghasilkan ➔ <strong>Behavior (Perilaku Nyata)</strong>.
           </p>
         </div>
       </div>
     </article>
 
-    <!-- SOAL 3 -->
+    <!-- SOAL 03 -->
     <article class="q-post">
       <div class="q-post-header">
         <div class="q-badge-group">
           <span class="badge-qno">SOAL 03</span>
           <span class="badge-score">Bobot: 15 Poin</span>
-          <span class="badge-source">SPADA P3 &amp; Penerapan OOP</span>
+          <span class="badge-source">Modul Pertemuan 3 (Hal. 4–5: Tabel Objek &amp; Behavior)</span>
         </div>
       </div>
 
@@ -849,45 +893,92 @@
       </h2>
 
       <div class="solution-card">
-        <span class="sol-tag">Kunci Jawaban Resmi Berdasarkan Modul Kuliah</span>
+        <span class="sol-tag">Kunci Jawaban Resmi Berdasarkan Diktat Pertemuan 3 UMS</span>
         <div class="sol-content">
-          <h4>Pemodelan Behavior Manusia:</h4>
+          <h4>A. Tabel Resmi Contoh Objek dan Behavior-nya (Modul Pertemuan 3 Hal. 4–5)</h4>
           <p>
-            Sesuai prinsip modul: Objek menerima instruksi dan menjalankan aksi (**method**) untuk mengubah keadaan (**property**) dan berinteraksi di dalam scene. Jika manusia dimodelkan sebagai class di dalam program visual:
+            Dosen menegaskan bahwa setiap objek memiliki method/behavior yang sesuai dengan karakter objeknya:
+          </p>
+          <table class="rubrik-table">
+            <thead>
+              <tr>
+                <th>Objek</th>
+                <th>Behavior / Method Sesuai Karakter Objek</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Character (Manusia)</strong></td>
+                <td><code>walk()</code>, <code>jump()</code>, <code>say()</code></td>
+              </tr>
+              <tr>
+                <td><strong>Robot</strong></td>
+                <td><code>move()</code>, <code>turn()</code>, <code>stop()</code></td>
+              </tr>
+              <tr>
+                <td><strong>Car</strong></td>
+                <td><code>move()</code>, <code>turn()</code>, <code>stop()</code></td>
+              </tr>
+              <tr>
+                <td><strong>Door</strong></td>
+                <td><code>open()</code>, <code>close()</code>, <code>lock()</code></td>
+              </tr>
+              <tr>
+                <td><strong>Ball</strong></td>
+                <td><code>move()</code>, <code>roll()</code>, <code>stop()</code></td>
+              </tr>
+              <tr>
+                <td><strong>Animal</strong></td>
+                <td><code>walk()</code>, <code>jump()</code>, <code>makeSound()</code></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>B. Analisis Penting Dosen: "Apakah Semua Objek Dapat Melakukan Behavior yang Sama?"</h4>
+          <p>
+            Jawabannya: <strong>TIDAK. Method harus sesuai dengan jenis objeknya!</strong>
           </p>
           <ul>
-            <li><strong>Property (Keadaan Manusia):</strong> <code>nama</code>, <code>posisi</code> (koordinat x,y,z), <code>arahHadap</code> (orientasi), <code>tingkatEnergi</code>, <code>statusKenyang</code>.</li>
-            <li><strong>5 Contoh Behavior (Method) Manusia:</strong>
-              <ol>
-                <li>
-                  <code>berjalan(Direction arah, double langkah)</code> ➔ Menggerakkan tubuh manusia berpindah posisi di scene (ekuivalen dengan <code>move()</code> di Alice 3), mengurangi nilai property <code>tingkatEnergi</code>.
-                </li>
-                <li>
-                  <code>berbicara(String pesan)</code> ➔ Menampilkan balon dialog percakapan di atas kepala (ekuivalen dengan method <code>say("Hello!")</code> di Alice 3).
-                </li>
-                <li>
-                  <code>melompat()</code> ➔ Menggerakkan badan ke atas lalu kembali ke bawah (ekuivalen dengan procedure <code>jump()</code> pada model Biped di Alice 3).
-                </li>
-                <li>
-                  <code>berputar(Direction arah, double putaran)</code> ➔ Mengubah orientasi hadap tubuh sebesar sudut tertentu (ekuivalen dengan <code>turn(RIGHT, 0.25)</code>).
-                </li>
-                <li>
-                  <code>makan(String makanan)</code> ➔ Aksi mengonsumsi nutrisi yang mengubah state property <code>statusKenyang</code> bertambah dan memulihkan <code>tingkatEnergi</code>.
-                </li>
-              </ol>
+            <li><em>Kasus Modul:</em> Apa yang terjadi jika kita memberikan instruksi <code>open()</code> kepada robot atau <code>move()</code> kepada pintu?
+              <ul>
+                <li><code>open()</code> adalah behavior yang cocok untuk <strong>Door</strong>, bukan untuk <strong>Robot</strong> atau Manusia.</li>
+                <li><code>move()</code> adalah behavior yang cocok untuk <strong>Robot</strong>, <strong>Car</strong>, atau <strong>Ball</strong>, tetapi tidak cocok untuk <strong>Door</strong>.</li>
+              </ul>
             </li>
           </ul>
+
+          <h4>C. Pemodelan Behavior Manusia (Character) dalam OOP</h4>
+          <p>
+            Jika Manusia dimodelkan sebagai <strong>Class: Character / Manusia</strong>, maka behavior yang valid dan realistis adalah:
+          </p>
+          <ol>
+            <li>
+              <strong><code>walk(Direction arah, double langkah)</code></strong>: Behavior manusia untuk berjalan berpindah tempat, mengubah state property <code>posisi</code> dan mengurangi <code>stamina</code>.
+            </li>
+            <li>
+              <strong><code>jump()</code></strong>: Behavior manusia untuk melompat ke atas lalu mendarat (ekuivalen model Biped di Alice 3).
+            </li>
+            <li>
+              <strong><code>say(String pesan)</code></strong>: Behavior manusia untuk berbicara / menampilkan pesan percakapan (contoh: <code>say("Halo!")</code>).
+            </li>
+            <li>
+              <strong><code>makan(String makanan, int porsi)</code></strong>: Behavior biologis manusia untuk menambah state property <code>energi/kenyang</code>.
+            </li>
+            <li>
+              <strong><code>tidur(int jam)</code></strong>: Behavior untuk mereset dan memulihkan state property <code>stamina</code> menjadi 100%.
+            </li>
+          </ol>
         </div>
       </div>
     </article>
 
-    <!-- SOAL 4 -->
+    <!-- SOAL 04 -->
     <article class="q-post">
       <div class="q-post-header">
         <div class="q-badge-group">
           <span class="badge-qno">SOAL 04</span>
           <span class="badge-score">Bobot: 15 Poin</span>
-          <span class="badge-source">Modul Pertemuan 5 &amp; 6 (Procedural Abstraction)</span>
+          <span class="badge-source">Modul Pertemuan 3 (Hal. 2, 6, 7, 8) &amp; Pertemuan 5–6 (Sequence &amp; Abstraction)</span>
         </div>
       </div>
 
@@ -896,31 +987,67 @@
       </h2>
 
       <div class="solution-card">
-        <span class="sol-tag">Kunci Jawaban Resmi Berdasarkan Modul Kuliah</span>
+        <span class="sol-tag">Kunci Jawaban Resmi Berdasarkan Diktat Pertemuan 3, 5, 6 UMS</span>
         <div class="sol-content">
-          <h4>A. Pengertian Procedure:</h4>
+          <h4>A. Landasan Konsep: Masalah ➔ Algoritma ➔ Instruksi ➔ Program ➔ Output</h4>
           <p>
-            Berdasarkan Modul Pertemuan 5 &amp; 6: <strong>Procedure</strong> adalah subrutin atau kumpulan instruksi yang dikelompokkan bersama untuk menjalankan suatu aksi atau perilaku tertentu (misalnya animasi gerak atau perubahan visual) <strong>tanpa mengembalikan nilai hasil (return type void)</strong>.
-            <br><em>Contoh pada Modul:</em> Pembuatan procedure <code>jump()</code> pada Bunny / MarchHare untuk mengemas gerakan melompat.
+            Berdasarkan <strong>Modul Pertemuan 3 Sub-bab 1 &amp; 2</strong>:
+          </p>
+          <ul>
+            <li><strong>Instruksi</strong> adalah perintah yang diberikan agar objek melakukan sesuatu.</li>
+            <li><strong>Objek</strong> adalah pihak yang menjalankan instruksi.</li>
+            <li><strong>Program</strong> adalah sekumpulan instruksi yang mengendalikan apa yang dilakukan oleh objek.</li>
+            <li><strong>Sequence (Urutan)</strong> adalah urutan instruksi yang dijalankan; menentukan hasil atau perilaku program. Komputer menjalankan instruksi secara berurutan sesuai urutan yang diberikan.</li>
+          </ul>
+
+          <h4>B. Pengertian Procedure</h4>
+          <p>
+            <strong>Procedure</strong> adalah subprogram atau method berisi kumpulan instruksi terstruktur yang mengendalikan aksi/perilaku objek <strong>tanpa mengembalikan nilai data (return type void)</strong>.
           </p>
 
-          <h4>B. Mengapa Procedure Diperlukan dalam Pengembangan Program?</h4>
+          <h4>C. Studi Kasus Urutan Instruksi Modul Dosen: Robot Mencapai Bendera</h4>
+          <p>
+            Modul Pertemuan 3 Hal. 6–8 mendemonstrasikan bahwa objek yang sama dengan instruksi yang sama, jika urutannya berbeda, menghasilkan perilaku yang berbeda:
+          </p>
+          <table class="rubrik-table">
+            <thead>
+              <tr>
+                <th>Rangkaian Instruksi</th>
+                <th>Urutan yang Diberikan</th>
+                <th>Hasil / Perilaku Program</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Urutan Benar (A)</strong></td>
+                <td><code>move()</code> ➔ <code>move()</code> ➔ <code>turnRight()</code> ➔ <code>move()</code> ➔ <code>move()</code></td>
+                <td><strong style="color:var(--teal);">Robot BERHASIL mencapai bendera.</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Urutan Salah (B)</strong></td>
+                <td><code>turnRight()</code> ➔ <code>move()</code> ➔ <code>move()</code> ➔ <code>turnRight()</code> ➔ <code>move()</code></td>
+                <td><strong style="color:var(--coral);">Robot GAGAL / tidak mencapai bendera.</strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>D. Mengapa Procedure Diperlukan dalam Pengembangan Program?</h4>
           <ol>
             <li>
-              <strong>Procedural Abstraction (Penyederhanaan):</strong><br>
-              Sekumpulan instruksi rumit dapat dikelompokkan menjadi sebuah procedure (seperti <code>jump()</code>), sehingga pemanggil cukup memanggil satu baris instruksi tanpa perlu menuliskan detail instruksi yang sama secara berulang.
+              <strong>Procedural Abstraction (Abstraksi Prosedural):</strong><br>
+              Daripada menulis 5 baris instruksi dasar <code>move()</code> dan <code>turnRight()</code> berulang kali, kita mengelompokkannya menjadi satu procedure bernama <code>capaiBendera()</code> atau <code>jump()</code>. Kompleksitas detail disembunyikan di balik nama aksi yang bermakna.
             </li>
             <li>
-              <strong>Code Reusability (Dapat Digunakan Kembali):</strong><br>
-              Procedure yang telah dibuat dapat dipanggil berulang kali di berbagai scene atau diwariskan ke objek lain (misal ditempatkan di class Biped agar bisa dipakai Bunny dan MarchHare).
+              <strong>Menghindari Duplikasi Kode (Code Reusability / DRY):</strong><br>
+              Procedure cukup ditulis satu kali dan dapat dipanggil berulang kali oleh berbagai objek kapan pun dibutuhkan.
             </li>
             <li>
-              <strong>Modularitas &amp; Maintainability:</strong><br>
-              Jika terdapat perbaikan pada gerakan animasi, programmer cukup memperbaiki kode di dalam procedure tersebut tanpa merusak alur program utama.
+              <strong>Modularitas &amp; Kemudahan Perawatan (Maintainability):</strong><br>
+              Jika logika gerakan perlu diubah, programmer cukup menyunting isi procedure tersebut tanpa perlu mengubah puluhan pemanggilan di modul utama.
             </li>
             <li>
               <strong>Mendukung Parameter:</strong><br>
-              Procedure dapat dikembangkan menjadi <code>jump(direction)</code> dengan menambahkan parameter untuk menghasilkan variasi behavior berdasarkan input yang diberikan.
+              Procedure dapat menerima argumen (misal <code>capaiBendera(kecepatan)</code> atau <code>jump(arah)</code>) untuk menghasilkan variasi aksi dinamis.
             </li>
           </ol>
         </div>
@@ -1080,13 +1207,238 @@ new Car().start(); // Output: Moving</code></pre>
         </div>
       </article>
 
-      <article class="module-card">
-        <div class="module-header">
-          <span class="module-pill">PERTEMUAN 3</span>
-          <h3 class="module-title">Dari Instruksi Menuju Object dan Class</h3>
+      <!-- PERTEMUAN 3 LENGKAP RESMI DARI DOSEN UMS -->
+      <article class="module-card" style="border: 2px solid var(--teal); background: #fdfdf9;">
+        <div class="module-header" style="background: var(--teal-soft); border-bottom: 2px solid var(--teal); padding: 14px 20px;">
+          <span class="module-pill" style="background: var(--teal); color: #fff;">PERTEMUAN 3 (DIKTAT RESMI UMS)</span>
+          <h3 class="module-title" style="color: var(--ink);">Dari Instruksi ke Perilaku Program — Blueprint, Sequence &amp; Objek</h3>
         </div>
-        <div class="module-body">
-          <p>Object menerima instruksi dan beraksi. Sequence memengaruhi hasil. Property = data/keadaan. Method = aksi. Class = blueprint/template. One Class Many Objects (Robot A, B, C).</p>
+        <div class="module-body" style="padding: 20px 24px;">
+          
+          <h4>1. Gambaran Umum: Alur Pemrograman</h4>
+          <p>
+            Materi menghubungkan alur fundamental pemrograman komputer:
+            <br><strong style="font-family:var(--mono); color:var(--teal); font-size:14px;">Masalah ➔ Algoritma ➔ Instruksi ➔ Program ➔ Output</strong>
+          </p>
+          <ul>
+            <li><strong>Instruksi:</strong> Perintah yang diberikan agar objek melakukan sesuatu.</li>
+            <li><strong>Objek:</strong> Pihak di dalam program yang menjalankan instruksi.</li>
+            <li><strong>Program:</strong> Sekumpulan instruksi yang mengendalikan apa yang dilakukan oleh objek (<em>"Program = sekumpulan instruksi yang mengendalikan apa yang dilakukan oleh objek"</em>).</li>
+            <li><strong>Output / Perilaku:</strong> Hasil yang muncul setelah instruksi dijalankan.</li>
+          </ul>
+
+          <h4>2. Program Membentuk Perilaku (Behavior)</h4>
+          <p>Contoh instruksi yang diberikan kepada Robot:</p>
+          <div class="code-window" style="margin-bottom:12px;">
+            <pre><code>move forward
+turn right
+say "Hello!"</code></pre>
+          </div>
+          <p>Hasil perilaku (behavior) yang ditampilkan robot:</p>
+          <ol>
+            <li><strong>Move Forward:</strong> Robot bergerak maju.</li>
+            <li><strong>Turn Right:</strong> Robot berbelok ke kanan.</li>
+            <li><strong>Say "Hello!":</strong> Robot mengucapkan kata "Hello!".</li>
+          </ol>
+          <p>
+            <em>Definisi:</em> <strong>Perilaku / Behavior</strong> adalah hasil aksi yang dilakukan objek setelah instruksi dijalankan.
+          </p>
+
+          <h4>3. Siapa yang Melakukan Instruksi?</h4>
+          <blockquote>
+            <strong>"Ketika kita memberikan instruksi, harus ada objek yang melakukan instruksi tersebut."</strong>
+          </blockquote>
+          <p>
+            <strong>Object</strong> adalah sesuatu di dalam program yang dapat kita berikan instruksi. Instruksi tidak dapat berdiri sendiri; harus ada objek yang menjalankannya.
+          </p>
+
+          <h4>4. Tabel Contoh Objek dan Behavior-nya</h4>
+          <table class="rubrik-table">
+            <thead>
+              <tr>
+                <th>Objek</th>
+                <th>Behavior / Method</th>
+                <th>Kesesuaian Logika</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Robot</strong></td>
+                <td><code>move()</code>, <code>turn()</code>, <code>stop()</code></td>
+                <td>Cocok untuk berpindah posisi dan bernavigasi.</td>
+              </tr>
+              <tr>
+                <td><strong>Character</strong></td>
+                <td><code>walk()</code>, <code>jump()</code>, <code>say()</code></td>
+                <td>Cocok untuk manusia / karakter avatar.</td>
+              </tr>
+              <tr>
+                <td><strong>Car</strong></td>
+                <td><code>move()</code>, <code>turn()</code>, <code>stop()</code></td>
+                <td>Cocok untuk kendaraan roda empat.</td>
+              </tr>
+              <tr>
+                <td><strong>Door</strong></td>
+                <td><code>open()</code>, <code>close()</code>, <code>lock()</code></td>
+                <td>Cocok untuk pintu membuka/menutup.</td>
+              </tr>
+              <tr>
+                <td><strong>Ball</strong></td>
+                <td><code>move()</code>, <code>roll()</code>, <code>stop()</code></td>
+                <td>Cocok untuk benda bulat menggelinding.</td>
+              </tr>
+              <tr>
+                <td><strong>Animal</strong></td>
+                <td><code>walk()</code>, <code>jump()</code>, <code>makeSound()</code></td>
+                <td>Cocok untuk satwa bersuara/melompat.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            <em>Pertanyaan Penting Dosen:</em> <strong>"Apa yang terjadi jika kita memberikan instruksi `open()` kepada robot atau `move()` kepada pintu?"</strong>
+            <br>• <code>open()</code> adalah behavior yang cocok untuk <strong>Door</strong>, bukan untuk <strong>Robot</strong>.
+            <br>• <code>move()`</code> adalah behavior yang cocok untuk <strong>Robot</strong>, <strong>Car</strong>, atau <strong>Ball</strong>, tetapi tidak cocok untuk <strong>Door</strong>.
+            <br>• <strong>Kesimpulan:</strong> Tidak semua objek dapat melakukan behavior yang sama. Method harus sesuai dengan jenis objeknya.
+          </p>
+
+          <h4>5 &amp; 6. Sequence: Urutan Instruksi Menentukan Hasil</h4>
+          <blockquote>
+            <strong>"Instruksi yang sama, namun urutannya berbeda dapat menghasilkan perilaku yang berbeda. Komputer menjalankan instruksi secara berurutan sesuai dengan urutan yang diberikan."</strong>
+          </blockquote>
+          <ul>
+            <li><strong>Urutan Instruksi A:</strong> <code>move forward</code> ➔ <code>turn right</code> ➔ <code>move forward</code> ➔ <code>stop</code> <span style="color:var(--teal); font-weight:700;">(Robot mencapai bendera)</span></li>
+            <li><strong>Urutan Instruksi B:</strong> <code>turn right</code> ➔ <code>move forward</code> ➔ <code>move forward</code> ➔ <code>stop</code> <span style="color:var(--coral); font-weight:700;">(Robot berbelok duluan ➔ tidak mencapai bendera)</span></li>
+          </ul>
+
+          <h4>7. Studi Kasus: Membuat Robot Mencapai Tujuan Bendera</h4>
+          <p>Robot sudah bisa <code>move()</code> dan <code>turnRight()</code>. Untuk mencapai bendera pada grid:</p>
+          <ul>
+            <li><strong style="color:var(--teal);">Urutan Benar:</strong> <code>move()</code> ➔ <code>move()</code> ➔ <code>turnRight()</code> ➔ <code>move()</code> ➔ <code>move()</code> ➔ <span style="font-weight:700;">Berhasil!</span></li>
+            <li><strong style="color:var(--coral);">Urutan Salah:</strong> <code>turnRight()</code> ➔ <code>move()</code> ➔ <code>move()</code> ➔ <code>turnRight()</code> ➔ <code>move()</code> ➔ <span style="font-weight:700;">Gagal!</span></li>
+          </ul>
+
+          <h4>8. Object Memiliki Property dan Method</h4>
+          <ul>
+            <li><strong>Property:</strong> Data atau keadaan yang dimiliki oleh sebuah object (misal: warna → "biru", posisi, arah, kecepatan). Property dapat berubah selama program berjalan (contoh: posisi robot setelah bergerak).</li>
+            <li><strong>Method:</strong> Aksi atau perilaku yang dapat dilakukan oleh sebuah object (contoh: <code>move()</code>, <code>turnRight()</code>, <code>stop()</code>, <code>say("...")</code>).</li>
+          </ul>
+
+          <h4>9. Kasus Tiga Robot: Robot A, Robot B, dan Robot C</h4>
+          <p>Ketiga robot memiliki method yang sama dan struktur property yang sama, namun memiliki nilai property yang berbeda:</p>
+          <table class="rubrik-table">
+            <thead>
+              <tr>
+                <th>Objek</th>
+                <th>Warna</th>
+                <th>Posisi</th>
+                <th>Arah</th>
+                <th>Kecepatan</th>
+                <th>Method yang Dimiliki</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Robot A</strong></td>
+                <td>biru</td>
+                <td>(2, 1)</td>
+                <td>kanan</td>
+                <td>2</td>
+                <td><code>move()</code>, <code>turnRight()</code>, <code>stop()</code></td>
+              </tr>
+              <tr>
+                <td><strong>Robot B</strong></td>
+                <td>merah</td>
+                <td>(4, 2)</td>
+                <td>kiri</td>
+                <td>3</td>
+                <td><code>move()</code>, <code>turnRight()</code>, <code>stop()</code></td>
+              </tr>
+              <tr>
+                <td><strong>Robot C</strong></td>
+                <td>hijau</td>
+                <td>(1, 5)</td>
+                <td>atas</td>
+                <td>1</td>
+                <td><code>move()</code>, <code>turnRight()</code>, <code>stop()</code></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>10. Kita Membutuhkan Blueprint (Class: Robot)</h4>
+          <p>
+            Daripada mendefinisikan property dan method berulang kali untuk setiap robot, kita mendefinisikan strukturnya satu kali saja dalam sebuah Class.
+            <br><strong>Class: Robot</strong> mendefinisikan:
+          </p>
+          <ul>
+            <li><strong>Property (data):</strong> <code>warna</code>, <code>posisi</code>, <code>arah</code>, <code>kecepatan</code></li>
+            <li><strong>Method (perilaku):</strong> <code>move()</code>, <code>turnRight()</code>, <code>stop()</code>, <code>say("...")</code></li>
+          </ul>
+
+          <h4>11. Class vs Object: Analogi Blueprint Rumah</h4>
+          <p>
+            Dari satu blueprint <strong>Class: Rumah</strong> (property: warna, jumlah lantai, penghuni, lokasi; method: <code>bangun()</code>, <code>ubahWarna()</code>, <code>tambahLantai()</code>), dapat dibangun:
+          </p>
+          <ul>
+            <li><strong>Rumah A:</strong> putih, 2 lantai, Keluarga A, lokasi Solo.</li>
+            <li><strong>Rumah B:</strong> cokelat, 2 lantai, Keluarga B, lokasi Yogyakarta.</li>
+            <li><strong>Rumah C:</strong> abu-abu, 3 lantai, Keluarga C, lokasi Bandung.</li>
+          </ul>
+          <p>
+            <em>Pertanyaan Refleksi Dosen:</em> Jika blueprint rumah diubah, apakah rumah yang dibuat berikutnya ikut berubah?
+            <br><strong>Ya.</strong> Blueprint/class mendefinisikan struktur. Jika blueprint diubah, seluruh objek baru yang dibuat darinya akan mengikuti perubahan struktur tersebut.
+          </p>
+
+          <h4>12. Tabel Ringkasan Definisi 13 Istilah Resmi Dosen UMS</h4>
+          <table class="rubrik-table">
+            <thead>
+              <tr>
+                <th>Istilah</th>
+                <th>Definisi Resmi Dosen SPADA UMS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Masalah</strong></td><td>Sesuatu yang perlu diselesaikan atau tujuan yang ingin dicapai.</td></tr>
+              <tr><td><strong>Algoritma</strong></td><td>Urutan langkah penyelesaian masalah.</td></tr>
+              <tr><td><strong>Instruksi</strong></td><td>Perintah yang diberikan agar objek melakukan sesuatu.</td></tr>
+              <tr><td><strong>Program</strong></td><td>Sekumpulan instruksi yang mengendalikan apa yang dilakukan oleh objek.</td></tr>
+              <tr><td><strong>Output</strong></td><td>Hasil yang muncul setelah program/instruksi dijalankan.</td></tr>
+              <tr><td><strong>Object</strong></td><td>Sesuatu di dalam program yang dapat kita berikan instruksi.</td></tr>
+              <tr><td><strong>Behavior</strong></td><td>Aksi atau perilaku yang dapat dilakukan oleh suatu object.</td></tr>
+              <tr><td><strong>Sequence</strong></td><td>Urutan instruksi yang dijalankan; menentukan hasil atau perilaku program.</td></tr>
+              <tr><td><strong>Property</strong></td><td>Data atau keadaan yang dimiliki oleh sebuah object; dapat berubah selama program berjalan.</td></tr>
+              <tr><td><strong>Method</strong></td><td>Aksi atau perilaku yang dapat dilakukan oleh sebuah object.</td></tr>
+              <tr><td><strong>Class</strong></td><td>Blueprint atau template yang mendefinisikan property dan method yang dimiliki oleh object.</td></tr>
+              <tr><td><strong>Object/Instance</strong></td><td>Hasil nyata yang dibuat berdasarkan class.</td></tr>
+              <tr><td><strong>Banyak Object</strong></td><td>Banyak object dapat dibuat menggunakan satu class yang sama; nilai property dapat berbeda, tetapi struktur property dan method-nya sama.</td></tr>
+            </tbody>
+          </table>
+
+          <h4>13. Hubungan Gambar Halaman 1–12 Slide dengan Definisi</h4>
+          <table class="rubrik-table">
+            <thead>
+              <tr>
+                <th>Hal.</th>
+                <th>Gambar pada Slide Kuliah</th>
+                <th>Definisi yang Dihubungkan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>1</td><td>Kepala robot dan kubus bercahaya</td><td>Gambaran topik: instruksi, objek, dan perilaku program.</td></tr>
+              <tr><td>2</td><td>Alur Masalah ➔ Algoritma ➔ Instruksi ➔ Program ➔ Output &amp; Robot Move/Turn/Say</td><td>Program adalah kumpulan instruksi; objek menjalankan instruksi; output adalah hasil perilaku.</td></tr>
+              <tr><td>3</td><td>3 Panel: Move Forward, Turn Right, Say "Hello!"</td><td>Program membentuk perilaku objek melalui instruksi.</td></tr>
+              <tr><td>4</td><td>Gambar perempuan bertanya "Siapa yang harus bergerak?"</td><td>Instruksi harus dilakukan oleh <strong>objek</strong>.</td></tr>
+              <tr><td>4–5</td><td>Tabel Objek &amp; Behavior: Robot, Character, Car, Door, Ball, Animal</td><td>Object = sesuatu yang dapat diberi instruksi; behavior = aksi yang dapat dilakukan object.</td></tr>
+              <tr><td>5</td><td>Pertanyaan <code>open()</code> untuk robot atau <code>move()</code> untuk pintu</td><td>Tidak semua objek memiliki behavior yang sama; method harus sesuai karakter objek.</td></tr>
+              <tr><td>6</td><td>Dua urutan instruksi: A dan B</td><td>Urutan instruksi memengaruhi hasil/perilaku program.</td></tr>
+              <tr><td>7</td><td>Urutan A mencapai bendera, Urutan B tidak</td><td><strong>Sequence</strong> menentukan hasil atau perilaku program.</td></tr>
+              <tr><td>8</td><td>Studi kasus robot mencapai bendera dengan <code>move()</code> &amp; <code>turnRight()</code></td><td>Objek sama, instruksi sama, urutan berbeda ➔ hasil berbeda.</td></tr>
+              <tr><td>9</td><td>Robot dengan property warna, posisi, arah, kecepatan; method <code>move()</code>, <code>turnRight()</code>, <code>stop()</code>, <code>say()</code></td><td>Property = data/keadaan object; method = aksi/perilaku object.</td></tr>
+              <tr><td>10</td><td>Robot A, B, C dengan nilai property berbeda tetapi method sama</td><td>Banyak object memiliki struktur sama tetapi nilai property berbeda.</td></tr>
+              <tr><td>11</td><td>Class: Robot sebagai blueprint &amp; Object: Robot A/B/C</td><td>Class = blueprint/template; object = instance yang dibuat dari class.</td></tr>
+              <tr><td>12</td><td>Blueprint rumah dan Rumah A, B, C (Solo, Yogya, Bandung)</td><td>Class mendefinisikan struktur; object adalah hasil nyata dengan nilai property berbeda.</td></tr>
+            </tbody>
+          </table>
+
         </div>
       </article>
 

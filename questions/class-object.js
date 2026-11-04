@@ -16,19 +16,22 @@ window.QUESTION_BANK.push(
 - **Class** adalah cetak biru (blueprint) atau template yang mendefinisikan struktur data (**property**) dan perilaku (**method**). Di Alice 3, class berada di **Gallery** (misalnya class [[Bunny]] atau [[Robot]]).
 - **Object** adalah wujud nyata (*instance*) dari class yang dimasukkan ke dalam **Scene** (misalnya [[Robot A]], [[Robot B]], [[Robot C]] atau [[bunny]], [[bunny2]]).
 
-Satu class bisa menghasilkan banyak object (**One Class, Many Objects**). Setiap object memiliki salinan property-nya sendiri (misalnya warna, posisi, orientasi, ukuran), sehingga mengubah property object yang satu tidak akan mengubah object lainnya.
+Satu class bisa menghasilkan banyak object (**One Class, Many Objects**). Setiap object memiliki salinan property-nya sendiri (misalnya warna, posisi, orientasi, ukuran, kecepatan), sehingga mengubah property object yang satu tidak akan mengubah object lainnya.
+
+Analogi resmi modul dosen: Dari satu cetak biru **Class Rumah** (warna, jumlah lantai, lokasi), dapat dibangun **Rumah A** (Solo, putih), **Rumah B** (Yogyakarta, cokelat), dan **Rumah C** (Bandung, abu-abu).
 
 ~~~
 class Robot {
     String nama;
     String warna;
+    int kecepatan;
 }
 
 Robot a = new Robot();
 Robot b = new Robot();
 
-a.nama = "Robot A"; a.warna = "Merah";
-b.nama = "Robot B"; b.warna = "Biru";
+a.nama = "Robot A"; a.warna = "Biru";  a.kecepatan = 2;
+b.nama = "Robot B"; b.warna = "Merah"; b.kecepatan = 3;
 ~~~
 
 [[a]] dan [[b]] adalah dua instance berbeda dari class yang sama. Jadi, class bicara soal **rancangan/blueprint**, sedangkan object bicara soal **wujud nyata/instance** dari rancangan itu.`
