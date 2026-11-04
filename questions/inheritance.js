@@ -1,3 +1,14 @@
+/**
+ * @file inheritance.js
+ * @description Bank Soal Topik 3: Inheritance (Pewarisan Kelas dan Relasi 'is-a')
+ * @curriculum Pemrograman Visual (Alice 3 / Java OOP) - SPADA UMS Pertemuan 5 & Modul Netlify
+ * @learning_outcomes
+ *   - Memahami konsep generalisasi (Superclass) dan spesialisasi (Subclass).
+ *   - Menguasai rekonstruksi diagram UML berbasis prinsip Don't Repeat Yourself (DRY).
+ *   - Menganalisis sintaks pewarisan `extends` dan pemanggilan `super()`.
+ *   - Memahami visibilitas modifier `protected` untuk aksesibilitas kelas turunan.
+ */
+
 /* Topik 3 — Inheritance */
 window.QUESTION_BANK = window.QUESTION_BANK || [];
 
