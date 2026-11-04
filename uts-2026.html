@@ -193,7 +193,7 @@
 }
 .exam-meta-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
   gap: 12px;
   margin-bottom: 18px;
   background: var(--paper);
@@ -438,15 +438,29 @@
   line-height: 1.55;
 }
 
+.rubrik-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 16px 0;
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  background: var(--card);
+  box-shadow: 2px 2px 0 var(--ink);
+  overscroll-behavior-x: contain;
+}
+.rubrik-table-wrap .rubrik-table {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  min-width: 520px;
+}
 .rubrik-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 14px 0;
   font-size: 13px;
   background: var(--card);
-  border: 1.5px solid var(--ink);
-  border-radius: 8px;
-  overflow: hidden;
 }
 .rubrik-table th {
   background: var(--paper-deep);
@@ -620,6 +634,64 @@
   font-size: 12px;
 }
 
+/* Responsive Breakpoints untuk Mencegah Horizontal Flow & Shift */
+@media (max-width: 640px) {
+  .site-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .exam-nav {
+    width: 100%;
+    gap: 8px;
+  }
+  .univ-brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .exam-score-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 18px;
+  }
+  .score-tally-box {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .sim-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .score-slider-wrap {
+    width: 100%;
+  }
+  .score-slider-wrap input[type=range] {
+    flex: 1;
+  }
+  .official-header-card {
+    padding: 20px 16px;
+  }
+  .official-header-card::before {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .nav-pill {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+  .tab-trigger {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  .q-statement {
+    font-size: 1.1rem;
+  }
+}
+
 /* Printable */
 @media print {
   body { background: #fff !important; color: #000 !important; }
@@ -673,7 +745,7 @@
   <header class="site-head">
     <a class="brand" href="index.html" aria-label="Kembali ke Beranda Ruang Visual">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40">
+        <svg viewBox="0 0 40 40" width="40" height="40">
           <rect x="2" y="13" width="21" height="21" rx="6" fill="#2b8a79" stroke="#24221f" stroke-width="2.5"/>
           <rect x="9" y="7" width="21" height="21" rx="6" fill="#f2b544" stroke="#24221f" stroke-width="2.5"/>
           <rect x="16" y="1" width="21" height="21" rx="6" fill="#dd5a3a" stroke="#24221f" stroke-width="2.5"/>
@@ -802,7 +874,8 @@
             <strong>Banyak object dapat dibuat menggunakan satu class yang sama.</strong> Setiap object memiliki <strong>struktur property dan method yang sama</strong>, tetapi dapat memiliki <strong>nilai property yang berbeda</strong>.
           </p>
           
-          <table class="rubrik-table">
+          <div class="rubrik-table-wrap">
+<table class="rubrik-table">
             <thead>
               <tr>
                 <th>Object (Instance)</th>
@@ -828,6 +901,7 @@
               </tr>
             </tbody>
           </table>
+</div>
 
           <h4>D. Analogi Resmi Modul: Blueprint Rumah (Halaman 12)</h4>
           <p>
@@ -941,7 +1015,8 @@
           <p>
             Dosen menegaskan bahwa setiap objek memiliki method/behavior yang sesuai dengan karakter objeknya:
           </p>
-          <table class="rubrik-table">
+          <div class="rubrik-table-wrap">
+<table class="rubrik-table">
             <thead>
               <tr>
                 <th>Objek</th>
@@ -975,6 +1050,7 @@
               </tr>
             </tbody>
           </table>
+</div>
 
           <h4>B. Analisis Penting Dosen: "Apakah Semua Objek Dapat Melakukan Behavior yang Sama?"</h4>
           <p>
@@ -1051,7 +1127,8 @@
           <p>
             Modul Pertemuan 3 Hal. 6–8 mendemonstrasikan bahwa objek yang sama dengan instruksi yang sama, jika urutannya berbeda, menghasilkan perilaku yang berbeda:
           </p>
-          <table class="rubrik-table">
+          <div class="rubrik-table-wrap">
+<table class="rubrik-table">
             <thead>
               <tr>
                 <th>Rangkaian Instruksi</th>
@@ -1072,6 +1149,7 @@
               </tr>
             </tbody>
           </table>
+</div>
 
           <h4>D. Mengapa Procedure Diperlukan dalam Pengembangan Program?</h4>
           <ol>
@@ -1114,7 +1192,8 @@
         <span class="sol-tag">Kunci Jawaban Resmi Berdasarkan Modul Kuliah</span>
         <div class="sol-content">
           <h4>Matriks Perbedaan Resmi (Modul Pertemuan 6 Pokok Bahasan 4):</h4>
-          <table class="rubrik-table">
+          <div class="rubrik-table-wrap">
+<table class="rubrik-table">
             <thead>
               <tr>
                 <th>Pembeda</th>
@@ -1154,6 +1233,7 @@
               </tr>
             </tbody>
           </table>
+</div>
         </div>
       </div>
     </article>
@@ -1295,7 +1375,8 @@ say "Hello!"</code></pre>
           </p>
 
           <h4>4. Tabel Contoh Objek dan Behavior-nya</h4>
-          <table class="rubrik-table">
+          <div class="rubrik-table-wrap">
+<table class="rubrik-table">
             <thead>
               <tr>
                 <th>Objek</th>
@@ -1336,6 +1417,7 @@ say "Hello!"</code></pre>
               </tr>
             </tbody>
           </table>
+</div>
           <p>
             <em>Pertanyaan Penting Dosen:</em> <strong>"Apa yang terjadi jika kita memberikan instruksi `open()` kepada robot atau `move()` kepada pintu?"</strong>
             <br>• <code>open()</code> adalah behavior yang cocok untuk <strong>Door</strong>, bukan untuk <strong>Robot</strong>.
@@ -1367,7 +1449,8 @@ say "Hello!"</code></pre>
 
           <h4>9. Kasus Tiga Robot: Robot A, Robot B, dan Robot C</h4>
           <p>Ketiga robot memiliki method yang sama dan struktur property yang sama, namun memiliki nilai property yang berbeda:</p>
-          <table class="rubrik-table">
+          <div class="rubrik-table-wrap">
+<table class="rubrik-table">
             <thead>
               <tr>
                 <th>Objek</th>
@@ -1405,6 +1488,7 @@ say "Hello!"</code></pre>
               </tr>
             </tbody>
           </table>
+</div>
 
           <h4>10. Kita Membutuhkan Blueprint (Class: Robot)</h4>
           <p>
@@ -1431,7 +1515,8 @@ say "Hello!"</code></pre>
           </p>
 
           <h4>12. Tabel Ringkasan Definisi 13 Istilah Resmi Dosen UMS</h4>
-          <table class="rubrik-table">
+          <div class="rubrik-table-wrap">
+<table class="rubrik-table">
             <thead>
               <tr>
                 <th>Istilah</th>
@@ -1454,9 +1539,11 @@ say "Hello!"</code></pre>
               <tr><td><strong>Banyak Object</strong></td><td>Banyak object dapat dibuat menggunakan satu class yang sama; nilai property dapat berbeda, tetapi struktur property dan method-nya sama.</td></tr>
             </tbody>
           </table>
+</div>
 
           <h4>13. Hubungan Gambar Halaman 1–12 Slide dengan Definisi</h4>
-          <table class="rubrik-table">
+          <div class="rubrik-table-wrap">
+<table class="rubrik-table">
             <thead>
               <tr>
                 <th>Hal.</th>
@@ -1480,6 +1567,7 @@ say "Hello!"</code></pre>
               <tr><td>12</td><td>Blueprint rumah dan Rumah A, B, C (Solo, Yogya, Bandung)</td><td>Class mendefinisikan struktur; object adalah hasil nyata dengan nilai property berbeda.</td></tr>
             </tbody>
           </table>
+</div>
 
         </div>
       </article>
@@ -1736,7 +1824,7 @@ say "Hello!"</code></pre>
         Pelajari bagaimana hierarki visual di Alice 3 diterjemahkan ke sintaks Java murni dengan keyword <code>extends</code> dan <code>super</code>.
       </p>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:18px;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap:18px;">
         
         <!-- Alice 3 Biped Hierarchy -->
         <div style="border:2px solid var(--ink); border-radius:12px; background:var(--paper); padding:16px;">
@@ -1802,7 +1890,7 @@ say "Hello!"</code></pre>
         <p style="font-family:var(--mono); font-size:10.5px; margin:2px 0 0;">Teknik Informatika Universitas Muhammadiyah Surakarta · Sesuai PRD &amp; Modul Kuliah</p>
       </div>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; font-size:11px; line-height:1.45;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap:10px; font-size:11px; line-height:1.45;">
         <div style="border:1.5px solid #24221f; border-radius:6px; padding:7px; background:#fffdf7;">
           <strong style="color:var(--tomato); font-family:var(--mono);">1. CLASS &amp; OBJECT</strong><br>
           • <strong>Class:</strong> Blueprint / template (contoh: Class Robot, Gallery Bunny).<br>

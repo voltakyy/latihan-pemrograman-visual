@@ -195,7 +195,7 @@
 }
 .exam-meta-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
   gap: 12px;
   margin-bottom: 18px;
   background: var(--paper);
@@ -399,15 +399,29 @@
 }
 
 /* Tabel Rubrik & Analisis */
+.rubrik-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 16px 0;
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  background: var(--card);
+  box-shadow: 2px 2px 0 var(--ink);
+  overscroll-behavior-x: contain;
+}
+.rubrik-table-wrap .rubrik-table {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  min-width: 520px;
+}
 .rubrik-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 14px 0;
   font-size: 13px;
   background: var(--card);
-  border: 1.5px solid var(--ink);
-  border-radius: 8px;
-  overflow: hidden;
 }
 .rubrik-table th {
   background: var(--paper-deep);
@@ -631,6 +645,64 @@
   height: auto;
 }
 
+/* Responsive Breakpoints untuk Mencegah Horizontal Flow & Shift */
+@media (max-width: 640px) {
+  .site-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .exam-nav {
+    width: 100%;
+    gap: 8px;
+  }
+  .univ-brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .exam-score-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 18px;
+  }
+  .score-tally-box {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .sim-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .score-slider-wrap {
+    width: 100%;
+  }
+  .score-slider-wrap input[type=range] {
+    flex: 1;
+  }
+  .official-header-card {
+    padding: 20px 16px;
+  }
+  .official-header-card::before {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  .nav-pill {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+  .tab-trigger {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+  .q-statement {
+    font-size: 1.1rem;
+  }
+}
+
 /* Print Sheet A4 Styles */
 @media print {
   body {
@@ -707,7 +779,7 @@
   <header class="site-head">
     <a class="brand" href="index.html" aria-label="Kembali ke Beranda Ruang Visual">
       <span class="brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40">
+        <svg viewBox="0 0 40 40" width="40" height="40">
           <rect x="2" y="13" width="21" height="21" rx="6" fill="#2b8a79" stroke="#24221f" stroke-width="2.5"/>
           <rect x="9" y="7" width="21" height="21" rx="6" fill="#f2b544" stroke="#24221f" stroke-width="2.5"/>
           <rect x="16" y="1" width="21" height="21" rx="6" fill="#dd5a3a" stroke="#24221f" stroke-width="2.5"/>
@@ -869,7 +941,8 @@ public class Main {
 }</code></pre>
           </div>
 
-          <table class="rubrik-table">
+          <div class="rubrik-table-wrap">
+<table class="rubrik-table">
             <thead>
               <tr>
                 <th>Aspek Penilaian</th>
@@ -895,6 +968,7 @@ public class Main {
               </tr>
             </tbody>
           </table>
+</div>
         </div>
       </div>
     </article>
@@ -975,7 +1049,8 @@ public class Main {
 }</code></pre>
           </div>
 
-          <table class="rubrik-table">
+          <div class="rubrik-table-wrap">
+<table class="rubrik-table">
             <thead>
               <tr>
                 <th>Komponen Jawaban</th>
@@ -1001,6 +1076,7 @@ public class Main {
               </tr>
             </tbody>
           </table>
+</div>
         </div>
       </div>
     </article>
@@ -1181,7 +1257,8 @@ public class Main {
           <p>
             Dalam Pemrograman Visual (khususnya <strong>Alice 3</strong> dan OOP Java), method terbagi menjadi dua kategori utama berdasarkan ada atau tidaknya nilai balik (<em>return value</em>):
           </p>
-          <table class="rubrik-table">
+          <div class="rubrik-table-wrap">
+<table class="rubrik-table">
             <thead>
               <tr>
                 <th>Pembeda</th>
@@ -1217,6 +1294,7 @@ public class Main {
               </tr>
             </tbody>
           </table>
+</div>
 
           <h4>2. Contoh Procedures di ALICE 3 (Minimal 2 Contoh)</h4>
           <ol>
@@ -1323,7 +1401,8 @@ if (this.alice.getDistanceTo(this.rabbit) < 1.5) {
           <p>
             <strong>Tabel Trace Eksekusi:</strong>
           </p>
-          <table class="rubrik-table">
+          <div class="rubrik-table-wrap">
+<table class="rubrik-table">
             <thead>
               <tr>
                 <th>Iterasi</th>
@@ -1342,6 +1421,7 @@ if (this.alice.getDistanceTo(this.rabbit) < 1.5) {
               <tr><td>Selesai</td><td>6</td><td>6 &lt;= 5 (False)</td><td>Loop Berhenti</td><td>Keluar loop</td></tr>
             </tbody>
           </table>
+</div>
         </div>
       </div>
     </article>
@@ -1598,7 +1678,7 @@ if (this.alice.getDistanceTo(this.rabbit) < 1.5) {
         <p style="font-family:var(--mono); font-size:11px; margin:4px 0 0;">Informatika Universitas Muhammadiyah Surakarta · Gasal 2024/2025</p>
       </div>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap:16px;">
         <!-- Kiri: Soal 1 & 2 -->
         <div>
           <div style="border:1.5px solid #24221f; border-radius:8px; padding:10px; margin-bottom:12px; background:#fffdf7;">
@@ -1651,7 +1731,8 @@ if (this.alice.getDistanceTo(this.rabbit) < 1.5) {
 
           <div style="border:1.5px solid #24221f; border-radius:8px; padding:10px; background:#fffdf7;">
             <strong style="display:block; font-size:12px; font-family:var(--mono); color:var(--teal); border-bottom:1px solid #ccc; padding-bottom:3px; margin-bottom:6px;">SOAL 4: ALICE 3 PROCEDURES VS FUNCTIONS</strong>
-            <table style="width:100%; font-size:11px; border-collapse:collapse; margin-top:4px;">
+            <div class="rubrik-table-wrap">
+<table style="width:100%; font-size:11px; border-collapse:collapse; margin-top:4px;">
               <tr style="background:#eee;">
                 <th style="padding:4px; text-align:left;">Procedures (Void)</th>
                 <th style="padding:4px; text-align:left;">Functions (Return Val)</th>
@@ -1675,6 +1756,7 @@ if (this.alice.getDistanceTo(this.rabbit) < 1.5) {
                 </td>
               </tr>
             </table>
+</div>
           </div>
         </div>
       </div>

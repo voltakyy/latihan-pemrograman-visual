@@ -27,8 +27,12 @@
   --shadow:7px 7px 0 var(--ink);
 }
 
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box;min-inline-size:0}
+html{
+  scroll-behavior:smooth;
+  scrollbar-gutter:stable;
+  overflow-x:clip;
+}
 
 .skip-link {
   position: fixed;
@@ -53,6 +57,7 @@ html{scroll-behavior:smooth}
 body{
   margin:0;
   min-height:100vh;
+  min-height:100dvh;
   color:var(--ink);
   font-family:var(--font);
   font-size:16px;
@@ -64,7 +69,8 @@ body{
     var(--paper);
   background-attachment:fixed;
   -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
+  overflow-x:clip;
+  font-size-adjust:from-font;
 }
 body::before{
   content:'';
@@ -79,17 +85,22 @@ body::before{
 [hidden]{display:none !important}
 button{font:inherit;color:inherit}
 a{color:inherit}
-img,svg{max-width:100%}
+img,svg{max-width:100%;height:auto}
 ::selection{background:rgba(242,181,68,.55);color:var(--ink)}
 :focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.mono{font-family:var(--mono)}
+.mono, .score-chip strong, .tab-badge, .badge-score, .score-val-badge, #qCounter, #scoreNum, #liveTotalScore {
+  font-family:var(--mono);
+  font-variant-numeric:tabular-nums;
+}
 
 .shell{
   position:relative;
   z-index:1;
   width:min(1080px, 100%);
+  max-width:100%;
   margin:0 auto;
   padding:22px clamp(16px, 3.4vw, 30px) 38px;
+  overflow-x:clip;
 }
 
 /* ---------- header ---------- */
@@ -97,7 +108,10 @@ img,svg{max-width:100%}
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:20px;
+  gap:16px;
+  flex-wrap:wrap;
+  width:100%;
+}
   padding:4px 0 20px;
   border-bottom:2px dashed rgba(36,34,31,.22);
 }
@@ -119,7 +133,7 @@ img,svg{max-width:100%}
   display:grid;
   place-items:center;
 }
-.brand-mark svg{display:block;width:100%;height:100%}
+.brand-mark svg{display:block;width:100%;height:100%;aspect-ratio:1/1}
 .brand-text{
   font-family:var(--display);
   font-size:1.16rem;
@@ -279,6 +293,7 @@ h1 .h1-question{
   display:block;
   width:100%;
   height:auto;
+  aspect-ratio: 560 / 410;
   border:2px solid var(--ink);
   border-radius:8px;
 }
@@ -289,6 +304,53 @@ h1 .h1-question{
   font-size:10px;
   color:var(--ink-faint);
   letter-spacing:.01em;
+}
+
+/* ---------- Responsive Tables & Wrappers (Modern Web Guidance) ---------- */
+.rubrik-table-wrap,
+.table-scroll-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 16px 0;
+  border: 1.5px solid var(--ink);
+  border-radius: 10px;
+  background: var(--card);
+  box-shadow: 2px 2px 0 var(--ink);
+  overscroll-behavior-x: contain;
+}
+.rubrik-table-wrap .rubrik-table,
+.table-scroll-wrap table {
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  min-width: 520px;
+  width: 100%;
+}
+.rubrik-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  background: var(--card);
+}
+.rubrik-table th {
+  background: var(--paper-deep);
+  border-bottom: 1.5px solid var(--ink);
+  padding: 8px 12px;
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.rubrik-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(36,34,31,.15);
+  vertical-align: top;
+}
+.rubrik-table tr:last-child td { border-bottom: none; }
 }
 
 /* ---------- tombol ---------- */
@@ -1074,6 +1136,8 @@ code.code-stack{display:inline-block;white-space:pre;vertical-align:top;line-hei
 @media (max-width: 640px){
   body::before{opacity:.16}
   .shell{padding:16px 14px 30px}
+  .site-head{flex-direction:column;align-items:flex-start;gap:12px}
+  .head-meta{width:100%;flex-wrap:wrap;gap:8px}
   .brand-mark{width:36px;height:36px}
   .brand-text{font-size:1.05rem}
   .stamp-badge{display:none}
