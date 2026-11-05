@@ -6,6 +6,16 @@ Format berkas ini mengacu pada panduan [Keep a Changelog](https://keepachangelog
 
 ---
 
+## [2.1.1] - 2026-11-05
+### Diperbaiki
+- **Pencegahan Text Overflow & Squashing:** Memperbaiki layout bug pada `.tab-trigger` dan `.nav-pill` di `uts-2024.html` dan `uts-2026.html` menggunakan `flex: 0 0 auto`, `flex-shrink: 0`, dan `white-space: nowrap`.
+- **Akselerasi Touch Scroll (iOS/WebKit):** Menambahkan `-webkit-overflow-scrolling: touch` pada container horizontal tab navigation `.exam-tabs`.
+- **Auto Smooth Centering:** Tombol tab aktif otomatis melakukan pergeseran mulus (*smooth auto-scroll into view*) ke tengah layar saat ditekan pada layar perangkat ponsel.
+- **Responsivitas Header:** Menambahkan `flex-wrap: wrap` pada `.head-meta` di `styles.css` agar badge navigasi tidak berhimpitan pada breakpoint menengah.
+- **Tautan Eksternal:** Menghubungkan footer `index.html` dengan portal pendamping UTS KKI (Kepemimpinan).
+
+---
+
 ## [2.1.0] - 2026-11-04
 ### Ditambahkan
 - Modul pembelajaran komprehensif UTS 2026/2027 (`uts-2026.html`) berdasarkan materi SPADA UMS Pertemuan 1-7.
