@@ -44,6 +44,9 @@
   font-size: 11px;
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
+  flex: 0 0 auto;
+  flex-shrink: 0;
   box-shadow: 2px 2px 0 var(--ink);
   transition: all .15s ease;
 }
@@ -71,6 +74,7 @@
   display: flex;
   gap: 8px;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   padding-bottom: 4px;
 }
@@ -90,6 +94,8 @@
   cursor: pointer;
   box-shadow: 3px 3px 0 var(--ink);
   white-space: nowrap;
+  flex: 0 0 auto;
+  flex-shrink: 0;
   transition: all .15s ease;
 }
 .tab-trigger:hover {
@@ -1977,7 +1983,10 @@ function switchExamTab(tabId, btnElement) {
 
   const targetPane = document.getElementById('pane-' + tabId);
   if (targetPane) targetPane.classList.add('active');
-  if (btnElement) btnElement.classList.add('active');
+  if (btnElement) {
+    btnElement.classList.add('active');
+    btnElement.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  }
 }
 
 function toggleKey(keyId, btn) {
